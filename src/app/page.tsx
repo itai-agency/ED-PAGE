@@ -213,9 +213,11 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
-                    <div key={index} className="p-8 bg-background/50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                        <div className="p-4 bg-primary text-primary-foreground rounded-full mb-4 inline-block">
-                            {service.icon}
+                    <div key={index} className="p-8 bg-background/80 backdrop-blur-sm rounded-xl border border-white/10 shadow-lg hover:border-primary/30 hover:shadow-primary/10 transition-all duration-300 flex flex-col items-center text-center group">
+                        <div className="p-4 bg-background border rounded-full mb-6 inline-block transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                            <div className="text-primary transform group-hover:scale-110 transition-transform duration-300">
+                               {service.icon}
+                            </div>
                         </div>
                         <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
                         <p className="text-foreground/70">{service.description}</p>
