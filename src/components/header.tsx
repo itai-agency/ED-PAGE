@@ -38,7 +38,9 @@ export function Header() {
         </nav>
         
         <div className="hidden md:flex items-center">
-            <Button className="rounded-full">Escríbenos</Button>
+            <Link href="#contact">
+                <Button className="rounded-full">Escríbenos</Button>
+            </Link>
         </div>
 
         <div className="md:hidden">
@@ -77,7 +79,9 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto p-4">
-                    <Button className="w-full rounded-full">Escríbenos</Button>
+                    <Link href="#contact" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                        <Button className="w-full rounded-full">Escríbenos</Button>
+                    </Link>
                 </div>
               </div>
             </SheetContent>
