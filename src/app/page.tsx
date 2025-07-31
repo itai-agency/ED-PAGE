@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { PlayCircle } from "lucide-react";
+import { ArrowRight, PlayCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -10,21 +10,19 @@ export default function Home() {
         <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)] pt-16 pb-20 md:pt-0 md:pb-0">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              LA MEJOR <span className="text-primary">COMPAÑÍA DE MARKETING</span>.
+              Amplifica el Pulso Digital de tu Marca
             </h1>
-            <p className="text-lg md:text-xl font-medium">
-              #1 Agencia de Servicios de Marketing en EE.UU. y Reino Unido
+            <p className="text-foreground/80 md:text-lg">
+              Somos una agencia de marketing digital de servicio completo dedicada a elevar la presencia online de tu marca. Desde SEO hasta redes sociales, creamos estrategias basadas en datos que ofrecen resultados reales.
             </p>
-            <p className="text-foreground/80">
-              Si estás buscando la mejor compañía de SEO para tu negocio, PageTraffic es la elección perfecta.
-            </p>
-            <div className="flex items-center justify-center md:justify-start gap-x-4">
-              <Button size="lg" className="rounded-full">
-                Empezar
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+              <Button size="lg" className="rounded-full w-full sm:w-auto">
+                Explora Nuestros Servicios
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="link" className="text-foreground font-semibold">
+              <Button variant="link" size="lg" className="text-foreground font-semibold">
                 <PlayCircle className="mr-2 h-6 w-6 text-primary" />
-                Ver Video
+                Mira Nuestro Trabajo
               </Button>
             </div>
           </div>
