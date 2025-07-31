@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin } from "lucide-react";
 import React from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import "./marquee.css";
 
 const logos = [
@@ -104,22 +106,40 @@ export default function Home() {
       
       <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="marquee">
-            <div className="marquee-content">
-              {[...logos, ...logos].map((logo, index) => (
-                <div key={index} className="mx-6 flex-shrink-0">
-                   <Image
-                      src={logo.src}
-                      alt={logo.alt}
-                      width={70}
-                      height={70}
-                      className="grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
-                      data-ai-hint={logo.hint}
-                    />
-                </div>
-              ))}
-            </div>
-          </div>
+            <Carousel
+                plugins={[
+                    Autoplay({
+                        delay: 2000,
+                        stopOnInteraction: true,
+                    }),
+                ]}
+                opts={{
+                    align: "start",
+                    loop: true,
+                }}
+                className="w-full"
+            >
+                <CarouselContent>
+                    {logos.map((logo, index) => (
+                        <CarouselItem key={index} className="basis-1/3 md:basis-1/4 lg:basis-1/6">
+                            <div className="p-1">
+                                <div className="flex aspect-square items-center justify-center p-6">
+                                    <Image
+                                        src={logo.src}
+                                        alt={logo.alt}
+                                        width={100}
+                                        height={100}
+                                        className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                                        data-ai-hint={logo.hint}
+                                    />
+                                </div>
+                            </div>
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden sm:flex" />
+                <CarouselNext className="hidden sm:flex" />
+            </Carousel>
         </div>
       </section>
 
@@ -297,3 +317,5 @@ export default function Home() {
     </>
   );
 }
+
+    
