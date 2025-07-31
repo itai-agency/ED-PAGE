@@ -9,6 +9,10 @@ import React from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import "./marquee.css";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 const logos = [
   { src: "https://i.imgur.com/8eMNQ9j.png", alt: "TechCorp Logo", hint: "company logo" },
@@ -276,8 +280,60 @@ export default function Home() {
             </div>
         </div>
       </section>
+
+      <section id="contact" className="py-20 md:py-32 bg-secondary">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              ¿Listo para llevar tu marca al <span className="text-primary">siguiente nivel?</span>
+            </h2>
+            <p className="text-foreground/80 text-lg mt-4 mb-8" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+              Hablemos de tu proyecto. Contáctanos y descubre cómo podemos ayudarte a alcanzar tus objetivos.
+            </p>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="rounded-full">
+                  Comienza tu Proyecto
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle style={{ fontFamily: 'Poppins, sans-serif' }}>Hablemos</DialogTitle>
+                  <DialogDescription style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                    Completa el formulario y nos pondremos en contacto contigo a la brevedad.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="name" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      Nombre
+                    </Label>
+                    <Input id="name" placeholder="Tu nombre completo" className="col-span-3" />
+                  </div>
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="email" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      Email
+                    </Label>
+                    <Input id="email" type="email" placeholder="tu.correo@ejemplo.com" className="col-span-3" />
+                  </div>
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="message" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      Mensaje
+                    </Label>
+                    <Textarea id="message" placeholder="Cuéntanos sobre tu proyecto..." className="col-span-3" />
+                  </div>
+                </div>
+                <div className="flex justify-end">
+                    <Button type="submit" className="rounded-full">Enviar Mensaje</Button>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
+        </div>
+      </section>
       
-      <section id="locations" className="py-20 md:py-32 bg-secondary">
+      <section id="locations" className="py-20 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -317,7 +373,3 @@ export default function Home() {
     </>
   );
 }
-
-    
-
-    
