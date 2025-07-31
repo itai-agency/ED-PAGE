@@ -92,8 +92,8 @@ export default function Home() {
                           <Image
                             src={logo.src}
                             alt={logo.alt}
-                            width={90}
-                            height={90}
+                            width={70}
+                            height={70}
                             className="grayscale opacity-60 transition-opacity duration-300 hover:opacity-100 hover:grayscale-0"
                             data-ai-hint={logo.hint}
                           />
