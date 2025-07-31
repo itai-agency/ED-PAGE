@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin } from "lucide-react";
 import React from "react";
 import "./marquee.css";
 
@@ -53,6 +53,15 @@ const services = [
         description: "Construimos y fortalecemos la identidad de tu marca para que destaques en el mercado y conectes con tu público.",
     },
 ]
+
+const locations = [
+  { state: "Ciudad de México", city: "CDMX" },
+  { state: "Jalisco", city: "Guadalajara" },
+  { state: "Nuevo León", city: "Monterrey" },
+  { state: "Quintana Roo", city: "Cancún" },
+  { state: "Baja California", city: "Tijuana" },
+  { state: "Yucatán", city: "Mérida" },
+];
 
 export default function Home() {
 
@@ -247,6 +256,38 @@ export default function Home() {
             </div>
         </div>
       </section>
+      
+      <section id="locations" className="py-20 md:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                    ¿Dónde nos <span className="text-primary">encontramos?</span>
+                </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10">
+                    {locations.map((loc, index) => (
+                        <div key={index} className="text-center md:text-left">
+                            <p className="text-foreground/70">{loc.state}</p>
+                            <p className="font-bold text-primary text-lg hover:underline cursor-pointer">{loc.city}</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="relative">
+                    <Image 
+                        src="https://i.imgur.com/uS1x4Kj.png"
+                        alt="Mapa del mundo con ubicaciones"
+                        width={600}
+                        height={400}
+                        className="w-full h-auto object-contain opacity-70"
+                        data-ai-hint="world map"
+                    />
+                </div>
+            </div>
+        </div>
+      </section>
     </>
   );
 }
+
+    
