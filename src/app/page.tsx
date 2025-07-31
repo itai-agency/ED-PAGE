@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin, Building } from "lucide-react";
 import React from "react";
 import "./marquee.css";
 
@@ -55,12 +55,12 @@ const services = [
 ]
 
 const locations = [
-  { state: "Ciudad de México", city: "CDMX" },
-  { state: "Jalisco", city: "Guadalajara" },
-  { state: "Nuevo León", city: "Monterrey" },
-  { state: "Quintana Roo", city: "Cancún" },
-  { state: "Baja California", city: "Tijuana" },
-  { state: "Yucatán", city: "Mérida" },
+  { state: "Ciudad de México", city: "CDMX", icon: <Building className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" /> },
+  { state: "Jalisco", city: "Guadalajara", icon: <Building className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" /> },
+  { state: "Nuevo León", city: "Monterrey", icon: <Building className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" /> },
+  { state: "Quintana Roo", city: "Cancún", icon: <Building className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" /> },
+  { state: "Baja California", city: "Tijuana", icon: <Building className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" /> },
+  { state: "Yucatán", city: "Mérida", icon: <Building className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" /> },
 ];
 
 export default function Home() {
@@ -272,7 +272,7 @@ export default function Home() {
                     {locations.map((loc, index) => (
                         <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:bg-background hover:shadow-lg hover:border-primary/20 transition-all duration-300 cursor-pointer">
                             <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary transition-colors duration-300">
-                                <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                                {loc.icon}
                             </div>
                             <div>
                                 <p className="font-semibold text-foreground text-lg font-sans">{loc.city}</p>
