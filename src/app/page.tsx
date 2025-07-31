@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="bg-gray-50 py-12 -mt-24">
+      <section className="bg-white py-12 -mt-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="relative w-full overflow-hidden">
             <Carousel
