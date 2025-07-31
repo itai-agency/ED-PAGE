@@ -16,14 +16,14 @@ import React from "react";
 
 
 const logos = [
-  { src: "https://placehold.co/140x60.png", alt: "TechCorp Logo", hint: "company logo" },
-  { src: "https://placehold.co/140x60.png", alt: "Innovate Inc Logo", hint: "company logo" },
-  { src: "https://placehold.co/140x60.png", alt: "Solutions Co Logo", hint: "company logo" },
-  { src: "https://placehold.co/140x60.png", alt: "Digital Wave Logo", hint: "company logo" },
-  { src: "https://placehold.co/140x60.png", alt: "Quantum Leap Logo", hint: "company logo" },
-  { src: "https://placehold.co/140x60.png", alt: "NextGen Ventures Logo", hint: "company logo" },
-  { src: "https://placehold.co/140x60.png", alt: "Apex Industries Logo", hint: "company logo" },
-  { src: "https://placehold.co/140x60.png", alt: "Stellar Group Logo", hint: "company logo" },
+  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "TechCorp Logo", hint: "company logo" },
+  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Innovate Inc Logo", hint: "company logo" },
+  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Solutions Co Logo", hint: "company logo" },
+  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Digital Wave Logo", hint: "company logo" },
+  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Quantum Leap Logo", hint: "company logo" },
+  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "NextGen Ventures Logo", hint: "company logo" },
+  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Apex Industries Logo", hint: "company logo" },
+  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Stellar Group Logo", hint: "company logo" },
 ];
 
 export default function Home() {
@@ -90,8 +90,8 @@ export default function Home() {
                                 <Image
                                     src={logo.src}
                                     alt={logo.alt}
-                                    width={120}
-                                    height={50}
+                                    width={140}
+                                    height={60}
                                     className="grayscale opacity-60 transition-opacity duration-300 hover:opacity-100 hover:grayscale-0"
                                     data-ai-hint={logo.hint}
                                 />
