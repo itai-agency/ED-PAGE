@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, Search, ThumbsUp, CircleDollarSign, Codepen, Mail, BarChart2 } from "lucide-react";
 import React from "react";
 import "./marquee.css";
 
@@ -20,6 +20,39 @@ const logos = [
   { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Visionary Tech Logo", hint: "company logo" },
   { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Future Systems Logo", hint: "company logo" },
 ];
+
+const services = [
+    {
+        icon: <Search className="h-8 w-8" />,
+        title: "SEO y Marketing de Contenidos",
+        description: "Optimizamos tu web para que aparezca en los primeros lugares de búsqueda y creamos contenido que atrae y convierte.",
+    },
+    {
+        icon: <ThumbsUp className="h-8 w-8" />,
+        title: "Gestión de Redes Sociales",
+        description: "Construimos y gestionamos comunidades activas en redes sociales, fortaleciendo la lealtad hacia tu marca.",
+    },
+    {
+        icon: <CircleDollarSign className="h-8 w-8" />,
+        title: "Publicidad de Pago (PPC)",
+        description: "Creamos campañas de publicidad rentables en Google Ads y redes sociales para generar leads y ventas inmediatas.",
+    },
+    {
+        icon: <Codepen className="h-8 w-8" />,
+        title: "Diseño y Desarrollo Web",
+        description: "Diseñamos y desarrollamos sitios web modernos, rápidos y optimizados para la conversión.",
+    },
+    {
+        icon: <Mail className="h-8 w-8" />,
+        title: "Email Marketing",
+        description: "Creamos campañas de email automatizadas que nutren a tus prospectos y fidelizan a tus clientes.",
+    },
+    {
+        icon: <BarChart2 className="h-8 w-8" />,
+        title: "Analítica y Reportes",
+        description: "Medimos cada acción y te entregamos reportes claros para tomar decisiones basadas en datos.",
+    },
+]
 
 export default function Home() {
 
@@ -166,6 +199,29 @@ export default function Home() {
               <p className="text-foreground/70">Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-20 md:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+                <span className="text-primary font-semibold uppercase tracking-wider">Nuestros Servicios</span>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Soluciones Integrales para tu Éxito Digital</h2>
+                <p className="text-foreground/80 text-lg mt-4">
+                    Ofrecemos una gama completa de servicios de marketing digital diseñados para hacer crecer tu negocio y fortalecer tu presencia en línea.
+                </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, index) => (
+                    <div key={index} className="p-8 bg-background/50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                        <div className="p-4 bg-primary text-primary-foreground rounded-full mb-4 inline-block">
+                            {service.icon}
+                        </div>
+                        <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
+                        <p className="text-foreground/70">{service.description}</p>
+                    </div>
+                ))}
+            </div>
         </div>
       </section>
     </>
