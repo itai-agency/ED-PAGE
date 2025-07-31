@@ -186,7 +186,7 @@ export default function Home() {
       <section id="culture" className="relative text-white py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://placehold.co/1920x800.png"
+            src="https://i.imgur.com/gxGxRLi.png"
             alt="Equipo de trabajo colaborando"
             layout="fill"
             objectFit="cover"
