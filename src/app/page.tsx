@@ -263,13 +263,21 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                     ¿Dónde nos <span className="text-primary">encontramos?</span>
                 </h2>
+                <p className="text-foreground/80 text-lg mt-4">
+                    Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
+                </p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {locations.map((loc, index) => (
-                        <div key={index} className="text-center md:text-left">
-                            <p className="text-foreground/70">{loc.state}</p>
-                            <p className="font-bold text-primary text-lg hover:underline cursor-pointer">{loc.city}</p>
+                        <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:border-primary/30 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                            <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary transition-colors duration-300">
+                                <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                            </div>
+                            <div>
+                                <p className="font-bold text-foreground text-lg">{loc.city}</p>
+                                <p className="text-foreground/70">{loc.state}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -279,7 +287,7 @@ export default function Home() {
                         alt="Mapa del mundo con ubicaciones"
                         width={600}
                         height={400}
-                        className="w-full h-auto object-contain opacity-70"
+                        className="w-full h-auto object-contain"
                         data-ai-hint="world map"
                     />
                 </div>
@@ -289,5 +297,3 @@ export default function Home() {
     </>
   );
 }
-
-    
