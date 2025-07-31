@@ -281,6 +281,44 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="locations" className="py-20 md:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    ¿Dónde nos <span className="text-primary">encontramos?</span>
+                </h2>
+                <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                    Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
+                </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {locations.map((loc, index) => (
+                        <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:bg-background hover:shadow-lg hover:border-primary/20 transition-all duration-300 cursor-pointer">
+                            <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary transition-colors duration-300">
+                                <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                            </div>
+                            <div>
+                                <p className="text-foreground text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>{loc.city}</p>
+                                <p className="text-foreground/70" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>{loc.state}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="relative">
+                    <Image 
+                        src="https://imgur.com/nXIwKd5.png"
+                        alt="Mapa del mundo con ubicaciones"
+                        width={600}
+                        height={400}
+                        className="w-full h-auto object-contain"
+                        data-ai-hint="world map"
+                    />
+                </div>
+            </div>
+        </div>
+      </section>
+      
       <section id="contact" className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
@@ -330,44 +368,6 @@ export default function Home() {
               </DialogContent>
             </Dialog>
           </div>
-        </div>
-      </section>
-      
-      <section id="locations" className="py-20 md:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                    ¿Dónde nos <span className="text-primary">encontramos?</span>
-                </h2>
-                <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
-                </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {locations.map((loc, index) => (
-                        <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:bg-background hover:shadow-lg hover:border-primary/20 transition-all duration-300 cursor-pointer">
-                            <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary transition-colors duration-300">
-                                <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-                            </div>
-                            <div>
-                                <p className="text-foreground text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>{loc.city}</p>
-                                <p className="text-foreground/70" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>{loc.state}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="relative">
-                    <Image 
-                        src="https://imgur.com/nXIwKd5.png"
-                        alt="Mapa del mundo con ubicaciones"
-                        width={600}
-                        height={400}
-                        className="w-full h-auto object-contain"
-                        data-ai-hint="world map"
-                    />
-                </div>
-            </div>
         </div>
       </section>
     </>
