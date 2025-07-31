@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import './typewriter.css';
+import '../app/typewriter.css';
 
 interface TypewriterProps {
   text: string;
