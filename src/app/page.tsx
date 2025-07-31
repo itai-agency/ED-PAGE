@@ -74,9 +74,9 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary">
                 Amplifica el Pulso Digital de tu Marca
               </h1>
-              <p className="text-foreground/80 md:text-lg font-sans">Somos una agencia de marketing digital de servicio completo dedicada a elevar la presencia online de tu marca. Desde SEO hasta redes sociales, creamos estrategias basadas en datos que ofrecen resultados reales.</p>
+              <p className="text-foreground/80 md:text-lg font-sans font-normal">Somos una agencia de marketing digital de servicio completo dedicada a elevar la presencia online de tu marca. Desde SEO hasta redes sociales, creamos estrategias basadas en datos que ofrecen resultados reales.</p>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-                <Button size="lg" className="rounded-full w-full sm:w-auto font-sans">
+                <Button size="lg" className="rounded-full w-full sm:w-auto font-sans font-semibold">
                   Explora Nuestros Servicios
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -137,14 +137,14 @@ export default function Home() {
               />
               <div className="absolute -bottom-4 -right-4 bg-primary rounded-xl p-4 text-primary-foreground text-center shadow-lg w-48">
                 <p className="text-4xl font-bold font-serif">+10</p>
-                <p className="text-sm font-sans">Años de Experiencia</p>
+                <p className="text-sm font-sans font-normal">Años de Experiencia</p>
               </div>
             </div>
             <div className="space-y-6">
               <div className="space-y-3">
                 <span className="text-primary font-semibold uppercase tracking-wider font-sans">Sobre Nosotros</span>
                 <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground">Tu Socio Estratégico para el Crecimiento Digital</h2>
-                <p className="text-foreground/80 text-lg font-sans">
+                <p className="text-foreground/80 text-lg font-sans font-normal">
                   En ExpertizDigital, no solo creamos campañas; construimos legados. Somos un equipo de estrategas apasionados, creativos y analistas dedicados a un solo objetivo: hacer que tu marca brille en el saturado mundo digital.
                 </p>
               </div>
@@ -153,21 +153,21 @@ export default function Home() {
                   <CheckCircle className="h-6 w-6 text-primary mt-1 shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground">Innovación Constante</h3>
-                    <p className="text-foreground/70">Nos mantenemos a la vanguardia de las tendencias para ofrecerte siempre las soluciones más efectivas.</p>
+                    <p className="text-foreground/70 font-normal">Nos mantenemos a la vanguardia de las tendencias para ofrecerte siempre las soluciones más efectivas.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground">Resultados Medibles</h3>
-                    <p className="text-foreground/70">Creemos en la transparencia. Cada acción que tomamos está respaldada por datos y orientada a resultados tangibles.</p>
+                    <p className="text-foreground/70 font-normal">Creemos en la transparencia. Cada acción que tomamos está respaldada por datos y orientada a resultados tangibles.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground">Asociación Verdadera</h3>
-                    <p className="text-foreground/70">Consideramos a nuestros clientes como socios. Tu éxito es nuestro éxito.</p>
+                    <p className="text-foreground/70 font-normal">Consideramos a nuestros clientes como socios. Tu éxito es nuestro éxito.</p>
                   </div>
                 </li>
               </ul>
@@ -196,20 +196,20 @@ export default function Home() {
             <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
-                    <Lightbulb className="mr-2 h-5 w-5 text-primary" /> Innovación
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 transition-all duration-300">
+                    <Lightbulb className="mr-2 h-5 w-5" /> Innovación
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
-                    <Users className="mr-2 h-5 w-5 text-primary" /> Colaboración
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 transition-all duration-300">
+                    <Users className="mr-2 h-5 w-5" /> Colaboración
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
-                    <Rocket className="mr-2 h-5 w-5 text-primary" /> Resultados
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 transition-all duration-300">
+                    <Rocket className="mr-2 h-5 w-5" /> Resultados
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
-                    <Sparkles className="mr-2 h-5 w-5 text-primary" /> Creatividad
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 transition-all duration-300">
+                    <Sparkles className="mr-2 h-5 w-5" /> Creatividad
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
-                    <Handshake className="mr-2 h-5 w-5 text-primary" /> Transparencia
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 transition-all duration-300">
+                    <Handshake className="mr-2 h-5 w-5" /> Transparencia
                 </Button>
             </div>
         </div>
@@ -237,7 +237,7 @@ export default function Home() {
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <span className="text-primary font-semibold uppercase tracking-wider font-sans">Nuestros Servicios</span>
                 <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mt-2">Soluciones Integrales para tu Éxito Digital</h2>
-                <p className="text-foreground/80 text-lg font-sans mt-4">
+                <p className="text-foreground/80 text-lg font-sans font-normal mt-4">
                     Ofrecemos una gama completa de servicios de marketing digital diseñados para hacer crecer tu negocio y fortalecer tu presencia en línea.
                 </p>
             </div>
@@ -250,7 +250,7 @@ export default function Home() {
                             </div>
                         </div>
                         <h3 className="text-xl font-bold font-serif text-foreground mb-3">{service.title}</h3>
-                        <p className="text-foreground/70 font-sans">{service.description}</p>
+                        <p className="text-foreground/70 font-sans font-normal">{service.description}</p>
                     </div>
                 ))}
             </div>
@@ -263,20 +263,20 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground">
                     ¿Dónde nos <span className="text-primary">encontramos?</span>
                 </h2>
-                <p className="text-foreground/80 text-lg font-sans mt-4">
+                <p className="text-foreground/80 text-lg font-sans font-normal mt-4">
                     Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {locations.map((loc, index) => (
-                        <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:bg-background hover:shadow-lg transition-all duration-300 cursor-pointer">
+                        <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:bg-background hover:shadow-lg hover:border-primary/20 transition-all duration-300 cursor-pointer">
                             <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary transition-colors duration-300">
                                 <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                             </div>
                             <div>
-                                <p className="font-bold text-foreground text-lg font-sans">{loc.city}</p>
-                                <p className="text-foreground/70 font-sans">{loc.state}</p>
+                                <p className="font-semibold text-foreground text-lg font-sans">{loc.city}</p>
+                                <p className="text-foreground/70 font-sans font-normal">{loc.state}</p>
                             </div>
                         </div>
                     ))}
