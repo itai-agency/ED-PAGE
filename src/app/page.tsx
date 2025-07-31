@@ -187,19 +187,19 @@ export default function Home() {
             <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
                     <Lightbulb className="mr-2 h-5 w-5 text-primary" /> Innovación
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
                     <Users className="mr-2 h-5 w-5 text-primary" /> Colaboración
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
                     <Rocket className="mr-2 h-5 w-5 text-primary" /> Resultados
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
                     <Sparkles className="mr-2 h-5 w-5 text-primary" /> Creatividad
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
                     <Handshake className="mr-2 h-5 w-5 text-primary" /> Transparencia
                 </Button>
             </div>
