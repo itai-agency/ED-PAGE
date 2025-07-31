@@ -54,9 +54,6 @@ export default function Home() {
                 </Button>
               </div>
               <div className="pt-12">
-                <h2 className="text-center md:text-left text-sm font-semibold text-foreground/60 uppercase tracking-wider mb-4">
-                    Con la confianza de las mejores marcas del mundo
-                </h2>
                 <Carousel
                     plugins={[plugin.current]}
                     className="w-full"
