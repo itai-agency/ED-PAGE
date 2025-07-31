@@ -73,7 +73,7 @@ export default function Home() {
                       alt={logo.alt}
                       width={70}
                       height={70}
-                      className="opacity-50 transition-opacity duration-300 hover:opacity-100"
+                      className="grayscale opacity-50 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
                       data-ai-hint={logo.hint}
                     />
                 </div>
