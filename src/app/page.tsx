@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="bg-white">
+      <section className="bg-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 to-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)] pt-16 pb-20 md:pt-0 md:pb-0">
             <div className="space-y-6 text-center md:text-left">
