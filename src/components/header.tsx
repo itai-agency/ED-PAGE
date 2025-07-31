@@ -37,7 +37,7 @@ export function Header() {
                 </Link>
             ))}
             </nav>
-            <Button>Contáctanos</Button>
+            <Button>Escríbenos</Button>
         </div>
 
         <div className="md:hidden">
@@ -76,7 +76,7 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto p-4">
-                    <Button className="w-full">Contáctanos</Button>
+                    <Button className="w-full">Escríbenos</Button>
                 </div>
               </div>
             </SheetContent>
