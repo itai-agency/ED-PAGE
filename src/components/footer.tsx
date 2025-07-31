@@ -56,11 +56,11 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {footerSections.map((section) => (
                     <div key={section.title}>
-                        <h3 className="font-bold text-lg mb-4 text-white">{section.title}</h3>
+                        <h3 className="font-bold text-lg mb-4 text-foreground">{section.title}</h3>
                         <ul className="space-y-3">
                             {section.links.map((link) => (
                                 <li key={link.label}>
-                                    <Link href={link.href} className="text-muted-foreground hover:text-white transition-colors duration-300">
+                                    <Link href={link.href} className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                                         {link.label}
                                     </Link>
                                 </li>
@@ -71,13 +71,13 @@ export function Footer() {
                 <div className="md:col-start-2 lg:col-start-4 lg:flex lg:justify-end">
                     <div className="text-left lg:text-right">
                         <Link href="/" className="flex items-center justify-start lg:justify-end space-x-2 mb-4">
-                            <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto brightness-0 invert" />
-                            <span className="text-2xl font-bold text-white">Expertiz<span className="text-primary">Digital</span></span>
+                            <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
+                            <span className="text-2xl font-bold text-foreground">Expertiz<span className="text-primary">Digital</span></span>
                         </Link>
-                        <h3 className="font-bold text-lg mb-4 mt-8 text-white">Redes sociales</h3>
+                        <h3 className="font-bold text-lg mb-4 mt-8 text-foreground">Redes sociales</h3>
                         <div className="flex items-center justify-start lg:justify-end space-x-4">
                             {socialLinks.map((social, index) => (
-                                <Link key={index} href={social.href} className="text-muted-foreground hover:text-white transition-colors duration-300">
+                                <Link key={index} href={social.href} className="text-muted-foreground hover:text-foreground transition-colors duration-300">
                                     {social.icon}
                                 </Link>
                             ))}
@@ -86,7 +86,7 @@ export function Footer() {
                 </div>
             </div>
         </div>
-      <div className="bg-black/20 py-4">
+      <div className="bg-muted py-4">
         <div className="container mx-auto px-4 md:px-6 text-center text-sm text-muted-foreground">
             <p>
                 &copy; {new Date().getFullYear()} ExpertizDigital. Todos los derechos reservados.

@@ -71,16 +71,16 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
             <div className="space-y-6 text-center md:text-left max-w-xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary">
                 Amplifica el Pulso Digital de tu Marca
               </h1>
-              <p className="text-foreground/80 md:text-lg">Somos una agencia de marketing digital de servicio completo dedicada a elevar la presencia online de tu marca. Desde SEO hasta redes sociales, creamos estrategias basadas en datos que ofrecen resultados reales.</p>
+              <p className="text-foreground/80 md:text-lg font-sans">Somos una agencia de marketing digital de servicio completo dedicada a elevar la presencia online de tu marca. Desde SEO hasta redes sociales, creamos estrategias basadas en datos que ofrecen resultados reales.</p>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-                <Button size="lg" className="rounded-full w-full sm:w-auto">
+                <Button size="lg" className="rounded-full w-full sm:w-auto font-sans">
                   Explora Nuestros Servicios
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="link" size="lg" className="text-foreground font-semibold">
+                <Button variant="link" size="lg" className="text-foreground font-semibold font-sans">
                   <PlayCircle className="mr-2 h-6 w-6 text-primary" />
                   Mira Nuestro Trabajo
                 </Button>
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="py-12">
+      <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4 md:px-6">
           <div className="marquee">
             <div className="marquee-content">
@@ -136,19 +136,19 @@ export default function Home() {
                 data-ai-hint="team collaboration"
               />
               <div className="absolute -bottom-4 -right-4 bg-primary rounded-xl p-4 text-primary-foreground text-center shadow-lg w-48">
-                <p className="text-4xl font-bold">+10</p>
-                <p className="text-sm">Años de Experiencia</p>
+                <p className="text-4xl font-bold font-serif">+10</p>
+                <p className="text-sm font-sans">Años de Experiencia</p>
               </div>
             </div>
             <div className="space-y-6">
               <div className="space-y-3">
-                <span className="text-primary font-semibold uppercase tracking-wider">Sobre Nosotros</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Tu Socio Estratégico para el Crecimiento Digital</h2>
-                <p className="text-foreground/80 text-lg">
+                <span className="text-primary font-semibold uppercase tracking-wider font-sans">Sobre Nosotros</span>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground">Tu Socio Estratégico para el Crecimiento Digital</h2>
+                <p className="text-foreground/80 text-lg font-sans">
                   En ExpertizDigital, no solo creamos campañas; construimos legados. Somos un equipo de estrategas apasionados, creativos y analistas dedicados a un solo objetivo: hacer que tu marca brille en el saturado mundo digital.
                 </p>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-4 font-sans">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 shrink-0" />
                   <div>
@@ -179,7 +179,7 @@ export default function Home() {
       <section id="culture" className="relative text-white py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://i.imgur.com/gxGxRLi.png"
+            src="https://imgur.com/gxGxRLi.png"
             alt="Equipo de trabajo colaborando"
             layout="fill"
             objectFit="cover"
@@ -190,25 +190,25 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold font-serif">
                 Cultura ExpertizDigital
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
                     <Lightbulb className="mr-2 h-5 w-5 text-primary" /> Innovación
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
                     <Users className="mr-2 h-5 w-5 text-primary" /> Colaboración
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
                     <Rocket className="mr-2 h-5 w-5 text-primary" /> Resultados
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
                     <Sparkles className="mr-2 h-5 w-5 text-primary" /> Creatividad
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold font-sans hover:bg-white/20 hover:text-primary backdrop-blur-sm transition-all duration-300">
                     <Handshake className="mr-2 h-5 w-5 text-primary" /> Transparencia
                 </Button>
             </div>
@@ -235,55 +235,55 @@ export default function Home() {
       <section id="services" className="py-20 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-                <span className="text-primary font-semibold uppercase tracking-wider">Nuestros Servicios</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Soluciones Integrales para tu Éxito Digital</h2>
-                <p className="text-foreground/80 text-lg mt-4">
+                <span className="text-primary font-semibold uppercase tracking-wider font-sans">Nuestros Servicios</span>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mt-2">Soluciones Integrales para tu Éxito Digital</h2>
+                <p className="text-foreground/80 text-lg font-sans mt-4">
                     Ofrecemos una gama completa de servicios de marketing digital diseñados para hacer crecer tu negocio y fortalecer tu presencia en línea.
                 </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
-                    <div key={index} className="p-8 bg-card/50 backdrop-blur-sm rounded-xl border border-border/10 shadow-lg hover:border-primary/30 hover:shadow-primary/10 transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-2">
+                    <div key={index} className="p-8 bg-card rounded-xl border border-border/10 shadow-lg hover:border-primary/30 hover:shadow-primary/10 transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-2">
                         <div className="p-4 bg-background border rounded-full mb-6 inline-block transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
                             <div className="transform group-hover:scale-110 transition-transform duration-300">
                                {service.icon}
                             </div>
                         </div>
-                        <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                        <p className="text-foreground/70">{service.description}</p>
+                        <h3 className="text-xl font-bold font-serif text-foreground mb-3">{service.title}</h3>
+                        <p className="text-foreground/70 font-sans">{service.description}</p>
                     </div>
                 ))}
             </div>
         </div>
       </section>
       
-      <section id="locations" className="py-20 md:py-32">
+      <section id="locations" className="py-20 md:py-32 bg-secondary">
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground">
                     ¿Dónde nos <span className="text-primary">encontramos?</span>
                 </h2>
-                <p className="text-foreground/80 text-lg mt-4">
+                <p className="text-foreground/80 text-lg font-sans mt-4">
                     Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {locations.map((loc, index) => (
-                        <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:border-primary/30 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                        <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:bg-background hover:shadow-lg transition-all duration-300 cursor-pointer">
                             <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary transition-colors duration-300">
                                 <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                             </div>
                             <div>
-                                <p className="font-bold text-foreground text-lg">{loc.city}</p>
-                                <p className="text-foreground/70">{loc.state}</p>
+                                <p className="font-bold text-foreground text-lg font-sans">{loc.city}</p>
+                                <p className="text-foreground/70 font-sans">{loc.state}</p>
                             </div>
                         </div>
                     ))}
                 </div>
                 <div className="relative">
                     <Image 
-                        src="https://i.imgur.com/nXIwKd5.png"
+                        src="https://imgur.com/nXIwKd5.png"
                         alt="Mapa del mundo con ubicaciones"
                         width={600}
                         height={400}
