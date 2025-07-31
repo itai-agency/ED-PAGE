@@ -28,7 +28,7 @@ export default function Home() {
       <section className="pt-16 pb-20 md:pt-0 md:pb-0">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
-            <div className="space-y-6 text-center md:text-left">
+            <div className="space-y-6 text-center md:text-left max-w-xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary">
                 Amplifica el Pulso Digital de tu Marca
               </h1>
