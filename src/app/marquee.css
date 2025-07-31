@@ -19,7 +19,7 @@
 .marquee-content {
   display: flex;
   width: 200%;
-  animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .marquee:hover .marquee-content {
