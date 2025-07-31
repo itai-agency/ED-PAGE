@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import React from "react";
 import "./marquee.css";
+import { Typewriter } from "@/components/typewriter";
+import "./typewriter.css";
 
 const logos = [
   { src: "https://i.imgur.com/8eMNQ9j.png", alt: "TechCorp Logo", hint: "company logo" },
@@ -32,9 +34,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary">
                 Amplifica el Pulso Digital de tu Marca
               </h1>
-              <p className="text-foreground/80 md:text-lg">
-                Somos una agencia de marketing digital de servicio completo dedicada a elevar la presencia online de tu marca. Desde SEO hasta redes sociales, creamos estrategias basadas en datos que ofrecen resultados reales.
-              </p>
+              <Typewriter text="Somos una agencia de marketing digital de servicio completo dedicada a elevar la presencia online de tu marca. Desde SEO hasta redes sociales, creamos estrategias basadas en datos que ofrecen resultados reales." />
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
                 <Button size="lg" className="rounded-full w-full sm:w-auto">
                   Explora Nuestros Servicios
