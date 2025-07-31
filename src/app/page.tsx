@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <div className="relative flex justify-center">
                 <Image
-                    src="https://placehold.co/500x600.png"
+                    src="https://i.imgur.com/CmfiXJ4.png"
                     alt="Hombre feliz señalando"
                     width={500}
                     height={600}
