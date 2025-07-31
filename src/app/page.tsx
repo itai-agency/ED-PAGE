@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, Search, ThumbsUp, CircleDollarSign, Codepen, Mail, BarChart2 } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, Search, ThumbsUp, CircleDollarSign, Codepen, Mail, BarChart2, LayoutTemplate, Video, Palette, Award } from "lucide-react";
 import React from "react";
 import "./marquee.css";
 
@@ -23,34 +23,34 @@ const logos = [
 
 const services = [
     {
-        icon: <Search className="h-8 w-8" />,
-        title: "SEO y Marketing de Contenidos",
-        description: "Optimizamos tu web para que aparezca en los primeros lugares de búsqueda y creamos contenido que atrae y convierte.",
+        icon: <Users className="h-8 w-8" />,
+        title: "Redes Sociales",
+        description: "Creamos y gestionamos perfiles en redes sociales para conectar con tu audiencia y fortalecer tu marca.",
+    },
+    {
+        icon: <LayoutTemplate className="h-8 w-8" />,
+        title: "Diseño Web",
+        description: "Diseñamos sitios web atractivos, funcionales y optimizados para una experiencia de usuario excepcional.",
     },
     {
         icon: <ThumbsUp className="h-8 w-8" />,
-        title: "Gestión de Redes Sociales",
-        description: "Construimos y gestionamos comunidades activas en redes sociales, fortaleciendo la lealtad hacia tu marca.",
+        title: "Social Media Management",
+        description: "Gestionamos tus redes sociales de forma estratégica para aumentar el engagement y construir una comunidad leal.",
     },
     {
-        icon: <CircleDollarSign className="h-8 w-8" />,
-        title: "Publicidad de Pago (PPC)",
-        description: "Creamos campañas de publicidad rentables en Google Ads y redes sociales para generar leads y ventas inmediatas.",
+        icon: <Video className="h-8 w-8" />,
+        title: "Creación de Videos Profesionales",
+        description: "Producimos videos de alta calidad que comunican tu mensaje de manera efectiva y atractiva.",
     },
     {
-        icon: <Codepen className="h-8 w-8" />,
-        title: "Diseño y Desarrollo Web",
-        description: "Diseñamos y desarrollamos sitios web modernos, rápidos y optimizados para la conversión.",
+        icon: <Palette className="h-8 w-8" />,
+        title: "Diseño Gráfico",
+        description: "Creamos piezas gráficas impactantes y coherentes con tu identidad de marca para comunicar tus ideas.",
     },
     {
-        icon: <Mail className="h-8 w-8" />,
-        title: "Email Marketing",
-        description: "Creamos campañas de email automatizadas que nutren a tus prospectos y fidelizan a tus clientes.",
-    },
-    {
-        icon: <BarChart2 className="h-8 w-8" />,
-        title: "Analítica y Reportes",
-        description: "Medimos cada acción y te entregamos reportes claros para tomar decisiones basadas en datos.",
+        icon: <Award className="h-8 w-8" />,
+        title: "Branding",
+        description: "Construimos y fortalecemos la identidad de tu marca para que destaques en el mercado y conectes con tu público.",
     },
 ]
 
