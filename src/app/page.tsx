@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake } from "lucide-react";
 import React from "react";
 import "./marquee.css";
 
@@ -55,22 +55,6 @@ const services = [
 ]
 
 export default function Home() {
-  const [activeCultureTab, setActiveCultureTab] = React.useState("Innovación");
-
-  const cultureContent = {
-    "Innovación": {
-      icon: <Lightbulb className="h-10 w-10 text-primary" />,
-      description: "Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia."
-    },
-    "Colaboración": {
-      icon: <Users className="h-10 w-10 text-primary" />,
-      description: "Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados."
-    },
-    "Resultados": {
-      icon: <Rocket className="h-10 w-10 text-primary" />,
-      description: "Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día."
-    }
-  };
 
   return (
     <>
@@ -203,39 +187,21 @@ export default function Home() {
             <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <Button
-                    onClick={() => setActiveCultureTab("Innovación")}
-                    variant={activeCultureTab === "Innovación" ? "default" : "secondary"}
-                    className="rounded-full bg-pink-500 hover:bg-pink-600 text-white"
-                >
-                    Innovación
+                <Button className="rounded-full bg-pink-500 hover:bg-pink-600 text-white font-semibold">
+                    <Lightbulb className="mr-2 h-5 w-5" /> Innovación
                 </Button>
-                <Button
-                    onClick={() => setActiveCultureTab("Colaboración")}
-                    variant={activeCultureTab === "Colaboración" ? "default" : "secondary"}
-                    className="rounded-full bg-blue-500 hover:bg-blue-600"
-                >
-                    Colaboración
+                <Button className="rounded-full bg-blue-500 hover:bg-blue-600 text-white font-semibold">
+                    <Users className="mr-2 h-5 w-5" /> Colaboración
                 </Button>
-                <Button
-                    onClick={() => setActiveCultureTab("Resultados")}
-                    variant={activeCultureTab === "Resultados" ? "default" : "secondary"}
-                    className="rounded-full bg-red-500 hover:bg-red-600"
-                >
-                    Pasión por los Resultados
+                <Button className="rounded-full bg-red-500 hover:bg-red-600 text-white font-semibold">
+                    <Rocket className="mr-2 h-5 w-5" /> Resultados
                 </Button>
-            </div>
-
-            <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-8 rounded-xl">
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4">
-                  {cultureContent[activeCultureTab as keyof typeof cultureContent].icon}
-                </div>
-                <h3 className="text-3xl font-bold mb-4">{activeCultureTab}</h3>
-                <p className="text-white/80 text-lg">
-                  {cultureContent[activeCultureTab as keyof typeof cultureContent].description}
-                </p>
-              </div>
+                <Button className="rounded-full bg-purple-500 hover:bg-purple-600 text-white font-semibold">
+                    <Sparkles className="mr-2 h-5 w-5" /> Creatividad
+                </Button>
+                <Button className="rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold">
+                    <Handshake className="mr-2 h-5 w-5" /> Transparencia
+                </Button>
             </div>
         </div>
         
