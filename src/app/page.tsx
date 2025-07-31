@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket } from "lucide-react";
 import React from "react";
 import "./marquee.css";
 
@@ -129,6 +129,41 @@ export default function Home() {
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="culture" className="bg-white py-20 md:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-primary font-semibold uppercase tracking-wider">Nuestra Cultura</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">La Cultura de ExpertizDigital</h2>
+            <p className="text-foreground/80 text-lg mt-4">
+              Nuestra fuerza reside en nuestra gente. Fomentamos un entorno de colaboración, aprendizaje continuo y pasión por el marketing digital.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-accent rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
+                <Lightbulb className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Innovación</h3>
+              <p className="text-foreground/70">Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia.</p>
+            </div>
+            <div className="text-center p-6 bg-accent rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
+                <Users className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Colaboración</h3>
+              <p className="text-foreground/70">Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados.</p>
+            </div>
+            <div className="text-center p-6 bg-accent rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
+                <Rocket className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Pasión por los Resultados</h3>
+              <p className="text-foreground/70">Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día.</p>
             </div>
           </div>
         </div>
