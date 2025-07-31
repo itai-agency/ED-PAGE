@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-          <span className="text-2xl font-bold">De<span className="text-primary">Mo</span>.</span>
+          <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
@@ -50,7 +50,7 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
                   <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                    <span className="text-2xl font-bold">De<span className="text-primary">Mo</span>.</span>
+                    <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                     <X className="h-6 w-6" />
