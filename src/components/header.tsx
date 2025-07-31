@@ -8,22 +8,22 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
   { href: "#services", label: "Servicios" },
-  { href: "#packages", label: "Paquetes" },
-  { href: "#who-we-are", label: "Quiénes Somos" },
-  { href: "#portfolio", label: "Nuestro Portafolio" },
-  { href: "#about", label: "Sobre Nosotros" },
+  { href: "#portfolio", label: "Portafolio" },
+  { href: "#about", label: "Nosotros" },
+  { href: "#contact", label: "Contacto" },
 ];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+    <header className="sticky top-0 z-50 w-full border-b bg-background">
+      <div className="container flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
           <span className="text-2xl font-bold">De<span className="text-primary">Mo</span>.</span>
         </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        
+        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -34,21 +34,19 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end">
-          <Button className="hidden md:inline-flex rounded-full" asChild>
-            <Link href="#contacts">Contactos</Link>
-          </Button>
+
+        <div className="md:hidden">
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
-                className="md:hidden"
+                size="icon"
                 aria-label="Toggle menu"
               >
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="p-0">
+            <SheetContent side="left" className="w-full max-w-xs p-0">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
                   <Link href="/" onClick={() => setIsMenuOpen(false)}>
@@ -64,18 +62,13 @@ export function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-lg w-full p-2 rounded-md font-medium transition-colors hover:text-primary hover:bg-accent"
+                      className="text-lg w-full p-3 rounded-md font-medium transition-colors hover:text-primary hover:bg-accent"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {link.label}
                     </Link>
                   ))}
                 </nav>
-                 <div className="mt-auto p-4 border-t">
-                    <Button asChild className="w-full rounded-full">
-                     <Link href="#contacts" onClick={() => setIsMenuOpen(false)}>Contactos</Link>
-                  </Button>
-                 </div>
               </div>
             </SheetContent>
           </Sheet>
