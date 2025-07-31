@@ -55,6 +55,22 @@ const services = [
 ]
 
 export default function Home() {
+  const [activeCultureTab, setActiveCultureTab] = React.useState("Innovación");
+
+  const cultureContent = {
+    "Innovación": {
+      icon: <Lightbulb className="h-10 w-10 text-primary" />,
+      description: "Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia."
+    },
+    "Colaboración": {
+      icon: <Users className="h-10 w-10 text-primary" />,
+      description: "Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados."
+    },
+    "Resultados": {
+      icon: <Rocket className="h-10 w-10 text-primary" />,
+      description: "Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día."
+    }
+  };
 
   return (
     <>
@@ -167,41 +183,77 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="culture" className="py-20 md:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-primary font-semibold uppercase tracking-wider">Nuestra Cultura</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">La Cultura de ExpertizDigital</h2>
-            <p className="text-foreground/80 text-lg mt-4">
-              Nuestra fuerza reside en nuestra gente. Fomentamos un entorno de colaboración, aprendizaje continuo y pasión por el marketing digital.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-2">
-              <Image src="https://placehold.co/600x400.png" alt="Innovación" width={600} height={400} className="rounded-lg mb-6 w-full object-cover aspect-[3/2]" data-ai-hint="innovation abstract" />
-              <div className="mb-4">
-                  <Lightbulb className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Innovación</h3>
-              <p className="text-foreground/80">Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia.</p>
+      <section id="culture" className="relative text-white py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://placehold.co/1920x800.png"
+            alt="Equipo de trabajo colaborando"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
+            data-ai-hint="teamwork collaboration"
+          />
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+        </div>
+
+        <div className="relative z-20 container mx-auto px-4 md:px-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold">
+                Cultura ExpertizDigital
+            </h2>
+            <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <Button
+                    onClick={() => setActiveCultureTab("Innovación")}
+                    variant={activeCultureTab === "Innovación" ? "default" : "secondary"}
+                    className="rounded-full bg-pink-500 hover:bg-pink-600 text-white"
+                >
+                    Innovación
+                </Button>
+                <Button
+                    onClick={() => setActiveCultureTab("Colaboración")}
+                    variant={activeCultureTab === "Colaboración" ? "default" : "secondary"}
+                    className="rounded-full bg-blue-500 hover:bg-blue-600"
+                >
+                    Colaboración
+                </Button>
+                <Button
+                    onClick={() => setActiveCultureTab("Resultados")}
+                    variant={activeCultureTab === "Resultados" ? "default" : "secondary"}
+                    className="rounded-full bg-red-500 hover:bg-red-600"
+                >
+                    Pasión por los Resultados
+                </Button>
             </div>
-            <div className="bg-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-2">
-              <Image src="https://placehold.co/600x400.png" alt="Colaboración" width={600} height={400} className="rounded-lg mb-6 w-full object-cover aspect-[3/2]" data-ai-hint="teamwork collaboration" />
-              <div className="mb-4">
-                  <Users className="h-10 w-10 text-primary" />
+
+            <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-sm p-8 rounded-xl">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-4">
+                  {cultureContent[activeCultureTab as keyof typeof cultureContent].icon}
+                </div>
+                <h3 className="text-3xl font-bold mb-4">{activeCultureTab}</h3>
+                <p className="text-white/80 text-lg">
+                  {cultureContent[activeCultureTab as keyof typeof cultureContent].description}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Colaboración</h3>
-              <p className="text-foreground/80">Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados.</p>
             </div>
-            <div className="bg-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-2">
-              <Image src="https://placehold.co/600x400.png" alt="Pasión por los Resultados" width={600} height={400} className="rounded-lg mb-6 w-full object-cover aspect-[3/2]" data-ai-hint="rocket success" />
-              <div className="mb-4">
-                  <Rocket className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Pasión por los Resultados</h3>
-              <p className="text-foreground/80">Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día.</p>
-            </div>
-          </div>
+        </div>
+        
+        <div
+          className="absolute bottom-0 left-0 w-full h-20 bg-transparent"
+          style={{
+            background: 'linear-gradient(to top, hsl(var(--background)), transparent)',
+            transform: 'translateY(1px)'
+          }}
+        ></div>
+        <div
+          className="absolute bottom-0 left-0 w-full overflow-hidden leading-none"
+          style={{ transform: 'translateY(1px)' }}
+        >
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[100px] md:h-[150px]">
+            <path d="M1200 120L0 120 0 0 1200 0 1200 120z" className="fill-transparent"></path>
+            <path d="M0,0 Q300,100 600,0 T1200,0 L1200,120 L0,120 Z" className="fill-background"></path>
+          </svg>
         </div>
       </section>
 
@@ -232,5 +284,3 @@ export default function Home() {
     </>
   );
 }
-
-    
