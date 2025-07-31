@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle } from "lucide-react";
 import React from "react";
 import "./marquee.css";
 
@@ -27,7 +27,7 @@ export default function Home() {
     <>
       <section className="bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem-6rem)] pt-16 pb-20 md:pt-0 md:pb-0">
+          <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)] pt-16 pb-20 md:pt-0 md:pb-0">
             <div className="space-y-6 text-center md:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary">
                 Amplifica el Pulso Digital de tu Marca
@@ -76,6 +76,59 @@ export default function Home() {
                     />
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="bg-accent py-20 md:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="relative">
+              <Image
+                src="https://placehold.co/600x600.png"
+                alt="Equipo de ExpertizDigital colaborando"
+                width={600}
+                height={600}
+                className="rounded-xl shadow-2xl object-cover"
+                data-ai-hint="team collaboration"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-primary rounded-xl p-4 text-primary-foreground text-center shadow-lg w-48">
+                <p className="text-4xl font-bold">+10</p>
+                <p className="text-sm">Años de Experiencia</p>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <span className="text-primary font-semibold uppercase tracking-wider">Sobre Nosotros</span>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Tu Socio Estratégico para el Crecimiento Digital</h2>
+                <p className="text-foreground/80 text-lg">
+                  En ExpertizDigital, no solo creamos campañas; construimos legados. Somos un equipo de estrategas apasionados, creativos y analistas dedicados a un solo objetivo: hacer que tu marca brille en el saturado mundo digital.
+                </p>
+              </div>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-foreground">Innovación Constante</h3>
+                    <p className="text-foreground/70">Nos mantenemos a la vanguardia de las tendencias para ofrecerte siempre las soluciones más efectivas.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-foreground">Resultados Medibles</h3>
+                    <p className="text-foreground/70">Creemos en la transparencia. Cada acción que tomamos está respaldada por datos y orientada a resultados tangibles.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-foreground">Asociación Verdadera</h3>
+                    <p className="text-foreground/70">Consideramos a nuestros clientes como socios. Tu éxito es nuestro éxito.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
