@@ -19,13 +19,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-          <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
-          <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
-        </Link>
-        
-        <div className="hidden md:flex items-center space-x-8">
-            <nav className="flex items-center space-x-8 text-sm font-medium">
+        <div className="flex items-center gap-10">
+            <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+            <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
+            <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
+            </Link>
+            
+            <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
             {navLinks.map((link) => (
                 <Link
                 key={link.href}
@@ -37,7 +37,10 @@ export function Header() {
                 </Link>
             ))}
             </nav>
-            <Button>Escríbenos</Button>
+        </div>
+        
+        <div className="hidden md:flex items-center">
+            <Button className="rounded-full">Escríbenos</Button>
         </div>
 
         <div className="md:hidden">
@@ -76,7 +79,7 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto p-4">
-                    <Button className="w-full">Escríbenos</Button>
+                    <Button className="w-full rounded-full">Escríbenos</Button>
                 </div>
               </div>
             </SheetContent>
