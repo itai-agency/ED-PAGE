@@ -24,17 +24,20 @@ export function Header() {
           <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="transition-colors hover:text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden md:flex items-center space-x-8">
+            <nav className="flex items-center space-x-8 text-sm font-medium">
+            {navLinks.map((link) => (
+                <Link
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-primary"
+                >
+                {link.label}
+                </Link>
+            ))}
+            </nav>
+            <Button>Contáctanos</Button>
+        </div>
 
         <div className="md:hidden">
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -71,6 +74,9 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
+                <div className="mt-auto p-4">
+                    <Button className="w-full">Contáctanos</Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
