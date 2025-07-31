@@ -9,7 +9,7 @@ export default function Home() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)] pt-16 pb-20 md:pt-0 md:pb-0">
           <div className="space-y-6 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight transition-colors duration-300 hover:text-primary">
               Amplifica el Pulso Digital de tu Marca
             </h1>
             <p className="text-foreground/80 md:text-lg">
