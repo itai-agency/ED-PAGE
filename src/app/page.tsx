@@ -25,9 +25,9 @@ export default function Home() {
 
   return (
     <>
-      <section className="bg-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 to-white">
+      <section className="pt-16 pb-20 md:pt-0 md:pb-0">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)] pt-16 pb-20 md:pt-0 md:pb-0">
+          <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
             <div className="space-y-6 text-center md:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary">
                 Amplifica el Pulso Digital de tu Marca
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="bg-white py-12">
+      <section className="py-12">
         <div className="container mx-auto px-4 md:px-6">
           <div className="marquee">
             <div className="marquee-content">
@@ -81,7 +81,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="bg-accent py-20 md:py-32">
+      <section id="about" className="py-20 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="culture" className="bg-white py-20 md:py-32">
+      <section id="culture" className="py-20 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-primary font-semibold uppercase tracking-wider">Nuestra Cultura</span>
@@ -144,21 +144,21 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-accent rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="text-center p-6 bg-background/50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                 <Lightbulb className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Innovación</h3>
               <p className="text-foreground/70">Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia.</p>
             </div>
-            <div className="text-center p-6 bg-accent rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="text-center p-6 bg-background/50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                 <Users className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Colaboración</h3>
               <p className="text-foreground/70">Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados.</p>
             </div>
-            <div className="text-center p-6 bg-accent rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="text-center p-6 bg-background/50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
                 <Rocket className="h-8 w-8" />
               </div>
