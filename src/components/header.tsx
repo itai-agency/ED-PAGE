@@ -19,25 +19,23 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-10">
-            <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-            <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
-            <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
+        <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+          <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
+          <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
+        </Link>
+        
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="relative group transition-colors hover:text-primary"
+            >
+              <span>{link.label}</span>
+              <span className="absolute bottom-[-2px] left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
             </Link>
-            
-            <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
-            {navLinks.map((link) => (
-                <Link
-                key={link.href}
-                href={link.href}
-                className="relative group transition-colors hover:text-primary"
-                >
-                <span>{link.label}</span>
-                <span className="absolute bottom-[-2px] left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
-                </Link>
-            ))}
-            </nav>
-        </div>
+          ))}
+        </nav>
         
         <div className="hidden md:flex items-center">
             <Button className="rounded-full">Escríbenos</Button>
