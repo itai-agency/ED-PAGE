@@ -105,11 +105,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      
-      <section className="py-12 bg-secondary">
-        <div className="container mx-auto px-4 md:px-6">
+          <div className="py-12">
             <Carousel
                 plugins={[
                     Autoplay({
@@ -131,8 +127,8 @@ export default function Home() {
                                     <Image
                                         src={logo.src}
                                         alt={logo.alt}
-                                        width={100}
-                                        height={100}
+                                        width={70}
+                                        height={70}
                                         className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
                                         data-ai-hint={logo.hint}
                                     />
@@ -144,6 +140,7 @@ export default function Home() {
                 <CarouselPrevious className="hidden sm:flex" />
                 <CarouselNext className="hidden sm:flex" />
             </Carousel>
+        </div>
         </div>
       </section>
 
