@@ -53,6 +53,42 @@ export default function Home() {
                   Mira Nuestro Trabajo
                 </Button>
               </div>
+              <div className="pt-12">
+                <h2 className="text-center md:text-left text-sm font-semibold text-foreground/60 uppercase tracking-wider mb-4">
+                    Con la confianza de las mejores marcas del mundo
+                </h2>
+                <Carousel
+                    plugins={[plugin.current]}
+                    className="w-full"
+                    opts={{
+                    align: "start",
+                    loop: true,
+                    }}
+                    onMouseEnter={plugin.current.stop}
+                    onMouseLeave={plugin.current.reset}
+                >
+                    <CarouselContent className="-ml-2">
+                    {logos.map((logo, index) => (
+                        <CarouselItem key={index} className="basis-1/3 md:basis-1/4 pl-2">
+                            <div className="p-1">
+                                <Card className="bg-transparent border-none shadow-none">
+                                <CardContent className="flex aspect-video items-center justify-center p-1">
+                                    <Image
+                                        src={logo.src}
+                                        alt={logo.alt}
+                                        width={120}
+                                        height={50}
+                                        className="grayscale opacity-60 transition-opacity duration-300 hover:opacity-100 hover:grayscale-0"
+                                        data-ai-hint={logo.hint}
+                                    />
+                                </CardContent>
+                                </Card>
+                            </div>
+                        </CarouselItem>
+                    ))}
+                    </CarouselContent>
+                </Carousel>
+              </div>
             </div>
             <div className="relative mt-12 md:mt-0">
               <div className="absolute inset-0 flex items-center justify-center">
@@ -84,44 +120,6 @@ export default function Home() {
           </svg>
         </div>
       </div>
-      <section className="bg-background py-12 md:py-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-center text-sm font-semibold text-foreground/60 uppercase tracking-wider mb-8">
-            Con la confianza de las mejores marcas del mundo
-          </h2>
-          <Carousel
-            plugins={[plugin.current]}
-            className="w-full"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-          >
-            <CarouselContent>
-              {logos.map((logo, index) => (
-                <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/5">
-                  <div className="p-4">
-                    <Card className="bg-transparent border-none shadow-none">
-                      <CardContent className="flex aspect-video items-center justify-center p-2">
-                         <Image
-                            src={logo.src}
-                            alt={logo.alt}
-                            width={140}
-                            height={60}
-                            className="grayscale opacity-60 transition-opacity duration-300 hover:opacity-100 hover:grayscale-0"
-                            data-ai-hint={logo.hint}
-                          />
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
-      </section>
     </>
   );
 }
