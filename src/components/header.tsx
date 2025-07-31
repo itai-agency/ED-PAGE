@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#packages", label: "Packages" },
-  { href: "#who-we-are", label: "Who We Are" },
-  { href: "#portfolio", label: "Our Portfolio" },
-  { href: "#about", label: "About Us" },
+  { href: "#services", label: "Servicios" },
+  { href: "#packages", label: "Paquetes" },
+  { href: "#who-we-are", label: "Quiénes Somos" },
+  { href: "#portfolio", label: "Nuestro Portafolio" },
+  { href: "#about", label: "Sobre Nosotros" },
 ];
 
 export function Header() {
@@ -28,8 +28,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-primary data-[active=true]:text-primary data-[active=true]:underline data-[active=true]:underline-offset-4"
-              data-active={link.href === '#services'}
+              className="transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
@@ -37,7 +36,7 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end">
           <Button className="hidden md:inline-flex rounded-full" asChild>
-            <Link href="#contacts">Contacts</Link>
+            <Link href="#contacts">Contactos</Link>
           </Button>
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
@@ -57,7 +56,7 @@ export function Header() {
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                     <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
+                    <span className="sr-only">Cerrar menú</span>
                   </Button>
                 </div>
                 <nav className="flex flex-col items-start space-y-2 p-4">
@@ -74,7 +73,7 @@ export function Header() {
                 </nav>
                  <div className="mt-auto p-4 border-t">
                     <Button asChild className="w-full rounded-full">
-                     <Link href="#contacts" onClick={() => setIsMenuOpen(false)}>Contacts</Link>
+                     <Link href="#contacts" onClick={() => setIsMenuOpen(false)}>Contactos</Link>
                   </Button>
                  </div>
               </div>

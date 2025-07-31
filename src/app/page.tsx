@@ -10,21 +10,21 @@ export default function Home() {
         <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)] pt-16 pb-20 md:pt-0 md:pb-0">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              BEST <span className="text-primary">MARKETING</span> COMPANY.
+              LA MEJOR <span className="text-primary">COMPAÑÍA DE MARKETING</span>.
             </h1>
             <p className="text-lg md:text-xl font-medium">
-              #1 MARKETING Services Agency in USA & UK
+              #1 Agencia de Servicios de Marketing en EE.UU. y Reino Unido
             </p>
             <p className="text-foreground/80">
-              If you're looking for the best SEO company for your business, PageTraffic is the perfect choice.
+              Si estás buscando la mejor compañía de SEO para tu negocio, PageTraffic es la elección perfecta.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-x-4">
               <Button size="lg" className="rounded-full">
-                Get start
+                Empezar
               </Button>
               <Button variant="link" className="text-foreground font-semibold">
                 <PlayCircle className="mr-2 h-6 w-6 text-primary" />
-                Watch Video
+                Ver Video
               </Button>
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function Home() {
             <div className="relative flex justify-center">
                 <Image
                     src="https://placehold.co/500x600.png"
-                    alt="Happy man pointing"
+                    alt="Hombre feliz señalando"
                     width={500}
                     height={600}
                     className="object-contain"
