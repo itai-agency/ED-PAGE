@@ -56,7 +56,7 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {footerSections.map((section) => (
                     <div key={section.title}>
-                        <h3 className="font-bold text-lg mb-4 text-foreground">{section.title}</h3>
+                        <h3 className="font-bold text-lg mb-4 text-primary">{section.title}</h3>
                         <ul className="space-y-3">
                             {section.links.map((link) => (
                                 <li key={link.label}>
@@ -74,10 +74,10 @@ export function Footer() {
                             <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
                             <span className="text-2xl font-bold text-foreground">Expertiz<span className="text-primary">Digital</span></span>
                         </Link>
-                        <h3 className="font-bold text-lg mb-4 mt-8 text-foreground">Redes sociales</h3>
+                        <h3 className="font-bold text-lg mb-4 mt-8 text-primary">Redes sociales</h3>
                         <div className="flex items-center justify-start lg:justify-end space-x-4">
                             {socialLinks.map((social, index) => (
-                                <Link key={index} href={social.href} className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                                <Link key={index} href={social.href} className="text-primary hover:text-primary/80 transition-colors duration-300">
                                     {social.icon}
                                 </Link>
                             ))}
