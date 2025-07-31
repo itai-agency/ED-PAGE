@@ -187,19 +187,19 @@ export default function Home() {
             <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:text-primary backdrop-blur-sm transition-colors duration-300">
                     <Lightbulb className="mr-2 h-5 w-5 text-primary" /> Innovación
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:text-primary backdrop-blur-sm transition-colors duration-300">
                     <Users className="mr-2 h-5 w-5 text-primary" /> Colaboración
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:text-primary backdrop-blur-sm transition-colors duration-300">
                     <Rocket className="mr-2 h-5 w-5 text-primary" /> Resultados
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:text-primary backdrop-blur-sm transition-colors duration-300">
                     <Sparkles className="mr-2 h-5 w-5 text-primary" /> Creatividad
                 </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-primary backdrop-blur-sm">
+                <Button className="rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:text-primary backdrop-blur-sm transition-colors duration-300">
                     <Handshake className="mr-2 h-5 w-5 text-primary" /> Transparencia
                 </Button>
             </div>
