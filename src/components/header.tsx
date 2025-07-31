@@ -7,10 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
+  { href: "#services", label: "Services" },
+  { href: "#packages", label: "Packages" },
+  { href: "#who-we-are", label: "Who We Are" },
+  { href: "#portfolio", label: "Our Portfolio" },
   { href: "#about", label: "About Us" },
-  { href: "#services", label: "Service" },
-  { href: "#clients", label: "Clients" },
 ];
 
 export function Header() {
@@ -19,23 +20,24 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="#home" className="mr-6 flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-          <span className="font-bold font-headline text-xl">Elegant Entry</span>
+        <Link href="/" className="mr-6 flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+          <span className="text-2xl font-bold">De<span className="text-primary">Mo</span>.</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-primary"
+              className="transition-colors hover:text-primary data-[active=true]:text-primary data-[active=true]:underline data-[active=true]:underline-offset-4"
+              data-active={link.href === '#services'}
             >
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end">
-          <Button className="hidden md:inline-flex" asChild>
-            <Link href="#contact">Contact Us</Link>
+          <Button className="hidden md:inline-flex rounded-full" asChild>
+            <Link href="#contacts">Contacts</Link>
           </Button>
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
@@ -50,8 +52,8 @@ export function Header() {
             <SheetContent side="left" className="p-0">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
-                  <Link href="#home" onClick={() => setIsMenuOpen(false)}>
-                    <span className="font-bold font-headline text-xl">Elegant Entry</span>
+                  <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                    <span className="text-2xl font-bold">De<span className="text-primary">Mo</span>.</span>
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                     <X className="h-6 w-6" />
@@ -71,8 +73,8 @@ export function Header() {
                   ))}
                 </nav>
                  <div className="mt-auto p-4 border-t">
-                    <Button asChild className="w-full">
-                     <Link href="#contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+                    <Button asChild className="w-full rounded-full">
+                     <Link href="#contacts" onClick={() => setIsMenuOpen(false)}>Contacts</Link>
                   </Button>
                  </div>
               </div>
