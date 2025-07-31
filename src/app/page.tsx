@@ -275,7 +275,7 @@ export default function Home() {
                 </div>
                 <div className="relative">
                     <Image 
-                        src="https://i.imgur.com/uS1x4Kj.png"
+                        src="https://i.imgur.com/nXIwKd5.png"
                         alt="Mapa del mundo con ubicaciones"
                         width={600}
                         height={400}
