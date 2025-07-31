@@ -73,7 +73,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="pt-16 pb-20 md:pt-0 md:pb-0">
+      <section className="pt-16 pb-12 md:pt-0">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
             <div className="space-y-6 text-center md:text-left max-w-xl mx-auto">
@@ -106,40 +106,22 @@ export default function Home() {
             </div>
           </div>
           <div className="py-12">
-            <Carousel
-                plugins={[
-                    Autoplay({
-                        delay: 2000,
-                        stopOnInteraction: true,
-                    }),
-                ]}
-                opts={{
-                    align: "start",
-                    loop: true,
-                }}
-                className="w-full"
-            >
-                <CarouselContent>
-                    {logos.map((logo, index) => (
-                        <CarouselItem key={index} className="basis-1/3 md:basis-1/4 lg:basis-1/6">
-                            <div className="p-1">
-                                <div className="flex aspect-square items-center justify-center p-6">
-                                    <Image
-                                        src={logo.src}
-                                        alt={logo.alt}
-                                        width={70}
-                                        height={70}
-                                        className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
-                                        data-ai-hint={logo.hint}
-                                    />
-                                </div>
-                            </div>
-                        </CarouselItem>
+            <div className="marquee">
+                <div className="marquee-content">
+                    {[...logos, ...logos].map((logo, index) => (
+                        <div key={index} className="flex-shrink-0 mx-8">
+                            <Image
+                                src={logo.src}
+                                alt={logo.alt}
+                                width={70}
+                                height={70}
+                                className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                                data-ai-hint={logo.hint}
+                            />
+                        </div>
                     ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex" />
-                <CarouselNext className="hidden sm:flex" />
-            </Carousel>
+                </div>
+            </div>
         </div>
         </div>
       </section>
