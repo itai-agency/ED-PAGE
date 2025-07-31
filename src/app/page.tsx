@@ -23,32 +23,32 @@ const logos = [
 
 const services = [
     {
-        icon: <Users className="h-8 w-8" />,
+        icon: <Users className="h-8 w-8 text-primary" />,
         title: "Redes Sociales",
         description: "Creamos y gestionamos perfiles en redes sociales para conectar con tu audiencia y fortalecer tu marca.",
     },
     {
-        icon: <LayoutTemplate className="h-8 w-8" />,
+        icon: <LayoutTemplate className="h-8 w-8 text-primary" />,
         title: "Diseño Web",
         description: "Diseñamos sitios web atractivos, funcionales y optimizados para una experiencia de usuario excepcional.",
     },
     {
-        icon: <Users className="h-8 w-8" />,
+        icon: <Users className="h-8 w-8 text-primary" />,
         title: "Social Media Management",
         description: "Gestionamos tus redes sociales de forma estratégica para aumentar el engagement y construir una comunidad leal.",
     },
     {
-        icon: <Video className="h-8 w-8" />,
+        icon: <Video className="h-8 w-8 text-primary" />,
         title: "Creación de Videos Profesionales",
         description: "Producimos videos de alta calidad que comunican tu mensaje de manera efectiva y atractiva.",
     },
     {
-        icon: <Palette className="h-8 w-8" />,
+        icon: <Palette className="h-8 w-8 text-primary" />,
         title: "Diseño Gráfico",
         description: "Creamos piezas gráficas impactantes y coherentes con tu identidad de marca para comunicar tus ideas.",
     },
     {
-        icon: <Award className="h-8 w-8" />,
+        icon: <Award className="h-8 w-8 text-primary" />,
         title: "Branding",
         description: "Construimos y fortalecemos la identidad de tu marca para que destaques en el mercado y conectes con tu público.",
     },
@@ -177,35 +177,29 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="relative group overflow-hidden rounded-xl">
-              <Image src="https://placehold.co/600x400.png" alt="Innovación" width={600} height={400} className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" data-ai-hint="innovation abstract" />
-              <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
-                <div className="mb-4">
-                    <Lightbulb className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Innovación</h3>
-                <p className="text-white/80">Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia.</p>
+            <div className="bg-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-2">
+              <Image src="https://placehold.co/600x400.png" alt="Innovación" width={600} height={400} className="rounded-lg mb-6 w-full object-cover aspect-[3/2]" data-ai-hint="innovation abstract" />
+              <div className="mb-4">
+                  <Lightbulb className="h-10 w-10 text-primary" />
               </div>
+              <h3 className="text-2xl font-bold text-foreground mb-2">Innovación</h3>
+              <p className="text-foreground/80">Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia.</p>
             </div>
-            <div className="relative group overflow-hidden rounded-xl">
-              <Image src="https://placehold.co/600x400.png" alt="Colaboración" width={600} height={400} className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" data-ai-hint="teamwork collaboration" />
-              <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
-                 <div className="mb-4">
-                    <Users className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Colaboración</h3>
-                <p className="text-white/80">Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados.</p>
+            <div className="bg-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-2">
+              <Image src="https://placehold.co/600x400.png" alt="Colaboración" width={600} height={400} className="rounded-lg mb-6 w-full object-cover aspect-[3/2]" data-ai-hint="teamwork collaboration" />
+              <div className="mb-4">
+                  <Users className="h-10 w-10 text-primary" />
               </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Colaboración</h3>
+              <p className="text-foreground/80">Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados.</p>
             </div>
-            <div className="relative group overflow-hidden rounded-xl">
-              <Image src="https://placehold.co/600x400.png" alt="Pasión por los Resultados" width={600} height={400} className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" data-ai-hint="rocket success" />
-              <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
-                <div className="mb-4">
-                    <Rocket className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Pasión por los Resultados</h3>
-                <p className="text-white/80">Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día.</p>
+            <div className="bg-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-2">
+              <Image src="https://placehold.co/600x400.png" alt="Pasión por los Resultados" width={600} height={400} className="rounded-lg mb-6 w-full object-cover aspect-[3/2]" data-ai-hint="rocket success" />
+              <div className="mb-4">
+                  <Rocket className="h-10 w-10 text-primary" />
               </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Pasión por los Resultados</h3>
+              <p className="text-foreground/80">Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día.</p>
             </div>
           </div>
         </div>
@@ -222,9 +216,9 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
-                    <div key={index} className="p-8 bg-background/80 backdrop-blur-sm rounded-xl border border-white/10 shadow-lg hover:border-primary/30 hover:shadow-primary/10 transition-all duration-300 flex flex-col items-center text-center group">
+                    <div key={index} className="p-8 bg-card/50 backdrop-blur-sm rounded-xl border border-border/10 shadow-lg hover:border-primary/30 hover:shadow-primary/10 transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-2">
                         <div className="p-4 bg-background border rounded-full mb-6 inline-block transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                            <div className="text-primary transform group-hover:scale-110 transition-transform duration-300">
+                            <div className="transform group-hover:scale-110 transition-transform duration-300">
                                {service.icon}
                             </div>
                         </div>
@@ -238,3 +232,5 @@ export default function Home() {
     </>
   );
 }
+
+    
