@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, Search, ThumbsUp, CircleDollarSign, Codepen, Mail, BarChart2, LayoutTemplate, Video, Palette, Award } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award } from "lucide-react";
 import React from "react";
 import "./marquee.css";
 
@@ -33,7 +33,7 @@ const services = [
         description: "Diseñamos sitios web atractivos, funcionales y optimizados para una experiencia de usuario excepcional.",
     },
     {
-        icon: <ThumbsUp className="h-8 w-8" />,
+        icon: <Users className="h-8 w-8" />,
         title: "Social Media Management",
         description: "Gestionamos tus redes sociales de forma estratégica para aumentar el engagement y construir una comunidad leal.",
     },
@@ -177,26 +177,35 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-background/50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
-                <Lightbulb className="h-8 w-8" />
+            <div className="relative group overflow-hidden rounded-xl">
+              <Image src="https://placehold.co/600x400.png" alt="Innovación" width={600} height={400} className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" data-ai-hint="innovation abstract" />
+              <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
+                <div className="mb-4">
+                    <Lightbulb className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Innovación</h3>
+                <p className="text-white/80">Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia.</p>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Innovación</h3>
-              <p className="text-foreground/70">Buscamos constantemente nuevas ideas y tecnologías para mantener a nuestros clientes a la vanguardia.</p>
             </div>
-            <div className="text-center p-6 bg-background/50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
-                <Users className="h-8 w-8" />
+            <div className="relative group overflow-hidden rounded-xl">
+              <Image src="https://placehold.co/600x400.png" alt="Colaboración" width={600} height={400} className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" data-ai-hint="teamwork collaboration" />
+              <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
+                 <div className="mb-4">
+                    <Users className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Colaboración</h3>
+                <p className="text-white/80">Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados.</p>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Colaboración</h3>
-              <p className="text-foreground/70">Trabajamos en equipo, compartiendo conocimientos y habilidades para lograr los mejores resultados.</p>
             </div>
-            <div className="text-center p-6 bg-background/50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div className="inline-block p-4 bg-primary text-primary-foreground rounded-full mb-4">
-                <Rocket className="h-8 w-8" />
+            <div className="relative group overflow-hidden rounded-xl">
+              <Image src="https://placehold.co/600x400.png" alt="Pasión por los Resultados" width={600} height={400} className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110" data-ai-hint="rocket success" />
+              <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
+                <div className="mb-4">
+                    <Rocket className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Pasión por los Resultados</h3>
+                <p className="text-white/80">Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día.</p>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Pasión por los Resultados</h3>
-              <p className="text-foreground/70">Nos apasiona ver crecer a nuestros clientes. Su éxito es el motor que nos impulsa cada día.</p>
             </div>
           </div>
         </div>
