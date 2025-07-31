@@ -88,12 +88,12 @@ export default function Home() {
                   <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/6 pl-2">
                     <div className="p-1">
                       <Card className="bg-transparent border-none shadow-none">
-                        <CardContent className="flex aspect-video items-center justify-center p-1">
+                        <CardContent className="flex aspect-square items-center justify-center p-1">
                           <Image
                             src={logo.src}
                             alt={logo.alt}
-                            width={140}
-                            height={60}
+                            width={90}
+                            height={90}
                             className="grayscale opacity-60 transition-opacity duration-300 hover:opacity-100 hover:grayscale-0"
                             data-ai-hint={logo.hint}
                           />
