@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="bg-white py-12 -mt-20">
+      <section className="bg-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <div className="marquee">
             <div className="marquee-content">
