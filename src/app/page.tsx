@@ -272,45 +272,54 @@ export default function Home({
         </div>
       </section>
 
-      <section id="mission-vision" className="py-20 md:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
+      <section id="mission-vision" className="py-20 md:py-32 relative">
+          <div className="absolute inset-0">
               <Image 
-                src="https://placehold.co/600x400.png"
-                alt="Misión y Visión de la empresa"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-lg object-cover w-full"
-                data-ai-hint="business goal"
+                  src="https://placehold.co/1920x800.png"
+                  alt="Oficina moderna"
+                  layout="fill"
+                  objectFit="cover"
+                  className="opacity-20"
+                  data-ai-hint="modern office"
               />
-            </div>
-            <div className="space-y-10">
-              <div className="flex items-start gap-4">
-                <Eye className="h-10 w-10 text-primary mt-1 shrink-0" />
-                <div>
-                  <h3 className="text-3xl font-bold text-foreground mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                    Visión
-                  </h3>
-                  <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    Ser la agencia de marketing digital líder que transforma marcas, impulsando su crecimiento y conectándolas de manera auténtica con su audiencia a nivel global.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Goal className="h-10 w-10 text-primary mt-1 shrink-0" />
-                <div>
-                  <h3 className="text-3xl font-bold text-foreground mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                    Misión
-                  </h3>
-                  <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    Potenciar el éxito de nuestros clientes a través de estrategias digitales innovadoras, creativas y basadas en datos, construyendo relaciones duraderas y generando resultados medibles.
-                  </p>
-                </div>
-              </div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/50"></div>
           </div>
-        </div>
+          <div className="container mx-auto px-4 md:px-6 relative">
+              <div className="grid md:grid-cols-5 gap-8 items-center">
+                  <div className="md:col-span-3">
+                      <div className="bg-card/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-border/10">
+                          <div className="space-y-10">
+                              <div className="flex items-start gap-4">
+                                  <div className="p-3 bg-primary/10 rounded-full">
+                                      <Eye className="h-8 w-8 text-primary shrink-0" />
+                                  </div>
+                                  <div>
+                                      <h3 className="text-3xl font-bold text-foreground mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                                          Visión
+                                      </h3>
+                                      <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                                          Ser la agencia de marketing digital líder que transforma marcas, impulsando su crecimiento y conectándolas de manera auténtica con su audiencia a nivel global.
+                                      </p>
+                                  </div>
+                              </div>
+                              <div className="flex items-start gap-4">
+                                  <div className="p-3 bg-primary/10 rounded-full">
+                                      <Goal className="h-8 w-8 text-primary shrink-0" />
+                                  </div>
+                                  <div>
+                                      <h3 className="text-3xl font-bold text-foreground mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                                          Misión
+                                      </h3>
+                                      <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                                          Potenciar el éxito de nuestros clientes a través de estrategias digitales innovadoras, creativas y basadas en datos, construyendo relaciones duraderas y generando resultados medibles.
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </section>
 
       <section id="services" className="py-20 md:py-32">
