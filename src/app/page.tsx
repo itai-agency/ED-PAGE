@@ -285,8 +285,8 @@ export default function Home({
               <div className="absolute inset-0 bg-black/60"></div>
           </div>
           <div className="container mx-auto px-4 md:px-6 relative">
-              <div className="grid md:grid-cols-5 gap-8 items-center">
-                  <div className="md:col-span-3">
+              <div className="flex justify-center">
+                  <div className="max-w-3xl">
                       <div className="bg-card/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-border/10">
                           <div className="space-y-10">
                               <div className="flex items-start gap-4">
