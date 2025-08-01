@@ -57,3 +57,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .typewriter-cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.5em;
+    height: 1em;
+    background-color: hsl(var(--foreground));
+    animation: blink 0.75s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to {
+      background-color: transparent;
+    }
+    50% {
+      background-color: hsl(var(--foreground));
+    }
+  }
+}

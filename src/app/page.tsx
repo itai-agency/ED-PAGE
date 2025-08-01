@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin } from "lucide-react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import "./marquee.css";
@@ -68,6 +68,38 @@ const locations = [
   { state: "Baja California", city: "Tijuana" },
   { state: "Yucatán", city: "Mérida" },
 ];
+
+const TypewriterTitle = ({ text, className }: { text: string, className?: string }) => {
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  useEffect(() => {
+    let ticker: NodeJS.Timeout;
+    const handleTyping = () => {
+      setDisplayedText(text.substring(0, displayedText.length + 1));
+      setTypingSpeed(150);
+    };
+
+    ticker = setTimeout(handleTyping, typingSpeed);
+
+    if (displayedText === text) {
+      setTimeout(() => {
+        // Optionally reset animation
+      }, 5000); // Pause before resetting
+    }
+
+    return () => clearTimeout(ticker);
+  }, [displayedText, text, isDeleting, typingSpeed]);
+
+  return (
+    <h2 className={className}>
+      {displayedText}
+      <span className="typewriter-cursor"></span>
+    </h2>
+  );
+};
 
 export default function Home({
   params,
@@ -312,9 +344,10 @@ export default function Home({
       <section id="contact" className="py-20 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              ¿Listo para llevar tu marca al <span className="text-primary">siguiente nivel?</span>
-            </h2>
+             <TypewriterTitle 
+                text="¿Listo para llevar tu marca al siguiente nivel?"
+                className="text-3xl md:text-4xl font-bold text-foreground"
+             />
             <p className="text-foreground/80 text-lg mt-4 mb-8" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
               Hablemos de tu proyecto. Contáctanos y descubre cómo podemos ayudarte a alcanzar tus objetivos.
             </p>
