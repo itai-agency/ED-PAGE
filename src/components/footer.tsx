@@ -1,18 +1,10 @@
-import Link from "next/link";
-import { Instagram, Youtube, Linkedin } from "lucide-react";
 
-const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <path d="M12.528 8.014a5.5 5.5 0 1 0-5.487 5.487v.038" />
-        <path d="M12.528 8.014a5.5 5.5 0 0 1 5.487-5.487v10.974A5.5 5.5 0 1 1 7.04 13.5v-5.46"/>
-    </svg>
-);
+import Link from "next/link";
+import { Instagram, Facebook } from "lucide-react";
 
 const socialLinks = [
   { icon: <Instagram className="h-6 w-6" />, href: "#" },
-  { icon: <Youtube className="h-6 w-6" />, href: "#" },
-  { icon: <Linkedin className="h-6 w-6" />, href: "#" },
-  { icon: <TikTokIcon className="h-6 w-6" />, href: "#" },
+  { icon: <Facebook className="h-6 w-6" />, href: "#" },
 ];
 
 const footerSections = [
