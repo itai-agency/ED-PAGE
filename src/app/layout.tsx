@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { ScrollToTopButton } from '@/components/scroll-to-top-button';
 
 export const metadata: Metadata = {
   title: 'ExpertizDigital',
@@ -28,6 +29,7 @@ export default function RootLayout({
             <Footer />
         </div>
         <Toaster />
+        <ScrollToTopButton />
       </body>
     </html>
   );
