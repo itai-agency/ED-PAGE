@@ -31,32 +31,32 @@ const services = [
     {
         icon: <Users className="h-8 w-8 text-primary" />,
         title: "Redes Sociales",
-        description: "Creamos y gestionamos perfiles en redes sociales para conectar con tu audiencia y fortalecer tu marca.",
+        description: "Trabajamos con las redes sociales que tu negocio necesita. Desarrollamos La estrategia que te hará darte a conocer y viralizar tu marca. Creamos el contenido realizando los diseños mas virales.",
     },
     {
         icon: <LayoutTemplate className="h-8 w-8 text-primary" />,
         title: "Diseño Web",
-        description: "Diseñamos sitios web atractivos, funcionales y optimizados para una experiencia de usuario excepcional.",
+        description: "Desarrollo de la página web y soporte. Nuestro equipo Hará de tu página web un Espacio donde el cliente Encuentre fácilmente lo que Busca y a la vez sea cautivado Por el diseño de la misma.",
     },
     {
         icon: <Users className="h-8 w-8 text-primary" />,
         title: "Social Media Management",
-        description: "Gestionamos tus redes sociales de forma estratégica para aumentar el engagement y construir una comunidad leal.",
+        description: "Nos encargamos de construir y llevar la comunidad online de tu negocio que hay alrededor de tu marca. Nuestro objetivo es crear comunidad y dinamizarla. Aportando ideas frescas.",
     },
     {
         icon: <Video className="h-8 w-8 text-primary" />,
         title: "Creación de Videos Profesionales",
-        description: "Producimos videos de alta calidad que comunican tu mensaje de manera efectiva y atractiva.",
+        description: "Creamos videos en HD, 4K para la imagen de Tu negocio. Somos Profesionales en este Servicio, con la mejor Calidad contenido Dirigido e impacto Visual dirigido.",
     },
     {
         icon: <Palette className="h-8 w-8 text-primary" />,
         title: "Diseño Gráfico",
-        description: "Creamos piezas gráficas impactantes y coherentes con tu identidad de marca para comunicar tus ideas.",
+        description: "Materializamos los mejores diseños para tu negocio. Creamos el branding de tu marca basándonos en un estudio previo. Ademas de crear contenido gráfico de acuerdo a una Personalidad única de tu negocio.",
     },
     {
         icon: <Award className="h-8 w-8 text-primary" />,
         title: "Branding",
-        description: "Construimos y fortalecemos la identidad de tu marca para que destaques en el mercado y conectes con tu público.",
+        description: "Construimos tu marca, mediante La administración estratégica del Conjunto total de activos vinculados En forma directa o indirecta al Nombre y/o símbolo (logotipo) que identifica tu marca.",
     },
 ]
 
