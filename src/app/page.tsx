@@ -89,8 +89,8 @@ export default function Home() {
                   </Button>
                 </Link>
                 <Link href="#locations">
-                  <Button variant="link" size="lg" className="text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                    <PlayCircle className="mr-2 h-6 w-6 text-primary" />
+                  <Button variant="link" size="lg" className="text-foreground hover:text-primary group" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                    <MapPin className="mr-2 h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
                     Encuéntranos
                   </Button>
                 </Link>
