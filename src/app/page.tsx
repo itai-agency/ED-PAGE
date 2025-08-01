@@ -69,7 +69,14 @@ const locations = [
   { state: "Yucatán", city: "Mérida" },
 ];
 
-export default function Home() {
+export default function Home({
+  params,
+  searchParams,
+}: {
+  params: {};
+  searchParams: Record<string,
+    string | string[] | undefined>
+}) {
 
   return (
     <>
