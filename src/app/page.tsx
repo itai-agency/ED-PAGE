@@ -88,10 +88,12 @@ export default function Home() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Button variant="link" size="lg" className="text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                  <PlayCircle className="mr-2 h-6 w-6 text-primary" />
-                  Mira Nuestro Trabajo
-                </Button>
+                <Link href="#locations">
+                  <Button variant="link" size="lg" className="text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                    <PlayCircle className="mr-2 h-6 w-6 text-primary" />
+                    Encuéntranos
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="relative mt-12 md:mt-0">
@@ -133,7 +135,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
               <Image
-                src="https://i.imgur.com/y1IlHIp.png"
+                src="https://imgur.com/y1IlHIp.png"
                 alt="Equipo de ExpertizDigital colaborando"
                 width={600}
                 height={600}
@@ -355,3 +357,4 @@ export default function Home() {
   );
 }
  
+    
