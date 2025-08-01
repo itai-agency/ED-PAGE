@@ -127,12 +127,6 @@ export default function Home({
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href="#locations">
-                  <Button variant="link" size="lg" className="text-foreground hover:text-primary group" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                    <MapPin className="mr-2 h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
-                    Encuéntranos
-                  </Button>
-                </Link>
               </div>
             </div>
             <div className="relative mt-12 md:mt-0">
