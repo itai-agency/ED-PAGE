@@ -133,7 +133,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
               <Image
-                src="https://placehold.co/600x600.png"
+                src="https://i.imgur.com/y1IlHIp.png"
                 alt="Equipo de ExpertizDigital colaborando"
                 width={600}
                 height={600}
@@ -354,3 +354,4 @@ export default function Home() {
     </>
   );
 }
+ 
