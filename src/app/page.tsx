@@ -275,7 +275,7 @@ export default function Home({
       <section id="mission-vision" className="py-20 md:py-32 relative">
           <div className="absolute inset-0">
               <Image 
-                  src="https://placehold.co/1920x800.png"
+                  src="https://imgur.com/vqbDI4f.png"
                   alt="Oficina moderna"
                   layout="fill"
                   objectFit="cover"
@@ -444,4 +444,5 @@ export default function Home({
     
 
     
+
 
