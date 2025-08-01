@@ -63,8 +63,7 @@ export function Footer() {
                 <div className="md:col-start-2 lg:col-start-4 lg:flex lg:justify-end">
                     <div className="text-left lg:text-right">
                         <Link href="/" className="flex items-center justify-start lg:justify-end space-x-2 mb-4">
-                            <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
-                            <span className="text-2xl font-bold text-foreground">Expertiz<span className="text-primary">Digital</span></span>
+                            <img src="https://imgur.com/p8fziZ7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
                         </Link>
                         <h3 className="font-bold text-lg mb-4 mt-8 text-primary">Redes sociales</h3>
                         <div className="flex items-center justify-start lg:justify-end space-x-4">
