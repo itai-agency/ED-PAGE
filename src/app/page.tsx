@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin, Goal, Eye } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -269,6 +269,35 @@ export default function Home({
             <path d="M1200 120L0 120 0 0 1200 0 1200 120z" className="fill-transparent"></path>
             <path d="M0,0 Q300,100 600,0 T1200,0 L1200,120 L0,120 Z" className="fill-background"></path>
           </svg>
+        </div>
+      </section>
+
+      <section id="mission-vision" className="py-20 md:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div className="flex flex-col items-center text-center md:items-start md:text-left">
+              <div className="flex items-center gap-4 mb-4">
+                <Eye className="h-10 w-10 text-primary" />
+                <h3 className="text-3xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Visión
+                </h3>
+              </div>
+              <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                Ser la agencia de marketing digital líder que transforma marcas, impulsando su crecimiento y conectándolas de manera auténtica con su audiencia a nivel global.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center md:items-start md:text-left">
+              <div className="flex items-center gap-4 mb-4">
+                <Goal className="h-10 w-10 text-primary" />
+                <h3 className="text-3xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Misión
+                </h3>
+              </div>
+              <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                Potenciar el éxito de nuestros clientes a través de estrategias digitales innovadoras, creativas y basadas en datos, construyendo relaciones duraderas y generando resultados medibles.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
