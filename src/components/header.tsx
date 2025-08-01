@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-          <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
+          <img src="https://imgur.com/Szz2VyN.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
           <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
         </Link>
         
@@ -58,7 +58,7 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
                   <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-                    <img src="https://i.imgur.com/aUI6WX7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
+                    <img src="https://imgur.com/Szz2VyN.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
                     <span className="text-2xl font-bold">Expertiz<span className="text-primary">Digital</span></span>
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
