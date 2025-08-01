@@ -279,10 +279,10 @@ export default function Home({
                   alt="Oficina moderna"
                   layout="fill"
                   objectFit="cover"
-                  className="opacity-20"
+                  className=""
                   data-ai-hint="modern office"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/50"></div>
+              <div className="absolute inset-0 bg-black/60"></div>
           </div>
           <div className="container mx-auto px-4 md:px-6 relative">
               <div className="grid md:grid-cols-5 gap-8 items-center">
@@ -447,5 +447,7 @@ export default function Home({
 
 
 
+
+    
 
     
