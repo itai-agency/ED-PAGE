@@ -11,6 +11,7 @@ const navLinks = [
   { href: "#about", label: "Nosotros" },
   { href: "#culture", label: "Cultura" },
   { href: "#services", label: "Servicios" },
+  { href: "#locations", label: "Ubicacion" },
 ];
 
 export function Header() {
