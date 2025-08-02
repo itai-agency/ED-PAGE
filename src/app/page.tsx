@@ -229,98 +229,68 @@ export default function Home({
           <div className="absolute inset-0 bg-black/60 z-10"></div>
         </div>
 
-        <div className="relative z-20 container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Cultura ExpertizDigital
-            </h2>
-            <p className="mt-4 text-lg md:text-xl" style={{ fontFamily: 'Roboto, sans-serif' }}>
-              Donde la Pasión por el Marketing Digital nos Une
-            </p>
-            <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
+        <div className="relative z-20 container mx-auto px-4 md:px-6">
+            <div className="text-center">
+              <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Cultura ExpertizDigital
+              </h2>
+              <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Roboto, sans-serif' }}>
+                Donde la Pasión por el Marketing Digital nos Une
+              </p>
+              <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
+              
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      <Lightbulb className="mr-2 h-5 w-5" /> Innovación
+                  </Button>
+                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      <Users className="mr-2 h-5 w-5" /> Colaboración
+                  </Button>
+                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      <Rocket className="mr-2 h-5 w-5" /> Resultados
+                  </Button>
+                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      <Sparkles className="mr-2 h-5 w-5" /> Creatividad
+                  </Button>
+                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      <Handshake className="mr-2 h-5 w-5" /> Transparencia
+                  </Button>
+              </div>
+            </div>
             
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                    <Lightbulb className="mr-2 h-5 w-5" /> Innovación
-                </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                    <Users className="mr-2 h-5 w-5" /> Colaboración
-                </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                    <Rocket className="mr-2 h-5 w-5" /> Resultados
-                </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                    <Sparkles className="mr-2 h-5 w-5" /> Creatividad
-                </Button>
-                <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                    <Handshake className="mr-2 h-5 w-5" /> Transparencia
-                </Button>
+            <div className="grid md:grid-cols-2 gap-8 mt-16">
+                <div className="bg-card/20 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-white/10 text-white">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-white/10 rounded-full">
+                            <Eye className="h-8 w-8 text-white shrink-0" />
+                        </div>
+                        <div>
+                            <h3 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                                Visión
+                            </h3>
+                            <p className="text-white/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                                Ser la agencia de marketing digital líder que transforma marcas, impulsando su crecimiento y conectándolas de manera auténtica con su audiencia a nivel global.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="bg-card/20 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-white/10 text-white">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-white/10 rounded-full">
+                            <Goal className="h-8 w-8 text-white shrink-0" />
+                        </div>
+                        <div>
+                            <h3 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                                Misión
+                            </h3>
+                            <p className="text-white/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                                Potenciar el éxito de nuestros clientes a través de estrategias digitales innovadoras, creativas y basadas en datos, construyendo relaciones duraderas y generando resultados medibles.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div
-          className="absolute bottom-0 left-0 w-full h-20 bg-transparent"
-          style={{
-            background: 'linear-gradient(to top, hsl(var(--background)), transparent)',
-            transform: 'translateY(1px)'
-          }}
-        ></div>
-        <div
-          className="absolute bottom-0 left-0 w-full overflow-hidden leading-none"
-          style={{ transform: 'translateY(1px)' }}
-        >
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[100px] md:h-[150px]">
-            <path d="M1200 120L0 120 0 0 1200 0 1200 120z" className="fill-transparent"></path>
-            <path d="M0,0 Q300,100 600,0 T1200,0 L1200,120 L0,120 Z" className="fill-background"></path>
-          </svg>
-        </div>
-      </section>
-
-      <section id="mission-vision" className="py-20 md:py-32 relative">
-          <div className="absolute inset-0">
-              <Image 
-                  src="https://imgur.com/vqbDI4f.png"
-                  alt="Oficina moderna"
-                  layout="fill"
-                  objectFit="cover"
-                  className=""
-                  data-ai-hint="modern office"
-              />
-              <div className="absolute inset-0 bg-black/60"></div>
-          </div>
-          <div className="container mx-auto px-4 md:px-6 relative">
-              <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-card/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-border/10">
-                      <div className="flex items-start gap-4">
-                          <div className="p-3 bg-primary/10 rounded-full">
-                              <Eye className="h-8 w-8 text-primary shrink-0" />
-                          </div>
-                          <div>
-                              <h3 className="text-3xl font-bold text-foreground mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                                  Visión
-                              </h3>
-                              <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                                  Ser la agencia de marketing digital líder que transforma marcas, impulsando su crecimiento y conectándolas de manera auténtica con su audiencia a nivel global.
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-                  <div className="bg-card/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-border/10">
-                      <div className="flex items-start gap-4">
-                          <div className="p-3 bg-primary/10 rounded-full">
-                              <Goal className="h-8 w-8 text-primary shrink-0" />
-                          </div>
-                          <div>
-                              <h3 className="text-3xl font-bold text-foreground mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                                  Misión
-                              </h3>
-                              <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                                  Potenciar el éxito de nuestros clientes a través de estrategias digitales innovadoras, creativas y basadas en datos, construyendo relaciones duraderas y generando resultados medibles.
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
       </section>
 
       <section id="services" className="py-20 md:py-32">
@@ -454,3 +424,5 @@ export default function Home({
     
 
     
+
+  

@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "#about", label: "Nosotros" },
   { href: "#services", label: "Servicios" },
-  { href: "#culture", label: "Cultura" },
+  { href: "#culture", label: "Cultura y Valores" },
 ];
 
 export function Header() {
@@ -89,3 +89,5 @@ export function Header() {
     </header>
   );
 }
+
+  
