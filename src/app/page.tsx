@@ -233,6 +233,9 @@ export default function Home({
             <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Cultura ExpertizDigital
             </h2>
+            <p className="mt-4 text-lg md:text-xl" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              Donde la Pasión por el Marketing Digital nos Une
+            </p>
             <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
