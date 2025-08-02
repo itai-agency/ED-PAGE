@@ -9,8 +9,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "#about", label: "Nosotros" },
-  { href: "#services", label: "Servicios" },
   { href: "#culture", label: "Cultura y Valores" },
+  { href: "#services", label: "Servicios" },
 ];
 
 export function Header() {
@@ -89,5 +89,3 @@ export function Header() {
     </header>
   );
 }
-
-  
