@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin, Goal, Eye } from "lucide-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import "./marquee.css";
@@ -69,6 +69,36 @@ const locations = [
   { state: "Yucatán", city: "Mérida" },
 ];
 
+const useIntersectionObserver = (options: IntersectionObserverInit) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        if (elementRef.current) {
+          observer.unobserve(elementRef.current);
+        }
+      }
+    }, options);
+
+    const currentElement = elementRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, [elementRef, options]);
+
+  return [elementRef, isVisible] as const;
+};
+
+
 export default function Home({
   params,
   searchParams,
@@ -77,6 +107,13 @@ export default function Home({
   searchParams: Record<string,
     string | string[] | undefined>
 }) {
+
+  const [aboutRef, isAboutVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const [cultureRef, isCultureVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const [servicesRef, isServicesVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const [locationsRef, isLocationsVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const [contactRef, isContactVisible] = useIntersectionObserver({ threshold: 0.1 });
+
 
   return (
     <>
@@ -131,7 +168,7 @@ export default function Home({
         </div>
       </section>
 
-      <section id="about" className="py-20 md:py-32">
+      <section id="about" ref={aboutRef} className={`py-20 md:py-32 observed ${isAboutVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
@@ -184,7 +221,7 @@ export default function Home({
         </div>
       </section>
 
-      <section id="culture" className="relative text-white py-20 md:py-32 overflow-hidden">
+      <section id="culture" ref={cultureRef} className={`relative text-white pt-20 md:pt-32 overflow-hidden observed ${isCultureVisible ? 'animate-fade-in' : ''}`}>
         <div className="absolute inset-0">
           <Image
             src="https://imgur.com/gxGxRLi.png"
@@ -259,9 +296,14 @@ export default function Home({
                 </div>
             </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full text-white z-20">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto" preserveAspectRatio="none">
+                <path d="M0 50C144 9.5 288 9.5 432 50C576 90.5 720 90.5 864 50C1008 9.5 1152 9.5 1296 50C1368 70.25 1440 90.5 1440 100V100H0V50Z" fill="hsl(var(--background))"></path>
+            </svg>
+        </div>
       </section>
 
-      <section id="services" className="py-20 md:py-32">
+      <section id="services" ref={servicesRef} className={`py-20 md:py-32 observed ${isServicesVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Nuestros Servicios</span>
@@ -286,7 +328,7 @@ export default function Home({
         </div>
       </section>
 
-      <section id="locations" className="py-20 md:py-32">
+      <section id="locations" ref={locationsRef} className={`py-20 md:py-32 observed ${isLocationsVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -324,7 +366,7 @@ export default function Home({
         </div>
       </section>
       
-      <section id="contact" className="py-20 md:py-32">
+      <section id="contact" ref={contactRef} className={`py-20 md:py-32 observed ${isContactVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -378,18 +420,3 @@ export default function Home({
     </>
   );
 }
- 
-    
-
-    
-
-
-
-
-    
-
-    
-
-    
-
-  
