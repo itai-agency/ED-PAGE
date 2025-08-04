@@ -221,7 +221,7 @@ export default function Home({
         </div>
       </section>
 
-      <section id="culture" ref={cultureRef} className={`relative text-white pt-20 md:pt-32 overflow-hidden observed ${isCultureVisible ? 'animate-fade-in' : ''}`}>
+      <section id="culture" ref={cultureRef} className={`relative text-white pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden observed ${isCultureVisible ? 'animate-fade-in' : ''}`}>
         <div className="absolute inset-0">
           <Image
             src="https://imgur.com/gxGxRLi.png"
@@ -295,11 +295,6 @@ export default function Home({
                     </div>
                 </div>
             </div>
-        </div>
-        <div className="absolute bottom-0 left-0 w-full text-white z-20">
-            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto" preserveAspectRatio="none">
-                <path d="M0 50C144 9.5 288 9.5 432 50C576 90.5 720 90.5 864 50C1008 9.5 1152 9.5 1296 50C1368 70.25 1440 90.5 1440 100V100H0V50Z" fill="hsl(var(--background))"></path>
-            </svg>
         </div>
       </section>
 
