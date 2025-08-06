@@ -140,8 +140,7 @@ export default function Home({
 
     const mailtoLink = `mailto:contacto@expertizdigital.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // Using window.open to be more compatible
-    window.open(mailtoLink, '_self');
+    window.location.href = mailtoLink;
   };
 
 
@@ -465,3 +464,5 @@ export default function Home({
     </>
   );
 }
+
+    
