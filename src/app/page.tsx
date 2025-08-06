@@ -4,15 +4,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin, Goal, Eye } from "lucide-react";
+import { ArrowRight, CheckCircle, Lightbulb, Users, Rocket, LayoutTemplate, Video, Palette, Award, Sparkles, Handshake, MapPin, Goal, Eye } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import "./marquee.css";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+
 
 const logos = [
   { src: "https://i.imgur.com/8eMNQ9j.png", alt: "TechCorp Logo", hint: "company logo" },
@@ -98,6 +101,15 @@ const useIntersectionObserver = (options: IntersectionObserverInit) => {
   return [elementRef, isVisible] as const;
 };
 
+const formSchema = z.object({
+  name: z.string().min(1, { message: "El nombre es requerido." }),
+  city: z.string().min(1, { message: "La ciudad es requerida." }),
+  email: z.string().email({ message: "Por favor ingresa un correo válido." }),
+  phone: z.string().min(1, { message: "El teléfono es requerido." }),
+  position: z.string().min(1, { message: "El puesto es requerido." }),
+  message: z.string().min(1, { message: "El mensaje es requerido." }),
+});
+
 
 export default function Home({
   params,
@@ -114,14 +126,23 @@ export default function Home({
   const [locationsRef, isLocationsVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [contactRef, isContactVisible] = useIntersectionObserver({ threshold: 0.1 });
   
-  const [name, setName] = useState("");
-  const [city, setCity] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [position, setPosition] = useState("");
-  const [message, setMessage] = useState("");
-  
-  const handleWhatsappSubmit = () => {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      city: "",
+      email: "",
+      phone: "",
+      position: "",
+      message: "",
+    },
+  });
+
+  const handleWhatsappSubmit = async () => {
+    const isValid = await form.trigger();
+    if (!isValid) return;
+    
+    const { name, city, email, phone, position, message } = form.getValues();
     const text = `
       Hola ExpertizDigital,
 
@@ -141,7 +162,11 @@ export default function Home({
     window.open(whatsappLink, '_blank');
   };
 
-  const handleEmailSubmit = () => {
+  const handleEmailSubmit = async () => {
+    const isValid = await form.trigger();
+    if (!isValid) return;
+
+    const { name, city, email, phone, position, message } = form.getValues();
     const to = 'gelvins15@gmail.com';
     const subject = `Solicitud de Información: ${name}`;
     const body = `
@@ -278,9 +303,8 @@ export default function Home({
           <Image
             src="https://imgur.com/gxGxRLi.png"
             alt="Equipo de trabajo colaborando"
-            layout="fill"
-            objectFit="cover"
-            className="z-0"
+            fill
+            className="z-0 object-cover"
             data-ai-hint="teamwork collaboration"
           />
           <div className="absolute inset-0 bg-black/60 z-10"></div>
@@ -436,60 +460,102 @@ export default function Home({
                     Completa el formulario y elige tu método de contacto preferido.
                   </DialogDescription>
                 </DialogHeader>
-                <form>
-                  <div className="grid gap-4 py-4">
-                    <div className="grid grid-cols-4 items-center gap-4">
-                      <Label htmlFor="name" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                        Nombre
-                      </Label>
-                      <Input id="name" placeholder="Tu nombre completo" className="col-span-3" value={name} onChange={(e) => setName(e.target.value)} />
-                    </div>
-                    <div className="grid grid-cols-4 items-center gap-4">
-                      <Label htmlFor="city" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                        Ciudad
-                      </Label>
-                      <Input id="city" placeholder="Ciudad de residencia" className="col-span-3" value={city} onChange={(e) => setCity(e.target.value)} />
-                    </div>
-                    <div className="grid grid-cols-4 items-center gap-4">
-                      <Label htmlFor="email" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                        Correo
-                      </Label>
-                      <Input id="email" type="email" placeholder="tu.correo@ejemplo.com" className="col-span-3" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    </div>
-                     <div className="grid grid-cols-4 items-center gap-4">
-                      <Label htmlFor="phone" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                        Teléfono
-                      </Label>
-                      <Input id="phone" type="tel" placeholder="Tu número de teléfono" className="col-span-3" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                    </div>
-                     <div className="grid grid-cols-4 items-center gap-4">
-                      <Label htmlFor="position" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                        Puesto
-                      </Label>
-                      <Input id="position" placeholder="Tu puesto actual" className="col-span-3" value={position} onChange={(e) => setPosition(e.target.value)} />
-                    </div>
-                    <div className="grid grid-cols-4 items-center gap-4">
-                      <Label htmlFor="message" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                        Mensaje
-                      </Label>
-                      <Textarea id="message" placeholder="Cuéntanos sobre tu proyecto..." className="col-span-3" value={message} onChange={(e) => setMessage(e.target.value)} />
-                    </div>
-                  </div>
-                  <div className="flex justify-end gap-4 mt-4">
-                    <Button type="button" onClick={handleWhatsappSubmit} size="icon" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.89-5.451 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-1.001z"/>
-                      </svg>
-                      <span className="sr-only">WhatsApp</span>
-                    </Button>
-                    <Button type="button" onClick={handleEmailSubmit} size="icon" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M2.5 4.5h19c.825 0 1.5.675 1.5 1.5v12c0 .825-.675 1.5-1.5 1.5h-19c-.825 0-1.5-.675-1.5-1.5v-12c0-.825.675-1.5 1.5-1.5zM2.5 6v.338l9.5 5.662 9.5-5.662v-.338h-19zM2.5 18v-9.662l9.5 5.662 9.5-5.662v9.662h-19z"/>
-                      </svg>
-                      <span className="sr-only">Gmail</span>
-                    </Button>
-                  </div>
-                </form>
+                <Form {...form}>
+                  <form className="grid gap-4 py-4">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem className="grid grid-cols-4 items-center gap-4">
+                          <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Nombre</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Tu nombre completo" className="col-span-3" {...field} />
+                          </FormControl>
+                          <FormMessage className="col-span-4 text-right" />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="city"
+                      render={({ field }) => (
+                        <FormItem className="grid grid-cols-4 items-center gap-4">
+                          <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Ciudad</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Ciudad de residencia" className="col-span-3" {...field} />
+                          </FormControl>
+                          <FormMessage className="col-span-4 text-right" />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem className="grid grid-cols-4 items-center gap-4">
+                          <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Correo</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder="tu.correo@ejemplo.com" className="col-span-3" {...field} />
+                          </FormControl>
+                          <FormMessage className="col-span-4 text-right" />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem className="grid grid-cols-4 items-center gap-4">
+                          <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Teléfono</FormLabel>
+                          <FormControl>
+                            <Input type="tel" placeholder="Tu número de teléfono" className="col-span-3" {...field} />
+                          </FormControl>
+                          <FormMessage className="col-span-4 text-right" />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="position"
+                      render={({ field }) => (
+                        <FormItem className="grid grid-cols-4 items-center gap-4">
+                          <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Puesto</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Tu puesto actual" className="col-span-3" {...field} />
+                          </FormControl>
+                          <FormMessage className="col-span-4 text-right" />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem className="grid grid-cols-4 items-center gap-4">
+                          <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Mensaje</FormLabel>
+                          <FormControl>
+                            <Textarea placeholder="Cuéntanos sobre tu proyecto..." className="col-span-3" {...field} />
+                          </FormControl>
+                          <FormMessage className="col-span-4 text-right" />
+                        </FormItem>
+                      )}
+                    />
+                  </form>
+                </Form>
+                <div className="flex justify-end gap-4 mt-4">
+                  <Button type="button" onClick={handleWhatsappSubmit} size="icon" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.89-5.451 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-1.001z"/>
+                    </svg>
+                    <span className="sr-only">WhatsApp</span>
+                  </Button>
+                  <Button type="button" onClick={handleEmailSubmit} size="icon" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.5 4.5h19c.825 0 1.5.675 1.5 1.5v12c0 .825-.675 1.5-1.5 1.5h-19c-.825 0-1.5-.675-1.5-1.5v-12c0-.825.675-1.5 1.5-1.5zM2.5 6v.338l9.5 5.662 9.5-5.662v-.338h-19zM2.5 18v-9.662l9.5 5.662 9.5-5.662v9.662h-19z"/>
+                    </svg>
+                    <span className="sr-only">Gmail</span>
+                  </Button>
+                </div>
               </DialogContent>
             </Dialog>
           </div>
