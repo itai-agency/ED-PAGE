@@ -121,9 +121,20 @@ export default function Home({
   const [position, setPosition] = useState("");
   const [message, setMessage] = useState("");
   
-  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleWhatsappSubmit = () => {
+    const text = `
+      Hola, mi nombre es ${name}.
+      Ciudad: ${city}
+      Correo: ${email}
+      Teléfono: ${phone}
+      Puesto: ${position}
+      Mensaje: ${message}
+    `;
+    const whatsappLink = `https://wa.me/584141327273?text=${encodeURIComponent(text)}`;
+    window.open(whatsappLink, '_blank');
+  };
 
+  const handleEmailSubmit = () => {
     const subject = `Nuevo mensaje de contacto de: ${name}`;
     const body = `
       Un nuevo cliente potencial ha llenado el formulario de contacto.
@@ -137,9 +148,7 @@ export default function Home({
       - Mensaje:
       ${message}
     `;
-
-    const mailtoLink = `mailto:contacto@expertizdigital.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
+    const mailtoLink = `mailto:gelvins15@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   };
 
@@ -410,10 +419,10 @@ export default function Home({
                 <DialogHeader>
                   <DialogTitle style={{ fontFamily: 'Poppins, sans-serif' }}>Hablemos</DialogTitle>
                   <DialogDescription style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    Completa el formulario y nos pondremos en contacto contigo a la brevedad.
+                    Completa el formulario y elige tu método de contacto preferido.
                   </DialogDescription>
                 </DialogHeader>
-                <form onSubmit={handleContactSubmit}>
+                <form>
                   <div className="grid gap-4 py-4">
                     <div className="grid grid-cols-4 items-center gap-4">
                       <Label htmlFor="name" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
@@ -452,8 +461,19 @@ export default function Home({
                       <Textarea id="message" placeholder="Cuéntanos sobre tu proyecto..." className="col-span-3" value={message} onChange={(e) => setMessage(e.target.value)} />
                     </div>
                   </div>
-                  <div className="flex justify-end">
-                      <Button type="submit" className="rounded-full">Enviar Mensaje</Button>
+                  <div className="flex justify-end gap-4 mt-4">
+                    <Button type="button" onClick={handleWhatsappSubmit} size="icon" className="rounded-full bg-green-500 hover:bg-green-600 text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.89-5.451 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-1.001z"/>
+                      </svg>
+                      <span className="sr-only">WhatsApp</span>
+                    </Button>
+                    <Button type="button" onClick={handleEmailSubmit} size="icon" className="rounded-full bg-red-600 hover:bg-red-700 text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M2.5 4.5h19c.825 0 1.5.675 1.5 1.5v12c0 .825-.675 1.5-1.5 1.5h-19c-.825 0-1.5-.675-1.5-1.5v-12c0-.825.675-1.5 1.5-1.5zM2.5 6v.338l9.5 5.662 9.5-5.662v-.338h-19zM2.5 18v-9.662l9.5 5.662 9.5-5.662v9.662h-19z"/>
+                      </svg>
+                      <span className="sr-only">Gmail</span>
+                    </Button>
                   </div>
                 </form>
               </DialogContent>
@@ -464,5 +484,3 @@ export default function Home({
     </>
   );
 }
-
-    
