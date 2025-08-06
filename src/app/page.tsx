@@ -14,7 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 
 
 const logos = [
@@ -461,86 +461,80 @@ export default function Home({
                   </DialogDescription>
                 </DialogHeader>
                 <Form {...form}>
-                  <form className="grid gap-4 py-4">
+                  <div className="grid gap-4 py-4">
                     <FormField
                       control={form.control}
                       name="name"
-                      render={({ field }) => (
+                      render={({ field, fieldState: { error } }) => (
                         <FormItem className="grid grid-cols-4 items-center gap-4">
                           <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Nombre</FormLabel>
                           <FormControl>
-                            <Input placeholder="Tu nombre completo" className="col-span-3" {...field} />
+                            <Input placeholder={error ? error.message : "Tu nombre completo"} className="col-span-3" {...field} />
                           </FormControl>
-                          <FormMessage className="col-span-4 text-right" />
                         </FormItem>
                       )}
                     />
                     <FormField
                       control={form.control}
                       name="city"
-                      render={({ field }) => (
+                      render={({ field, fieldState: { error } }) => (
                         <FormItem className="grid grid-cols-4 items-center gap-4">
                           <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Ciudad</FormLabel>
                           <FormControl>
-                            <Input placeholder="Ciudad de residencia" className="col-span-3" {...field} />
+                            <Input placeholder={error ? error.message : "Ciudad de residencia"} className="col-span-3" {...field} />
                           </FormControl>
-                          <FormMessage className="col-span-4 text-right" />
                         </FormItem>
                       )}
                     />
                     <FormField
                       control={form.control}
                       name="email"
-                      render={({ field }) => (
+                      render={({ field, fieldState: { error } }) => (
                         <FormItem className="grid grid-cols-4 items-center gap-4">
                           <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Correo</FormLabel>
                           <FormControl>
-                            <Input type="email" placeholder="tu.correo@ejemplo.com" className="col-span-3" {...field} />
+                            <Input type="email" placeholder={error ? error.message : "tu.correo@ejemplo.com"} className="col-span-3" {...field} />
                           </FormControl>
-                          <FormMessage className="col-span-4 text-right" />
                         </FormItem>
                       )}
                     />
                     <FormField
                       control={form.control}
                       name="phone"
-                      render={({ field }) => (
+                      render={({ field, fieldState: { error } }) => (
                         <FormItem className="grid grid-cols-4 items-center gap-4">
                           <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Teléfono</FormLabel>
                           <FormControl>
-                            <Input type="tel" placeholder="Tu número de teléfono" className="col-span-3" {...field} />
+                            <Input type="tel" placeholder={error ? error.message : "Tu número de teléfono"} className="col-span-3" {...field} />
                           </FormControl>
-                          <FormMessage className="col-span-4 text-right" />
                         </FormItem>
                       )}
                     />
                     <FormField
                       control={form.control}
                       name="position"
-                      render={({ field }) => (
+                      render={({ field, fieldState: { error } }) => (
                         <FormItem className="grid grid-cols-4 items-center gap-4">
                           <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Puesto</FormLabel>
                           <FormControl>
-                            <Input placeholder="Tu puesto actual" className="col-span-3" {...field} />
+                            <Input placeholder={error ? error.message : "Tu puesto actual"} className="col-span-3" {...field} />
                           </FormControl>
-                          <FormMessage className="col-span-4 text-right" />
                         </FormItem>
                       )}
                     />
                     <FormField
                       control={form.control}
                       name="message"
-                      render={({ field }) => (
+                      render={({ field, fieldState: { error } }) => (
                         <FormItem className="grid grid-cols-4 items-center gap-4">
                           <FormLabel className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Mensaje</FormLabel>
                           <FormControl>
-                            <Textarea placeholder="Cuéntanos sobre tu proyecto..." className="col-span-3" {...field} />
+                            <Textarea placeholder={error ? error.message : "Cuéntanos sobre tu proyecto..."} className="col-span-3" {...field} />
                           </FormControl>
-                          <FormMessage className="col-span-4 text-right" />
                         </FormItem>
                       )}
                     />
-                  </form>
+                  </div>
                 </Form>
                 <div className="flex justify-end gap-4 mt-4">
                   <Button type="button" onClick={handleWhatsappSubmit} size="icon" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground">
