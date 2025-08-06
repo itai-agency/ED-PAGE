@@ -121,7 +121,7 @@ export default function Home({
   const [position, setPosition] = useState("");
   const [message, setMessage] = useState("");
   
-  const handleContactSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const subject = `Nuevo mensaje de contacto de: ${name}`;
@@ -140,13 +140,8 @@ export default function Home({
 
     const mailtoLink = `mailto:contacto@expertizdigital.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // Create a temporary anchor element and click it
-    const link = document.createElement('a');
-    link.href = mailtoLink;
-    link.style.display = 'none';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Using window.open to be more compatible
+    window.open(mailtoLink, '_self');
   };
 
 
@@ -419,7 +414,7 @@ export default function Home({
                     Completa el formulario y nos pondremos en contacto contigo a la brevedad.
                   </DialogDescription>
                 </DialogHeader>
-                <form>
+                <form onSubmit={handleContactSubmit}>
                   <div className="grid gap-4 py-4">
                     <div className="grid grid-cols-4 items-center gap-4">
                       <Label htmlFor="name" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
@@ -459,7 +454,7 @@ export default function Home({
                     </div>
                   </div>
                   <div className="flex justify-end">
-                      <Button type="submit" className="rounded-full" onClick={handleContactSubmit}>Enviar Mensaje</Button>
+                      <Button type="submit" className="rounded-full">Enviar Mensaje</Button>
                   </div>
                 </form>
               </DialogContent>
