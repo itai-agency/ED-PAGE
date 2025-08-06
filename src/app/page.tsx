@@ -113,6 +113,41 @@ export default function Home({
   const [servicesRef, isServicesVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [locationsRef, isLocationsVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [contactRef, isContactVisible] = useIntersectionObserver({ threshold: 0.1 });
+  
+  const [name, setName] = useState("");
+  const [city, setCity] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [position, setPosition] = useState("");
+  const [message, setMessage] = useState("");
+  
+  const handleContactSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    const subject = `Nuevo mensaje de contacto de: ${name}`;
+    const body = `
+      Un nuevo cliente potencial ha llenado el formulario de contacto.
+
+      Aquí están los detalles:
+      - Nombre: ${name}
+      - Ciudad: ${city}
+      - Correo Electrónico: ${email}
+      - Teléfono: ${phone}
+      - Puesto: ${position}
+      - Mensaje:
+      ${message}
+    `;
+
+    const mailtoLink = `mailto:contacto@expertizdigital.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Create a temporary anchor element and click it
+    const link = document.createElement('a');
+    link.href = mailtoLink;
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
 
   return (
@@ -384,47 +419,49 @@ export default function Home({
                     Completa el formulario y nos pondremos en contacto contigo a la brevedad.
                   </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-4 py-4">
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="name" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      Nombre
-                    </Label>
-                    <Input id="name" placeholder="Tu nombre completo" className="col-span-3" />
+                <form>
+                  <div className="grid gap-4 py-4">
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="name" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                        Nombre
+                      </Label>
+                      <Input id="name" placeholder="Tu nombre completo" className="col-span-3" value={name} onChange={(e) => setName(e.target.value)} />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="city" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                        Ciudad
+                      </Label>
+                      <Input id="city" placeholder="Ciudad de residencia" className="col-span-3" value={city} onChange={(e) => setCity(e.target.value)} />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="email" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                        Correo
+                      </Label>
+                      <Input id="email" type="email" placeholder="tu.correo@ejemplo.com" className="col-span-3" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                     <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="phone" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                        Teléfono
+                      </Label>
+                      <Input id="phone" type="tel" placeholder="Tu número de teléfono" className="col-span-3" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                    </div>
+                     <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="position" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                        Puesto
+                      </Label>
+                      <Input id="position" placeholder="Tu puesto actual" className="col-span-3" value={position} onChange={(e) => setPosition(e.target.value)} />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="message" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                        Mensaje
+                      </Label>
+                      <Textarea id="message" placeholder="Cuéntanos sobre tu proyecto..." className="col-span-3" value={message} onChange={(e) => setMessage(e.target.value)} />
+                    </div>
                   </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="city" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      Ciudad
-                    </Label>
-                    <Input id="city" placeholder="Ciudad de residencia" className="col-span-3" />
+                  <div className="flex justify-end">
+                      <Button type="submit" className="rounded-full" onClick={handleContactSubmit}>Enviar Mensaje</Button>
                   </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="email" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      Correo
-                    </Label>
-                    <Input id="email" type="email" placeholder="tu.correo@ejemplo.com" className="col-span-3" />
-                  </div>
-                   <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="phone" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      Teléfono
-                    </Label>
-                    <Input id="phone" type="tel" placeholder="Tu número de teléfono" className="col-span-3" />
-                  </div>
-                   <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="position" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      Puesto
-                    </Label>
-                    <Input id="position" placeholder="Tu puesto actual" className="col-span-3" />
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="message" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      Mensaje
-                    </Label>
-                    <Textarea id="message" placeholder="Cuéntanos sobre tu proyecto..." className="col-span-3" />
-                  </div>
-                </div>
-                <div className="flex justify-end">
-                    <Button type="submit" className="rounded-full">Enviar Mensaje</Button>
-                </div>
+                </form>
               </DialogContent>
             </Dialog>
           </div>
