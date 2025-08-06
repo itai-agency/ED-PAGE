@@ -123,32 +123,45 @@ export default function Home({
   
   const handleWhatsappSubmit = () => {
     const text = `
-      Hola, mi nombre es ${name}.
-      Ciudad: ${city}
-      Correo: ${email}
-      Teléfono: ${phone}
-      Puesto: ${position}
-      Mensaje: ${message}
-    `;
+      Hola ExpertizDigital,
+
+      Mi nombre es ${name} y les escribo desde ${city}. Estoy interesado/a en sus servicios y me gustaría recibir más información.
+
+      Les comparto mis datos de contacto:
+      - Correo: ${email}
+      - Teléfono: ${phone}
+      - Puesto: ${position}
+
+      Mi consulta es la siguiente:
+      ${message}
+
+      ¡Gracias!
+    `.trim().replace(/\n\s*\n/g, '\n\n');
     const whatsappLink = `https://wa.me/584141327273?text=${encodeURIComponent(text)}`;
     window.open(whatsappLink, '_blank');
   };
 
   const handleEmailSubmit = () => {
     const to = 'gelvins15@gmail.com';
-    const subject = `Nuevo mensaje de contacto de: ${name}`;
+    const subject = `Solicitud de Información: ${name}`;
     const body = `
-      Un nuevo cliente potencial ha llenado el formulario de contacto.
+      Hola ExpertizDigital,
 
-      Aquí están los detalles:
-      - Nombre: ${name}
-      - Ciudad: ${city}
+      Mi nombre es ${name} y les escribo desde ${city}. Estoy interesado/a en sus servicios de marketing digital y me gustaría recibir más información.
+
+      A continuación, mis datos de contacto:
       - Correo Electrónico: ${email}
       - Teléfono: ${phone}
       - Puesto: ${position}
-      - Mensaje:
+
+      Mi consulta específica es:
       ${message}
-    `;
+
+      Agradezco de antemano su tiempo y quedo a la espera de su respuesta.
+
+      Saludos cordiales,
+      ${name}
+    `.trim().replace(/\n\s*\n/g, '\n\n');
     const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(gmailLink, '_blank');
   };
