@@ -9,12 +9,12 @@ import React, { useState, useEffect, useRef } from "react";
 import "./marquee.css";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 
 const logos = [
@@ -120,6 +120,7 @@ export default function Home({
     string | string[] | undefined>
 }) {
 
+  const isMobile = useIsMobile();
   const [aboutRef, isAboutVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [cultureRef, isCultureVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [servicesRef, isServicesVisible] = useIntersectionObserver({ threshold: 0.1 });
@@ -168,7 +169,7 @@ export default function Home({
 
     const { name, city, email, phone, position, message } = form.getValues();
     const to = 'gelvins15@gmail.com';
-    const subject = `Solicitud de Información: ${name}`;
+    const subject = `Solicitud de Información de ${name}`;
     const body = `
       Hola ExpertizDigital,
 
@@ -177,18 +178,24 @@ export default function Home({
       A continuación, mis datos de contacto:
       - Correo Electrónico: ${email}
       - Teléfono: ${phone}
-      - Puesto: ${position}
+      - Puesto que ocupo: ${position}
 
-      Mi consulta específica es:
+      Mi consulta específica es la siguiente:
       ${message}
 
-      Agradezco de antemano su tiempo y quedo a la espera de su respuesta.
+      Agradezco de antemano su tiempo y quedo a la espera de su pronta respuesta.
 
       Saludos cordiales,
       ${name}
     `.trim().replace(/\n\s*\n/g, '\n\n');
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(gmailLink, '_blank');
+
+    let link = '';
+    if (isMobile) {
+        link = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    } else {
+        link = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+    window.open(link, '_blank');
   };
 
 
