@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Instagram, Facebook } from "lucide-react";
 
 const socialLinks = [
-  { icon: <Instagram className="h-6 w-6" />, href: "#" },
+  { icon: <Instagram className="h-6 w-6" />, href: "https://www.instagram.com/expertizdigital/" },
   { icon: <Facebook className="h-6 w-6" />, href: "https://www.facebook.com/expertizdigital/?locale=es_LA" },
 ];
 
