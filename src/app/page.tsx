@@ -377,7 +377,7 @@ export default function Home({
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px]">
+              <DialogContent className="sm:max-w-md">
                 <DialogHeader>
                   <DialogTitle style={{ fontFamily: 'Poppins, sans-serif' }}>Hablemos</DialogTitle>
                   <DialogDescription style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
@@ -392,10 +392,28 @@ export default function Home({
                     <Input id="name" placeholder="Tu nombre completo" className="col-span-3" />
                   </div>
                   <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="city" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      Ciudad
+                    </Label>
+                    <Input id="city" placeholder="Ciudad de residencia" className="col-span-3" />
+                  </div>
+                  <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="email" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      Email
+                      Correo
                     </Label>
                     <Input id="email" type="email" placeholder="tu.correo@ejemplo.com" className="col-span-3" />
+                  </div>
+                   <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="phone" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      Teléfono
+                    </Label>
+                    <Input id="phone" type="tel" placeholder="Tu número de teléfono" className="col-span-3" />
+                  </div>
+                   <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="position" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                      Puesto
+                    </Label>
+                    <Input id="position" placeholder="Tu puesto actual" className="col-span-3" />
                   </div>
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="message" className="text-right" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
