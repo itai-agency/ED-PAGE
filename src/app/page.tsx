@@ -148,8 +148,8 @@ export default function Home({
       - Mensaje:
       ${message}
     `;
-    const mailtoLink = `mailto:gelvins15@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+    const mailtoLink = `mailto:gelvind15@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink, '_blank');
   };
 
 
