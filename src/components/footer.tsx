@@ -4,7 +4,7 @@ import { Instagram, Facebook } from "lucide-react";
 
 const socialLinks = [
   { icon: <Instagram className="h-6 w-6" />, href: "#" },
-  { icon: <Facebook className="h-6 w-6" />, href: "#" },
+  { icon: <Facebook className="h-6 w-6" />, href: "https://www.facebook.com/expertizdigital/?locale=es_LA" },
 ];
 
 const footerSections = [
@@ -68,7 +68,7 @@ export function Footer() {
                         <h3 className="font-bold text-lg mb-4 mt-8 text-primary">Redes sociales</h3>
                         <div className="flex items-center justify-start lg:justify-end space-x-4">
                             {socialLinks.map((social, index) => (
-                                <Link key={index} href={social.href} className="text-primary hover:text-primary/80 transition-colors duration-300">
+                                <Link key={index} href={social.href} className="text-primary hover:text-primary/80 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
                                     {social.icon}
                                 </Link>
                             ))}
