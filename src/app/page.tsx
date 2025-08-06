@@ -468,7 +468,7 @@ export default function Home({
                       </svg>
                       <span className="sr-only">WhatsApp</span>
                     </Button>
-                    <Button type="button" onClick={handleEmailSubmit} size="icon" className="rounded-full bg-red-600 hover:bg-red-700 text-white">
+                    <Button onClick={handleEmailSubmit} size="icon" className="rounded-full bg-red-600 hover:bg-red-700 text-white">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M2.5 4.5h19c.825 0 1.5.675 1.5 1.5v12c0 .825-.675 1.5-1.5 1.5h-19c-.825 0-1.5-.675-1.5-1.5v-12c0-.825.675-1.5 1.5-1.5zM2.5 6v.338l9.5 5.662 9.5-5.662v-.338h-19zM2.5 18v-9.662l9.5 5.662 9.5-5.662v9.662h-19z"/>
                       </svg>
