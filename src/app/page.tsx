@@ -111,15 +111,7 @@ const formSchema = z.object({
 });
 
 
-export default function Home({
-  params,
-  searchParams,
-}: {
-  params: {};
-  searchParams: Record<string,
-    string | string[] | undefined>
-}) {
-
+export default function Home() {
   const isMobile = useIsMobile();
   const [aboutRef, isAboutVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [cultureRef, isCultureVisible] = useIntersectionObserver({ threshold: 0.1 });
@@ -162,42 +154,6 @@ export default function Home({
     const whatsappLink = `https://wa.me/584141327273?text=${encodeURIComponent(text)}`;
     window.open(whatsappLink, '_blank');
   };
-
-  const handleEmailSubmit = async () => {
-    const isValid = await form.trigger();
-    if (!isValid) return;
-
-    const { name, city, email, phone, position, message } = form.getValues();
-    const to = 'gelvins15@gmail.com';
-    const subject = `Solicitud de Información de ${name}`;
-    const body = `
-      Hola ExpertizDigital,
-
-      Mi nombre es ${name} y les escribo desde ${city}. Estoy interesado/a en sus servicios de marketing digital y me gustaría recibir más información.
-
-      A continuación, mis datos de contacto:
-      - Correo Electrónico: ${email}
-      - Teléfono: ${phone}
-      - Puesto que ocupo: ${position}
-
-      Mi consulta específica es la siguiente:
-      ${message}
-
-      Agradezco de antemano su tiempo y quedo a la espera de su pronta respuesta.
-
-      Saludos cordiales,
-      ${name}
-    `.trim().replace(/\n\s*\n/g, '\n\n');
-
-    let link = '';
-    if (isMobile) {
-        link = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    } else {
-        link = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
-    window.open(link, '_blank');
-  };
-
 
   return (
     <>
@@ -549,12 +505,6 @@ export default function Home({
                       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.89-5.451 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-1.001z"/>
                     </svg>
                     <span className="sr-only">WhatsApp</span>
-                  </Button>
-                  <Button type="button" onClick={handleEmailSubmit} size="icon" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M2.5 4.5h19c.825 0 1.5.675 1.5 1.5v12c0 .825-.675 1.5-1.5 1.5h-19c-.825 0-1.5-.675-1.5-1.5v-12c0-.825.675-1.5 1.5-1.5zM2.5 6v.338l9.5 5.662 9.5-5.662v-.338h-19zM2.5 18v-9.662l9.5 5.662 9.5-5.662v9.662h-19z"/>
-                    </svg>
-                    <span className="sr-only">Gmail</span>
                   </Button>
                 </div>
               </DialogContent>
