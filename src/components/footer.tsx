@@ -20,21 +20,17 @@ const footerSections = [
         ],
     },
     {
-        title: "Conócenos",
+        title: "Nosotros",
         links: [
-            { label: "Nuestra Visión", href: "#culture" },
-            { label: "Nuestra Misión", href: "#culture" },
+            { label: "Nuestra Cultura", href: "#culture" },
             { label: "Innovación", href: "#about" },
             { label: "Resultados", href: "#about" },
+            { label: "Contacto", href: "#contact" },
         ],
     },
     {
-        title: "Institucional",
+        title: "Legal",
         links: [
-            { label: "Nosotros", href: "#about" },
-            { label: "Servicios", href: "#services" },
-            { label: "Clientes", href: "#clients" },
-            { label: "Contacto", href: "#" },
             { label: "Política de Privacidad", href: "#" },
         ],
     }
