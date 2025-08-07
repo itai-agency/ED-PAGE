@@ -20,13 +20,10 @@ const footerSections = [
         ],
     },
     {
-        title: "Soluciones",
+        title: "Conócenos",
         links: [
-            { label: "Estrategias de Contenido", href: "#" },
-            { label: "Campañas Publicitarias", href: "#" },
-            { label: "SEO y SEM", href: "#" },
-            { label: "E-commerce", href: "#" },
-            { label: "Marketing de Influencers", href: "#" },
+            { label: "Nosotros", href: "#about" },
+            { label: "Cultura", href: "#culture" },
         ],
     },
     {
