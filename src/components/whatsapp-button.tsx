@@ -11,7 +11,7 @@ export function WhatsappButton() {
         <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button
                 size="icon"
-                className="rounded-full h-14 w-14 p-0 transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1"
+                className="rounded-full bg-white hover:bg-white/90 h-14 w-14 p-0 transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1"
                 aria-label="Contactar por WhatsApp"
             >
                 <img src="https://imgur.com/qAyeB6J.png" alt="WhatsApp" className="h-full w-full object-contain" />
