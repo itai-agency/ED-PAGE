@@ -168,7 +168,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
                 <Link href="#services">
                   <Button size="lg" className="rounded-full w-full sm:w-auto" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                    Explora Nuestros Servicios
+                    Descubre lo que podemos hacer
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
