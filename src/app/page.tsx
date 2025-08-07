@@ -177,12 +177,12 @@ export default function Home() {
             <div className="relative mt-12 md:mt-0">
               <div className="relative flex justify-center">
                 <Image
-                  src="https://i.imgur.com/CmfiXJ4.png"
-                  alt="Hombre feliz señalando"
+                  src="https://i.imgur.com/E2INdht.png"
+                  alt="Mujer profesional sonriendo"
                   width={500}
                   height={600}
                   className="object-contain"
-                  data-ai-hint="man excited"
+                  data-ai-hint="woman smiling"
                 />
               </div>
             </div>
