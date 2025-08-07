@@ -14,7 +14,7 @@ export function WhatsappButton() {
   const whatsappLink = `https://wa.me/584141327273?text=${encodeURIComponent(text)}`;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-20 right-4 z-50">
         <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button
                 size="icon"
