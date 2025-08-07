@@ -22,8 +22,10 @@ const footerSections = [
     {
         title: "Conócenos",
         links: [
-            { label: "Nosotros", href: "#about" },
-            { label: "Cultura", href: "#culture" },
+            { label: "Nuestra Visión", href: "#culture" },
+            { label: "Nuestra Misión", href: "#culture" },
+            { label: "Innovación", href: "#about" },
+            { label: "Resultados", href: "#about" },
         ],
     },
     {
