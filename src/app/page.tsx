@@ -162,7 +162,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
             <div className="space-y-6 text-center md:text-left max-w-xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Amplifica el Pulso Digital de tu Marca
+                Pisa el acelerador del marketing de tu concesionaria
               </h1>
               <p className="text-foreground/80 md:text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Somos una agencia de marketing digital de servicio completo dedicada a elevar la presencia online de tu marca. Desde SEO hasta redes sociales, creamos estrategias basadas en datos que ofrecen resultados reales.</p>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
