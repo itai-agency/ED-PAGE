@@ -28,12 +28,6 @@ const footerSections = [
             { label: "Contacto", href: "#contact" },
         ],
     },
-    {
-        title: "Legal",
-        links: [
-            { label: "Política de Privacidad", href: "#" },
-        ],
-    }
 ]
 
 export function Footer() {
