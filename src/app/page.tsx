@@ -164,11 +164,8 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground transition-colors duration-300 hover:text-primary" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Pisa el acelerador del marketing de tu concesionaria
               </h1>
-              <div className="text-foreground/80 md:text-lg space-y-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                <p><strong>Somos la agencia que rompe con lo típico.</strong></p>
-                <p>Hacemos que tu concesionario deje de pasar desapercibido y empiece a sonar (y vender) fuerte en redes sociales.</p>
-                <p>Campañas que jalan, contenido que conecta y estrategias que sí hacen la diferencia.</p>
-                <p>¿La clave? No vendemos humo: jugamos con datos, medimos todo y vamos directo al resultado.</p>
+              <div className="text-foreground/80 md:text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                <p>Transformamos tu concesionario en un referente en redes sociales, con campañas efectivas, contenido que conecta y estrategias basadas en datos que garantizan resultados.</p>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
                 <Link href="#services">
@@ -517,3 +514,5 @@ export default function Home() {
     </>
   );
 }
+
+    
