@@ -391,8 +391,8 @@ export default function Home() {
                 </div>
                 <div className="relative">
                     <Image 
-                        src="https://imgur.com/YwiOQ5z.png"
-                        alt="Mapa de México con ubicaciones"
+                        src="https://i.imgur.com/8x21EaG.png"
+                        alt="Mapa de México con ubicaciones de ExpertizDigital"
                         width={600}
                         height={400}
                         className="w-full h-auto object-contain"
