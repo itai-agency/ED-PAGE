@@ -281,7 +281,7 @@ export default function Home() {
                   Cultura ExpertizDigital
               </h2>
               <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Roboto, sans-serif' }}>
-                Donde la Pasión por el Marketing Digital nos Une
+                Porque cuando el motor es la pasión, no hay curva que nos detenga
               </p>
               <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
               
