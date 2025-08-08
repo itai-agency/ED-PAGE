@@ -391,12 +391,12 @@ export default function Home() {
                 </div>
                 <div className="relative">
                     <Image 
-                        src="https://imgur.com/nXIwKd5.png"
-                        alt="Mapa del mundo con ubicaciones"
+                        src="https://imgur.com/YwiOQ5z.png"
+                        alt="Mapa de México con ubicaciones"
                         width={600}
                         height={400}
                         className="w-full h-auto object-contain"
-                        data-ai-hint="world map"
+                        data-ai-hint="mexico map"
                     />
                 </div>
             </div>
