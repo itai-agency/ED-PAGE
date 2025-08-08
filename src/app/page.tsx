@@ -266,7 +266,7 @@ export default function Home() {
       <section id="culture" ref={cultureRef} className={`relative text-white pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden observed ${isCultureVisible ? 'animate-fade-in' : ''}`}>
         <div className="absolute inset-0">
           <Image
-            src="https://imgur.com/gxGxRLi.png"
+            src="https://imgur.com/n0hEQLB.png"
             alt="Equipo de trabajo colaborando"
             fill
             className="z-0 object-cover"
@@ -514,6 +514,8 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
 
