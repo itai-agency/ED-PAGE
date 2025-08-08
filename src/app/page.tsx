@@ -315,7 +315,7 @@ export default function Home() {
                                 Visión
                             </h3>
                             <p className="text-white/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                                Ser la agencia de marketing digital líder que transforma marcas, impulsando su crecimiento y conectándolas de manera auténtica con su audiencia a nivel global.
+                                Ser el motor creativo que revoluciona el marketing automotriz. Transformamos concesionarias en marcas memorables, conectando con las personas de forma auténtica y llevando su presencia digital a lo más alto.
                             </p>
                         </div>
                     </div>
@@ -330,7 +330,7 @@ export default function Home() {
                                 Misión
                             </h3>
                             <p className="text-white/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                                Potenciar el éxito de nuestros clientes a través de estrategias digitales innovadoras, creativas y basadas en datos, construyendo relaciones duraderas y generando resultados medibles.
+                                Impulsar el crecimiento de cada concesionaria con estrategias digitales inteligentes, creatividad sin frenos y decisiones basadas en datos. Consolidando así relaciones duraderas generando resultados medibles.
                             </p>
                         </div>
                     </div>
@@ -520,4 +520,5 @@ export default function Home() {
     
 
     
+
 
