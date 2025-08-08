@@ -406,7 +406,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              ¿Listo para llevar tu marca al siguiente nivel?
+              ¿Listo para acelerar el crecimiento digital de tu concesionaria?
             </h2>
             <p className="text-foreground/80 text-lg mt-4 mb-8" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
               Hablemos de tu proyecto. Contáctanos y descubre cómo podemos ayudarte a alcanzar tus objetivos.
