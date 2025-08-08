@@ -230,7 +230,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="space-y-3">
                 <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Sobre Nosotros</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>Tu Socio Estratégico para el Crecimiento Digital</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>Somos el motor detrás de tu marketing</h2>
                 <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                   En ExpertizDigital, no solo creamos campañas; construimos legados. Somos un equipo de estrategas apasionados, creativos y analistas dedicados a un solo objetivo: hacer que tu marca brille en el saturado mundo digital.
                 </p>
@@ -520,3 +520,4 @@ export default function Home() {
     
 
     
+
