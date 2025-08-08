@@ -308,7 +308,7 @@ export default function Home() {
                 <div className="bg-card/20 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-white/10 text-white">
                     <div className="flex items-start gap-4">
                         <div className="p-3 bg-white/10 rounded-full">
-                            <Eye className="h-8 w-8 text-white shrink-0" />
+                            <Eye className="h-8 w-8 text-primary shrink-0" />
                         </div>
                         <div>
                             <h3 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -323,7 +323,7 @@ export default function Home() {
                 <div className="bg-card/20 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-white/10 text-white">
                     <div className="flex items-start gap-4">
                         <div className="p-3 bg-white/10 rounded-full">
-                            <Goal className="h-8 w-8 text-white shrink-0" />
+                            <Goal className="h-8 w-8 text-primary shrink-0" />
                         </div>
                         <div>
                             <h3 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -520,5 +520,6 @@ export default function Home() {
     
 
     
+
 
 
