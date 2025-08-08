@@ -34,32 +34,32 @@ const services = [
     {
         icon: <Users className="h-8 w-8 text-primary" />,
         title: "Redes Sociales",
-        description: "Trabajamos con las redes sociales que tu negocio necesita. Desarrollamos La estrategia que te hará darte a conocer y viralizar tu marca. Creamos el contenido realizando los diseños mas virales.",
+        description: "Trabajamos con las redes que tu concesionaria necesita. Desarrollamos la estrategia que hará darte a conocer y conseguir los clientes ideales que necesita tu sucursal para cerrar el mes con éxito. Creamos un contenido creativo y de conexión para tu audiencia objetiva.",
     },
     {
         icon: <LayoutTemplate className="h-8 w-8 text-primary" />,
         title: "Diseño Web",
-        description: "Desarrollo de la página web y soporte. Nuestro equipo Hará de tu página web un Espacio donde el cliente Encuentre fácilmente lo que Busca y a la vez sea cautivado Por el diseño de la misma.",
+        description: "Desarrollo de la página web y soporte continuo. Te brindamos la creación u optimización de la página web de tu concesionaria, donde sea el espacio propicio para que tu cliente ideal encuentre de manera intuitiva y sencilla lo que busca.",
     },
     {
         icon: <Users className="h-8 w-8 text-primary" />,
         title: "Social Media Management",
-        description: "Nos encargamos de construir y llevar la comunidad online de tu negocio que hay alrededor de tu marca. Nuestro objetivo es crear comunidad y dinamizarla. Aportando ideas frescas.",
+        description: "Nos encargamos de construir, llevar, conectar y tener una comunicación eficaz con la comunidad alrededor de tu concesionaria. Estando cerca de tus clientes ideales y optimizar su recorrido de comprador.",
     },
     {
         icon: <Video className="h-8 w-8 text-primary" />,
         title: "Creación de Videos Profesionales",
-        description: "Creamos videos en HD, 4K para la imagen de Tu negocio. Somos Profesionales en este Servicio, con la mejor Calidad contenido Dirigido e impacto Visual dirigido.",
+        description: "Producimos contenido audiovisual en calidad HD y 4K para que tu concesionaria tenga presencia, impacto y estilo. Diseñamos cada video con estrategia, gancho visual y foco total en redes sociales.",
     },
     {
         icon: <Palette className="h-8 w-8 text-primary" />,
         title: "Diseño Gráfico",
-        description: "Materializamos los mejores diseños para tu negocio. Creamos el branding de tu marca basándonos en un estudio previo. Ademas de crear contenido gráfico de acuerdo a una Personalidad única de tu negocio.",
+        description: "Diseñamos piezas gráficas que no pasan desapercibidas. Desde branding hasta contenido visual para redes, nos basamos en tu identidad, tu voz y tu objetivo para que cada diseño conecte y potencie tu concesionaria.",
     },
     {
         icon: <Award className="h-8 w-8 text-primary" />,
         title: "Branding",
-        description: "Construimos tu marca, mediante La administración estratégica del Conjunto total de activos vinculados En forma directa o indirecta al Nombre y/o símbolo (logotipo) que identifica tu marca.",
+        description: "Tomamos tu logo, slogan, naming y línea gráfica, y los convertimos en una experiencia de marca coherente, atractiva y estratégica. No solo diseñamos, le damos alma a tu concesionaria.",
     },
 ]
 
