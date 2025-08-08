@@ -232,9 +232,33 @@ export default function Home() {
                 <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Sobre Nosotros</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>Somos el motor detrás de tu marketing</h2>
                 <div className="text-foreground/80 text-lg space-y-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    <p>En Expertiz Digital no solo creamos campañas de marketing automotriz; somos un equipo obsesionado con hacer que la esencia, historia y estilo de tu concesionaria resalten. Nos enfocamos en transmitir tu autenticidad para que, más allá de vender autos, tu marca resuene y conecte realmente con tu audiencia.</p>
+                    <p>En Expertiz Digital no solo hacemos campañas: Somos un equipo obsesionado con hacer que tu concesionaria <strong>suene, se vea y se sienta auténtica.</strong></p>
+                    <p>Porque no se trata solo de vender autos, se trata de transmitir tu esencia, tu historia, tu estilo. Y eso, lo hacemos con <strong>marketing automotriz</strong> que realmente responde.</p>
                 </div>
               </div>
+              <ul className="space-y-4 mt-6">
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 mr-4 shrink-0" />
+                  <div>
+                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Innovamos todo el tiempo</h3>
+                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Nos movemos al ritmo de las tendencias, pero no solo en estilo. Usamos herramientas y estrategias que realmente solucionan.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 mr-4 shrink-0" />
+                  <div>
+                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Resultados que se ven (y se miden)</h3>
+                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Cada paso que damos está respaldado por datos claros y orientado a resultados concretos.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-primary mt-1 mr-4 shrink-0" />
+                  <div>
+                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>No te vendemos un servicio. Te acompañamos en el camino.</h3>
+                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Creemos en las relaciones a largo plazo, con metas compartidas y una dirección clara: el éxito de tu concesionaria.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
