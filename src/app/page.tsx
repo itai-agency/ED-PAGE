@@ -64,12 +64,27 @@ const services = [
 ]
 
 const locations = [
-  { state: "Ciudad de México", city: "CDMX" },
-  { state: "Jalisco", city: "Guadalajara" },
-  { state: "Nuevo León", city: "Monterrey" },
-  { state: "Quintana Roo", city: "Cancún" },
-  { state: "Baja California", city: "Tijuana" },
-  { state: "Yucatán", city: "Mérida" },
+    { city: "Tijuana", state: "Baja California" },
+    { city: "Mexicali", state: "Baja California" },
+    { city: "Ensenada", state: "Baja California" },
+    { city: "La Paz", state: "Baja California Sur" },
+    { city: "Hermosillo", state: "Sonora" },
+    { city: "Chihuahua", state: "Chihuahua" },
+    { city: "Saltillo", state: "Coahuila" },
+    { city: "Monterrey", state: "Nuevo León" },
+    { city: "San Luis Potosí", state: "San Luis Potosí" },
+    { city: "León", state: "Guanajuato" },
+    { city: "Querétaro", state: "Querétaro" },
+    { city: "Ciudad de México", state: "CDMX" },
+    { city: "Tampico", state: "Tamaulipas" },
+    { city: "Veracruz", state: "Veracruz" },
+    { city: "Guadalajara", state: "Jalisco" },
+    { city: "Chetumal", state: "Quintana Roo" },
+    { city: "Zacatecas", state: "Zacatecas" },
+    { city: "Estado de México", state: "Estado de México" },
+    { city: "Culiacán", state: "Sinaloa" },
+    { city: "Los Mochis", state: "Sinaloa" },
+    { city: "Ciudad Juárez", state: "Chihuahua" },
 ];
 
 const useIntersectionObserver = (options: IntersectionObserverInit) => {
@@ -376,7 +391,7 @@ export default function Home() {
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {locations.map((loc, index) => (
                         <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:bg-background hover:shadow-lg hover:border-primary/20 transition-all duration-300 cursor-pointer">
                             <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary transition-colors duration-300">
@@ -391,7 +406,7 @@ export default function Home() {
                 </div>
                 <div className="relative">
                     <Image 
-                        src="https://i.imgur.com/8x21EaG.png"
+                        src="https://imgur.com/YwiOQ5z.png"
                         alt="Mapa de México con ubicaciones de ExpertizDigital"
                         width={600}
                         height={400}
