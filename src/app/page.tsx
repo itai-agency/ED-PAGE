@@ -425,7 +425,7 @@ export default function Home() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button size="lg" className="rounded-full">
-                  Comienza tu Proyecto
+                  Quiero mi asesoría
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </DialogTrigger>
