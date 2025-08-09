@@ -381,11 +381,12 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-12 items-start">
                 <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                        ¿Dónde nos <span className="text-primary">encontramos?</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                        <span className="text-primary">¿Dónde estamos?</span>
+                        <span className="text-foreground/80 block text-2xl md:text-3xl font-normal mt-1">En las ciudades que mueven el volante del país</span>
                     </h2>
                     <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                        Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
+                        Estamos en las <strong>principales ciudades de México</strong>, preparados para acelerar el crecimiento digital de tu concesionaria sin importar el código postal.
                     </p>
                     <div className="relative mt-8">
                         <Image 
