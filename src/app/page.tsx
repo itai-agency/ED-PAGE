@@ -417,7 +417,7 @@ export default function Home() {
               ¿Listo para acelerar el crecimiento digital de tu concesionaria?
             </h2>
             <p className="text-foreground/80 text-lg mt-4 mb-8" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-              Hablemos de tu proyecto. Contáctanos y descubre cómo podemos ayudarte a alcanzar tus objetivos.
+              Estamos listos para ayudarte a despegar con estrategia, creatividad y resultados.
             </p>
             <Dialog>
               <DialogTrigger asChild>
