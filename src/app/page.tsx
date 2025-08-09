@@ -387,7 +387,7 @@ export default function Home() {
                     <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                         Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
                     </p>
-                    <div className="relative mt-8 flex justify-center">
+                    <div className="relative mt-8">
                         <Image 
                             src="https://imgur.com/YwiOQ5z.png"
                             alt="Mapa de México con ubicaciones de ExpertizDigital"
