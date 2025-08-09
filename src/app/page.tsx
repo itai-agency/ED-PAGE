@@ -163,7 +163,7 @@ export default function Home() {
 
       ¡Gracias!
     `.trim().replace(/\n\s*\n/g, '\n\n');
-    const whatsappLink = `https://wa.me/584141327273?text=${encodeURIComponent(text)}`;
+    const whatsappLink = `https://wa.me/525649871454?text=${encodeURIComponent(text)}`;
     window.open(whatsappLink, '_blank');
   };
 

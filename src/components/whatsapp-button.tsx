@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function WhatsappButton() {
   const text = "Hola ExpertizDigital, me gustaría obtener más información.";
-  const whatsappLink = `https://wa.me/584141327273?text=${encodeURIComponent(text)}`;
+  const whatsappLink = `https://wa.me/525649871454?text=${encodeURIComponent(text)}`;
 
   return (
     <div className="fixed bottom-28 right-4 z-50">
