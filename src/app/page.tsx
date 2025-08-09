@@ -227,7 +227,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
               <Image
-                src="https://imgur.com/PQ1T1Av.png"
+                src="https://imgur.com/y1IlHIp.png"
                 alt="Equipo de ExpertizDigital colaborando"
                 width={600}
                 height={600}
