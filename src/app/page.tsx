@@ -18,16 +18,13 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 
 const logos = [
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "TechCorp Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Innovate Inc Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Solutions Co Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Digital Wave Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Quantum Leap Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "NextGen Ventures Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Apex Industries Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Stellar Group Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Visionary Tech Logo", hint: "company logo" },
-  { src: "https://i.imgur.com/8eMNQ9j.png", alt: "Future Systems Logo", hint: "company logo" },
+  { src: "https://imgur.com/Gb512YW.png", alt: "Logo 1", hint: "company logo" },
+  { src: "https://imgur.com/dWrNNXH.png", alt: "Logo 2", hint: "company logo" },
+  { src: "https://imgur.com/P3fj2nE.png", alt: "Logo 3", hint: "company logo" },
+  { src: "https://imgur.com/wDZiHvv.png", alt: "Logo 4", hint: "company logo" },
+  { src: "https://imgur.com/F9lY6i7.png", alt: "Logo 5", hint: "company logo" },
+  { src: "https://imgur.com/LJngIKf.png", alt: "Logo 6", hint: "company logo" },
+  { src: "https://imgur.com/V92oxZI.png", alt: "Logo 7", hint: "company logo" },
 ];
 
 const services = [
