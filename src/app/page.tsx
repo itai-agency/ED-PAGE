@@ -235,7 +235,7 @@ export default function Home() {
                 data-ai-hint="team collaboration"
               />
               <div className="absolute -bottom-4 -right-4 bg-primary rounded-xl p-4 text-primary-foreground text-center shadow-lg w-48">
-                <p className="text-4xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>+10</p>
+                <p className="text-4xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>+8</p>
                 <p className="text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Años de Experiencia</p>
               </div>
             </div>
