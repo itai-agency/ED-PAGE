@@ -382,28 +382,25 @@ export default function Home() {
 
       <section id="locations" ref={locationsRef} className={`py-20 md:py-32 observed ${isLocationsVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                    ¿Dónde nos <span className="text-primary">encontramos?</span>
-                </h2>
-                <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
-                </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
-                {locations.map((loc, index) => (
-                    <div key={index} className="group flex items-center gap-4 p-4 rounded-lg border border-transparent hover:bg-background hover:shadow-lg hover:border-primary/20 transition-all duration-300 cursor-pointer">
-                        <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary transition-colors duration-300">
-                            <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+                <div className="md:sticky md:top-24">
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                        ¿Dónde nos <span className="text-primary">encontramos?</span>
+                    </h2>
+                    <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                        Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
+                    </p>
+                </div>
+                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                    {locations.map((loc, index) => (
+                        <div key={index}>
+                            <p className="text-foreground font-semibold" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>{loc.city}</p>
+                            <p className="text-foreground/70 text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>{loc.state}</p>
                         </div>
-                        <div>
-                            <p className="text-foreground text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>{loc.city}</p>
-                            <p className="text-foreground/70" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>{loc.state}</p>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-            <div className="relative mt-8 flex justify-center">
+            <div className="relative mt-16 flex justify-center">
                 <Image 
                     src="https://imgur.com/YwiOQ5z.png"
                     alt="Mapa de México con ubicaciones de ExpertizDigital"
