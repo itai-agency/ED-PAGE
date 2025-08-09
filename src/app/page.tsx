@@ -383,13 +383,23 @@ export default function Home() {
       <section id="locations" ref={locationsRef} className={`py-20 md:py-32 observed ${isLocationsVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-12 items-start">
-                <div className="md:sticky md:top-24">
+                <div>
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         ¿Dónde nos <span className="text-primary">encontramos?</span>
                     </h2>
                     <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                         Tenemos presencia en las ciudades más importantes de México, listos para impulsar tu marca a nivel nacional.
                     </p>
+                    <div className="relative mt-8 flex justify-center">
+                        <Image 
+                            src="https://imgur.com/YwiOQ5z.png"
+                            alt="Mapa de México con ubicaciones de ExpertizDigital"
+                            width={800}
+                            height={500}
+                            className="w-full max-w-md h-auto object-contain"
+                            data-ai-hint="mexico map"
+                        />
+                    </div>
                 </div>
                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                     {locations.map((loc, index) => (
@@ -399,16 +409,6 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-            </div>
-            <div className="relative mt-16 flex justify-center">
-                <Image 
-                    src="https://imgur.com/YwiOQ5z.png"
-                    alt="Mapa de México con ubicaciones de ExpertizDigital"
-                    width={800}
-                    height={500}
-                    className="w-full max-w-4xl h-auto object-contain"
-                    data-ai-hint="mexico map"
-                />
             </div>
         </div>
       </section>
