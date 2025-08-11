@@ -205,7 +205,7 @@ export default function Home() {
             <div className="marquee">
                 <div className="marquee-content">
                     {[...logos, ...logos].map((logo, index) => (
-                        <div key={index} className="flex-shrink-0 mx-8">
+                        <div key={index} className="flex items-center flex-shrink-0 mx-8 h-24">
                             <Image
                                 src={logo.src}
                                 alt={logo.alt}
@@ -523,3 +523,5 @@ export default function Home() {
     </>
   );
 }
+
+    
