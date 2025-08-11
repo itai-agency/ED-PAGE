@@ -18,7 +18,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 
 const logos = [
-  { src: "https://imgur.com/Gb512YW.png", alt: "Logo 1", hint: "company logo" },
   { src: "https://imgur.com/dWrNNXH.png", alt: "Logo 2", hint: "company logo" },
   { src: "https://imgur.com/P3fj2nE.png", alt: "Logo 3", hint: "company logo" },
   { src: "https://imgur.com/wDZiHvv.png", alt: "Logo 4", hint: "company logo" },
