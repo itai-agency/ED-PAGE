@@ -24,6 +24,7 @@ const logos = [
   { src: "https://imgur.com/F9lY6i7.png", alt: "Logo 5", hint: "company logo" },
   { src: "https://imgur.com/LJngIKf.png", alt: "Logo 6", hint: "company logo" },
   { src: "https://imgur.com/V92oxZI.png", alt: "Logo 7", hint: "company logo" },
+  { src: "https://imgur.com/CtFRjlx.png", alt: "New Logo", hint: "company logo" },
 ];
 
 const services = [
