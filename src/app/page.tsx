@@ -400,7 +400,7 @@ export default function Home() {
 
                 <div className="bg-white p-4 rounded-2xl shadow-lg">
                     <Image 
-                        src="https://imgur.com/YwiOQ5z.png"
+                        src="https://imgur.com/QaeuFxv.png"
                         alt="Mapa estilizado de México"
                         width={800}
                         height={600}
@@ -534,5 +534,6 @@ export default function Home() {
     
 
     
+
 
 
