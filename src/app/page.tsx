@@ -61,27 +61,27 @@ const services = [
 ]
 
 const locations = [
-    { city: "Tijuana", state: "Baja California" },
-    { city: "Mexicali", state: "Baja California" },
-    { city: "Ensenada", state: "Baja California" },
-    { city: "La Paz", state: "Baja California Sur" },
-    { city: "Hermosillo", state: "Sonora" },
-    { city: "Chihuahua", state: "Chihuahua" },
-    { city: "Saltillo", state: "Coahuila" },
-    { city: "Monterrey", state: "Nuevo León" },
-    { city: "San Luis Potosí", state: "San Luis Potosí" },
-    { city: "León", state: "Guanajuato" },
-    { city: "Querétaro", state: "Querétaro" },
-    { city: "Ciudad de México", state: "CDMX" },
-    { city: "Tampico", state: "Tamaulipas" },
-    { city: "Veracruz", state: "Veracruz" },
-    { city: "Guadalajara", state: "Jalisco" },
-    { city: "Chetumal", state: "Quintana Roo" },
-    { city: "Zacatecas", state: "Zacatecas" },
-    { city: "Estado de México", state: "Estado de México" },
-    { city: "Culiacán", state: "Sinaloa" },
-    { city: "Los Mochis", state: "Sinaloa" },
-    { city: "Ciudad Juárez", state: "Chihuahua" },
+    { name: "Tijuana" },
+    { name: "Mexicali" },
+    { name: "Ensenada" },
+    { name: "La Paz" },
+    { name: "Hermosillo" },
+    { name: "Chihuahua" },
+    { name: "Saltillo" },
+    { name: "Monterrey" },
+    { name: "San Luis Potosí" },
+    { name: "León" },
+    { name: "Querétaro" },
+    { name: "Ciudad de México" },
+    { name: "Tampico" },
+    { name: "Veracruz" },
+    { name: "Guadalajara" },
+    { name: "Zacatecas" },
+    { name: "Chetumal" },
+    { name: "Culiacán" },
+    { name: "Los Mochis" },
+    { name: "Ciudad Juárez" },
+    { name: "Estado de México" },
 ];
 
 const useIntersectionObserver = (options: IntersectionObserverInit) => {
@@ -219,7 +219,7 @@ export default function Home() {
                                 alt={logo.alt}
                                 width={70}
                                 height={90}
-                                className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                                className="grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100 object-contain"
                                 data-ai-hint={logo.hint}
                             />
                         </div>
@@ -387,33 +387,36 @@ export default function Home() {
 
       <section id="locations" ref={locationsRef} className={`py-20 md:py-32 observed ${isLocationsVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-                <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                        <span className="text-primary">¿Dónde estamos?</span>
-                        <span className="text-foreground/80 block text-2xl md:text-3xl font-normal mt-1">En las ciudades que mueven el volante del país</span>
-                    </h2>
-                    <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                        Estamos en las <strong>principales ciudades de México</strong>, preparados para acelerar el crecimiento digital de tu concesionaria sin importar el código postal.
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div className="space-y-6">
+                    <div>
+                        <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>¿DÓNDE ESTAMOS?</span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                            En las ciudades que mueven el volante del país
+                        </h2>
+                    </div>
+                    <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                        Listos para acelerar el crecimiento de tu concesionaria sin importar el código postal.
                     </p>
-                    <div className="relative mt-8">
-                        <Image 
-                            src="https://imgur.com/YwiOQ5z.png"
-                            alt="Mapa de México con ubicaciones de ExpertizDigital"
-                            width={800}
-                            height={500}
-                            className="w-full max-w-md h-auto object-contain"
-                            data-ai-hint="mexico map"
-                        />
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        {locations.map((loc) => (
+                            <Button key={loc.name} variant="outline" className="justify-start text-left bg-transparent border-gray-200 hover:bg-gray-50 hover:border-primary/50">
+                                <MapPin className="mr-2 h-4 w-4 text-primary" />
+                                <span className="font-medium text-foreground/80">{loc.name}</span>
+                            </Button>
+                        ))}
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-                    {locations.map((loc, index) => (
-                        <div key={index}>
-                            <p className="text-foreground font-semibold" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>{loc.city}</p>
-                            <p className="text-foreground/70 text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>{loc.state}</p>
-                        </div>
-                    ))}
+
+                <div className="bg-white p-4 rounded-2xl shadow-lg">
+                    <Image 
+                        src="https://imgur.com/YwiOQ5z.png"
+                        alt="Mapa estilizado de México"
+                        width={800}
+                        height={600}
+                        className="w-full h-auto object-contain rounded-xl"
+                        data-ai-hint="mexico map"
+                    />
                 </div>
             </div>
         </div>
