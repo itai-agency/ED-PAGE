@@ -61,27 +61,23 @@ const services = [
 ]
 
 const locations = [
-    { name: "Tijuana" },
-    { name: "Mexicali" },
-    { name: "Ensenada" },
-    { name: "La Paz" },
-    { name: "Hermosillo" },
+    { name: "Baja California" },
+    { name: "Baja California Sur" },
+    { name: "Sonora" },
     { name: "Chihuahua" },
-    { name: "Saltillo" },
-    { name: "Monterrey" },
+    { name: "Coahuila" },
+    { name: "Nuevo León" },
     { name: "San Luis Potosí" },
-    { name: "León" },
+    { name: "Guanajuato" },
     { name: "Querétaro" },
     { name: "Ciudad de México" },
-    { name: "Tampico" },
+    { name: "Tamaulipas" },
     { name: "Veracruz" },
-    { name: "Guadalajara" },
+    { name: "Jalisco" },
+    { name: "Quintana Roo" },
     { name: "Zacatecas" },
-    { name: "Chetumal" },
-    { name: "Culiacán" },
-    { name: "Los Mochis" },
-    { name: "Ciudad Juárez" },
     { name: "Estado de México" },
+    { name: "Sinaloa" },
 ];
 
 const useIntersectionObserver = (options: IntersectionObserverInit) => {
@@ -396,7 +392,7 @@ export default function Home() {
                         </h2>
                     </div>
                     <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                        Listos para acelerar el crecimiento de tu concesionaria sin importar el código postal.
+                        Estamos en las principales ciudades de México, preparados para acelerar el crecimiento digital de tu concesionaria sin importar el código postal.
                     </p>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                         {locations.map((loc) => (
@@ -534,5 +530,7 @@ export default function Home() {
     </>
   );
 }
+
+    
 
     
