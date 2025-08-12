@@ -167,6 +167,9 @@ export default function Home() {
     window.open(whatsappLink, '_blank');
   };
 
+  const heroWhatsappLink = `https://wa.me/525649871454?text=${encodeURIComponent("Hola ExpertizDigital, me gustaría obtener más información.")}`;
+
+
   return (
     <>
       <section className="pt-16 pb-12 md:pt-0">
@@ -184,6 +187,11 @@ export default function Home() {
                   <Button size="lg" className="rounded-full w-full sm:w-auto" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
                     Descubre lo que podemos hacer
                     <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href={heroWhatsappLink} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline" className="rounded-full w-full sm:w-auto" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                    Agenda una asesoría
                   </Button>
                 </Link>
               </div>
@@ -523,5 +531,3 @@ export default function Home() {
     </>
   );
 }
-
-    
