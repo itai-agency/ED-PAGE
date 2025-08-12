@@ -178,7 +178,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
             <div className="space-y-6 text-center md:text-left max-w-xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Pisa el acelerador del <span className="text-primary transition-all duration-300 hover:brightness-125 hover:drop-shadow-[0_0_5px_hsl(var(--primary))]">marketing</span> de tu concesionaria
+                Pisa el acelerador del <span className="text-primary transition-colors duration-300 hover:text-primary/80">marketing</span> de tu concesionaria
               </h1>
               <div className="text-foreground/80 md:text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                 <p>Transformamos tu concesionario en un referente en redes sociales, con campañas efectivas, contenido que conecta y estrategias basadas en datos que garantizan resultados.</p>
