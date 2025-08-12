@@ -442,7 +442,7 @@ export default function Home() {
                 <DialogHeader>
                   <DialogTitle style={{ fontFamily: 'Poppins, sans-serif' }}>Hablemos</DialogTitle>
                   <DialogDescription style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    Completa el formulario y elige tu método de contacto preferido.
+                    Completa el formulario y te enviaremos un mensaje de WhatsApp para agendar tu asesoría.
                   </DialogDescription>
                 </DialogHeader>
                 <Form {...form}>
@@ -534,3 +534,5 @@ export default function Home() {
     </>
   );
 }
+
+    
