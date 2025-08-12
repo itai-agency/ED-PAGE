@@ -25,6 +25,11 @@ const logos = [
   { src: "https://imgur.com/LJngIKf.png", alt: "Logo 6", hint: "company logo" },
   { src: "https://imgur.com/V92oxZI.png", alt: "Logo 7", hint: "company logo" },
   { src: "https://imgur.com/CtFRjlx.png", alt: "New Logo", hint: "company logo" },
+  { src: "https://imgur.com/ErDRd51.png", alt: "New Logo 2", hint: "company logo" },
+  { src: "https://imgur.com/SVWvXuw.png", alt: "New Logo 3", hint: "company logo" },
+  { src: "https://imgur.com/OXYar1X.png", alt: "New Logo 4", hint: "company logo" },
+  { src: "https://imgur.com/31TSput.png", alt: "New Logo 5", hint: "company logo" },
+  { src: "https://imgur.com/4EaT7W4.png", alt: "New Logo 6", hint: "company logo" },
 ];
 
 const services = [
@@ -534,3 +539,4 @@ export default function Home() {
     
 
     
+
