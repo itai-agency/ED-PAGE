@@ -285,18 +285,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="culture" ref={cultureRef} className={`relative text-white pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden observed ${isCultureVisible ? 'animate-fade-in' : ''}`}>
-        <div className="absolute inset-0">
-          <Image
-            src="https://imgur.com/n0hEQLB.png"
-            alt="Equipo de trabajo colaborando"
-            fill
-            className="z-0 object-cover"
-            data-ai-hint="teamwork collaboration"
-          />
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
-        </div>
-
+      <section id="culture" ref={cultureRef} className={`relative text-white pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden observed bg-black/80 ${isCultureVisible ? 'animate-fade-in' : ''}`}>
         <div className="relative z-20 container mx-auto px-4 md:px-6">
             <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
@@ -545,4 +534,5 @@ export default function Home() {
     
 
     
+
 
