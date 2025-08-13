@@ -32,16 +32,31 @@ const footerSections = [
 
 export function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="bg-black/90 text-white">
         <div className="container mx-auto px-4 md:px-6 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div className="md:col-span-1 lg:col-span-2">
+                     <Link href="/" className="flex items-center space-x-2 mb-4">
+                        <img src="https://imgur.com/p8fziZ7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
+                    </Link>
+                    <p className="text-white/70 max-w-sm mt-4 text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                        Agencia de marketing digital especializada en el sector automotriz. Diseñamos estrategias que generan demanda y medimos lo que realmente importa: prospectos calificados, citas y ventas concretadas.
+                    </p>
+                    <div className="flex items-center space-x-4 mt-6">
+                        {socialLinks.map((social, index) => (
+                            <Link key={index} href={social.href} className="text-white/80 hover:text-white transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+                                {social.icon}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
                 {footerSections.map((section) => (
                     <div key={section.title}>
                         <h3 className="font-bold text-lg mb-4 text-primary">{section.title}</h3>
                         <ul className="space-y-3">
                             {section.links.map((link) => (
                                 <li key={link.label}>
-                                    <Link href={link.href} className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+                                    <Link href={link.href} className="text-white/70 hover:text-white transition-colors duration-300">
                                         {link.label}
                                     </Link>
                                 </li>
@@ -49,25 +64,10 @@ export function Footer() {
                         </ul>
                     </div>
                 ))}
-                <div className="md:col-start-2 lg:col-start-4 lg:flex lg:justify-end">
-                    <div className="text-left lg:text-right">
-                        <Link href="/" className="flex items-center justify-start lg:justify-end space-x-2 mb-4">
-                            <img src="https://imgur.com/p8fziZ7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
-                        </Link>
-                        <h3 className="font-bold text-lg mb-4 mt-8 text-primary">Redes sociales</h3>
-                        <div className="flex items-center justify-start lg:justify-end space-x-4">
-                            {socialLinks.map((social, index) => (
-                                <Link key={index} href={social.href} className="text-primary hover:text-primary/80 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
-                                    {social.icon}
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-      <div className="bg-muted/50 py-4">
-        <div className="container mx-auto px-4 md:px-6 text-center text-sm text-muted-foreground">
+      <div className="bg-black/50 py-4">
+        <div className="container mx-auto px-4 md:px-6 text-center text-sm text-white/50">
             <p>
                 &copy; {new Date().getFullYear()} ExpertizDigital. Todos los derechos reservados.
             </p>
