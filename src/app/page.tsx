@@ -298,7 +298,7 @@ export default function Home() {
               <div className="w-24 h-1 bg-primary mx-auto mt-6 mb-8"></div>
               <div className="flex flex-wrap justify-center gap-4 mb-16">
                 {cultureValues.map((value) => (
-                    <Button key={value} variant="outline" className="bg-transparent border-white/20 text-white hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors duration-300">
+                    <Button key={value} variant="outline" className="rounded-full bg-transparent border-white/20 text-white hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors duration-300">
                         {value}
                     </Button>
                 ))}
@@ -524,6 +524,7 @@ export default function Home() {
     
 
     
+
 
 
 
