@@ -178,7 +178,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
             <div className="space-y-6 text-center md:text-left max-w-xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Acelera las ventas y la presencia digital de tu concesionaria.
+                Acelera las ventas y la <span className="text-primary transition-all duration-300 hover:drop-shadow-[0_0_8px_hsl(var(--primary))]">presencia digital</span> de tu concesionaria.
               </h1>
               <div className="text-foreground/80 md:text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                 <p>Impulsamos tu concesionaria con estrategias digitales efectivas, contenido que conecta con tus clientes y acciones basadas en datos para ayudarte a vender más y mejor.</p>
@@ -284,13 +284,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="culture" ref={cultureRef} className={`relative text-white pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden observed bg-black/80 ${isCultureVisible ? 'animate-fade-in' : ''}`}>
+      <section id="culture" ref={cultureRef} className={`relative pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden observed bg-black/80 ${isCultureVisible ? 'animate-fade-in' : ''}`}>
         <div className="relative z-20 container mx-auto px-4 md:px-6">
             <div className="text-center">
-              <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   CULTURA EXPERTIZDIGITAL
               </h2>
-              <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-white/90" style={{ fontFamily: 'Roboto, sans-serif' }}>
                 Cuando la pasión nos mueve, no hay curva que nos detenga
               </p>
               <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
@@ -515,6 +515,7 @@ export default function Home() {
     
 
     
+
 
 
 
