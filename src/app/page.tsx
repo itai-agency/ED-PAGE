@@ -212,7 +212,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="py-12">
+          <div className="py-8 md:py-12">
             <div className="marquee">
                 <div className="marquee-content">
                     {[...logos, ...logos].map((logo, index) => (
@@ -233,7 +233,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" ref={aboutRef} className={`py-20 md:py-32 observed ${isAboutVisible ? 'animate-fade-in-up' : ''}`}>
+      <section id="about" ref={aboutRef} className={`py-16 md:py-24 observed ${isAboutVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
@@ -532,6 +532,7 @@ export default function Home() {
     
 
     
+
 
 
 
