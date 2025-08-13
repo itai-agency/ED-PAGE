@@ -11,12 +11,12 @@ const footerSections = [
     {
         title: "Servicios",
         links: [
-            { label: "Redes Sociales", href: "#services" },
-            { label: "Diseño Web", href: "#services" },
-            { label: "Social Media Management", href: "#services" },
-            { label: "Creación de Videos", href: "#services" },
-            { label: "Diseño Gráfico", href: "#services" },
-            { label: "Branding", href: "#services" },
+            { label: "Estrategias digitales", href: "#services" },
+            { label: "Diseño web", href: "#services" },
+            { label: "Publicidad inteligente", href: "#services" },
+            { label: "Producción audiovisual", href: "#services" },
+            { label: "Diseño gráfico", href: "#services" },
+            { label: "Innovación con IA", href: "#services" },
         ],
     },
     {
