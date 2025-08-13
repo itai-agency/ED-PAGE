@@ -397,10 +397,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              ¿Listo para acelerar el crecimiento digital de tu concesionaria?
+              ¿Listo para acelerar el crecimiento de tu concesionaria?
             </h2>
             <p className="text-foreground/80 text-lg mt-4 mb-8" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-              Estamos listos para ayudarte a despegar con estrategia, creatividad y resultados.
+              Estrategias digitales, creatividad y tecnología para atraer más clientes y cerrar más ventas.
             </p>
             <Dialog>
               <DialogTrigger asChild>
@@ -515,6 +515,7 @@ export default function Home() {
     
 
     
+
 
 
 
