@@ -182,7 +182,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Acelera las ventas y la <span className="text-primary transition-all duration-300 hover:drop-shadow-[0_0_8px_hsl(var(--primary))]">presencia digital</span> de tu concesionaria.
               </h1>
-              <div className="text-foreground/80 md:text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+              <div className="text-foreground md:text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                 <p>Impulsamos tu concesionaria con estrategias digitales efectivas, contenido que conecta con tus clientes y acciones basadas en datos para ayudarte a vender más y mejor.</p>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
@@ -254,7 +254,7 @@ export default function Home() {
               <div className="space-y-3">
                 <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Sobre Nosotros</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>Somos el motor que impulsa tu marketing automotriz</h2>
-                <div className="text-foreground/80 text-lg space-y-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                <div className="text-foreground text-lg space-y-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                     <p>No solo creamos anuncios: desarrollamos un sistema integral de crecimiento para tu concesionaria. Desde la estrategia hasta la implementación, con procesos claros y tableros que hablan el idioma del piso de ventas.</p>
                 </div>
               </div>
@@ -345,7 +345,7 @@ export default function Home() {
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Soluciones especializadas en marketing automotriz</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Soluciones Integrales para tu Éxito Digital</h2>
-                <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                <p className="text-foreground text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                     Estrategias, tecnología e inteligencia artificial para atraer, convertir y fidelizar a tus clientes ideales.
                 </p>
             </div>
@@ -375,16 +375,24 @@ export default function Home() {
                             En las ciudades que mueven el volante del país
                         </h2>
                     </div>
-                    <p className="text-foreground/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+                    <p className="text-foreground text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                         Estamos en las principales ciudades de México, preparados para acelerar el crecimiento digital de tu concesionaria sin importar el código postal.
                     </p>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        {locations.map((loc) => (
-                            <Button key={loc.name} variant="outline" className="justify-start text-left bg-transparent border-gray-200 hover:bg-gray-50 hover:border-primary/50">
-                                <MapPin className="mr-2 h-4 w-4 text-primary" />
-                                <span className="font-medium text-foreground/80">{loc.name}</span>
-                            </Button>
-                        ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                        <div className="bg-primary text-primary-foreground p-6 rounded-lg shadow-lg flex items-center gap-4">
+                            <MapPin className="h-10 w-10" />
+                            <div>
+                                <p className="text-3xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>+13</p>
+                                <p className="text-sm uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif' }}>Estados</p>
+                            </div>
+                        </div>
+                        <div className="bg-primary text-primary-foreground p-6 rounded-lg shadow-lg flex items-center gap-4">
+                            <Handshake className="h-10 w-10" />
+                            <div>
+                                <p className="text-3xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>+20</p>
+                                <p className="text-sm uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif' }}>Ciudades</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -408,7 +416,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
               ¿Listo para acelerar el crecimiento de tu concesionaria?
             </h2>
-            <p className="text-foreground/80 text-lg mt-4 mb-8" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
+            <p className="text-foreground text-lg mt-4 mb-8" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
               Estrategias digitales, creatividad y tecnología para atraer más clientes y cerrar más ventas.
             </p>
             <Dialog>
@@ -524,6 +532,7 @@ export default function Home() {
     
 
     
+
 
 
 
