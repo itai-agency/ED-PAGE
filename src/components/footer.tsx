@@ -44,7 +44,7 @@ export function Footer() {
                     </p>
                     <div className="flex items-center space-x-4 mt-6">
                         {socialLinks.map((social, index) => (
-                            <Link key={index} href={social.href} className="text-white/80 hover:text-white transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+                            <Link key={index} href={social.href} className="text-primary hover:text-primary/80 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
                                 {social.icon}
                             </Link>
                         ))}
