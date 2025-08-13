@@ -178,10 +178,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
             <div className="space-y-6 text-center md:text-left max-w-xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Pisa el acelerador del <span className="text-primary transition-colors duration-300 hover:brightness-110">marketing</span> de tu concesionaria
+                Acelera las ventas y la presencia digital de tu concesionaria.
               </h1>
               <div className="text-foreground/80 md:text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                <p>Transformamos tu concesionario en un referente en redes sociales, con campañas efectivas, contenido que conecta y estrategias basadas en datos que garantizan resultados.</p>
+                <p>Impulsamos tu concesionaria con estrategias digitales efectivas, contenido que conecta con tus clientes y acciones basadas en datos para ayudarte a vender más y mejor.</p>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
                 <Link href="#services">
@@ -534,6 +534,7 @@ export default function Home() {
     
 
     
+
 
 
 
