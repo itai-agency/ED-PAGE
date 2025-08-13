@@ -287,13 +287,13 @@ export default function Home() {
       <section id="culture" ref={cultureRef} className={`relative pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden observed bg-black/80 ${isCultureVisible ? 'animate-fade-in' : ''}`}>
         <div className="relative z-20 container mx-auto px-4 md:px-6">
             <div className="text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  CULTURA EXPERTIZDIGITAL
-              </h2>
-              <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-white/90" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                  Cultura ExpertizDigital
+              </span>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold text-white max-w-3xl mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Cuando la pasión nos mueve, no hay curva que nos detenga
-              </p>
-              <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
+              </h2>
+              <div className="w-24 h-1 bg-primary mx-auto mt-6 mb-8"></div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 mt-16">
@@ -515,6 +515,7 @@ export default function Home() {
     
 
     
+
 
 
 
