@@ -35,33 +35,33 @@ const logos = [
 const services = [
     {
         icon: <Users className="h-8 w-8 text-primary" />,
-        title: "Redes Sociales",
-        description: "Trabajamos con las redes que tu concesionaria necesita. Desarrollamos la estrategia que hará darte a conocer y conseguir los clientes ideales que necesita tu sucursal para cerrar el mes con éxito. Creamos un contenido creativo y de conexión para tu audiencia objetiva.",
+        title: "Estrategias digitales & redes Sociales",
+        description: "Creamos contenido estratégico y campañas basadas en inbound marketing que atraen prospectos calificados y generan oportunidades reales de venta.",
     },
     {
         icon: <LayoutTemplate className="h-8 w-8 text-primary" />,
-        title: "Diseño Web",
-        description: "Desarrollo de la página web y soporte continuo. Te brindamos la creación u optimización de la página web de tu concesionaria, donde sea el espacio propicio para que tu cliente ideal encuentre de manera intuitiva y sencilla lo que busca.",
+        title: "Diseño web & experiencia digital",
+        description: "Diseñamos páginas rápidas, intuitivas y optimizadas para captar leads y conectar con tu piso de ventas.",
     },
     {
-        icon: <Users className="h-8 w-8 text-primary" />,
-        title: "Social Media Management",
-        description: "Nos encargamos de construir, llevar, conectar y tener una comunicación eficaz con la comunidad alrededor de tu concesionaria. Estando cerca de tus clientes ideales y optimizar su recorrido de comprador.",
+        icon: <Rocket className="h-8 w-8 text-primary" />,
+        title: "Gestión de medios & publicidad inteligente",
+        description: "Ejecutamos estrategias publicitarias multicanal, potenciadas con inteligencia artificial para maximizar el retorno de inversión.",
     },
     {
         icon: <Video className="h-8 w-8 text-primary" />,
-        title: "Creación de Videos Profesionales",
-        description: "Producimos contenido audiovisual en calidad HD y 4K para que tu concesionaria tenga presencia, impacto y estilo. Diseñamos cada video con estrategia, gancho visual y foco total en redes sociales.",
+        title: "Producción de contenido audiovisual",
+        description: "Creamos material en HD y 4K para campañas, redes sociales y presentaciones, diseñado para captar atención y transmitir tu propuesta de valor.",
     },
     {
         icon: <Palette className="h-8 w-8 text-primary" />,
-        title: "Diseño Gráfico",
-        description: "Diseñamos piezas gráficas que no pasan desapercibidas. Desde branding hasta contenido visual para redes, nos basamos en tu identidad, tu voz y tu objetivo para que cada diseño conecte y potencie tu concesionaria.",
+        title: "Diseño gráfico",
+        description: "Creamos identidad visual y piezas gráficas coherentes con tu marca, fortaleciendo tu posicionamiento en el mercado automotriz.",
     },
     {
-        icon: <Award className="h-8 w-8 text-primary" />,
-        title: "Branding",
-        description: "Tomamos tu logo, slogan, naming y línea gráfica, y los convertimos en una experiencia de marca coherente, atractiva y estratégica. No solo diseñamos, le damos alma a tu concesionaria.",
+        icon: <Sparkles className="h-8 w-8 text-primary" />,
+        title: "Innovación & tecnología con IA",
+        description: "Nuestro departamento de tecnología e inteligencia artificial co-crea contigo soluciones que optimizan procesos, mejoran la eficiencia y elevan el rendimiento de tus campañas.",
     },
 ]
 
@@ -334,10 +334,10 @@ export default function Home() {
       <section id="services" ref={servicesRef} className={`py-20 md:py-32 observed ${isServicesVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-                <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Lo que te ofrecemos</span>
+                <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Soluciones especializadas en marketing automotriz</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Soluciones Integrales para tu Éxito Digital</h2>
                 <p className="text-foreground/80 text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    Ofrecemos una gama completa de servicios de marketing digital diseñados para hacer crecer tu negocio y fortalecer tu presencia en línea.
+                    Estrategias, tecnología e inteligencia artificial para atraer, convertir y fidelizar a tus clientes ideales.
                 </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -515,6 +515,7 @@ export default function Home() {
     
 
     
+
 
 
 
