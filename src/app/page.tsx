@@ -251,32 +251,31 @@ export default function Home() {
             <div className="space-y-6">
               <div className="space-y-3">
                 <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Sobre Nosotros</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>Somos el motor detrás de tu marketing</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>Somos el motor que impulsa tu marketing automotriz</h2>
                 <div className="text-foreground/80 text-lg space-y-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                    <p>En Expertiz Digital no solo hacemos campañas: Somos un equipo obsesionado con hacer que tu concesionaria <strong>suene, se vea y se sienta auténtica.</strong></p>
-                    <p>Porque no se trata solo de vender autos, se trata de transmitir tu esencia, tu historia, tu estilo. Y eso, lo hacemos con <strong>marketing automotriz</strong> que realmente responde.</p>
+                    <p>No solo creamos anuncios: desarrollamos un sistema integral de crecimiento para tu concesionaria. Desde la estrategia hasta la implementación, con procesos claros y tableros que hablan el idioma del piso de ventas.</p>
                 </div>
               </div>
               <ul className="space-y-4 mt-6">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 mr-4 shrink-0" />
                   <div>
-                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Innovamos todo el tiempo</h3>
-                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Nos movemos al ritmo de las tendencias, pero no solo en estilo. Usamos herramientas y estrategias que realmente solucionan.</p>
+                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Innovamos al ritmo del mercado</h3>
+                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Adoptamos herramientas y formatos probados en el ecosistema automotriz, evitando modas pasajeras.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 mr-4 shrink-0" />
                   <div>
-                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Resultados que se ven (y se miden)</h3>
-                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Cada paso que damos está respaldado por datos claros y orientado a resultados concretos.</p>
+                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Resultados medibles</h3>
+                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Cada acción está respaldada por un KPI. Si no genera visitas, citas, pruebas de manejo o ventas, no se implementa.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-primary mt-1 mr-4 shrink-0" />
                   <div>
-                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>No te vendemos un servicio. Te acompañamos en el camino.</h3>
-                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Creemos en las relaciones a largo plazo, con metas compartidas y una dirección clara: el éxito de tu concesionaria.</p>
+                    <h3 className="font-bold text-foreground" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Acompañamiento real</h3>
+                    <p className="text-foreground/80" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Trabajamos como parte de tu equipo: diseñamos estrategias, implementamos y damos seguimiento semanal. Sin humo, solo resultados.</p>
                   </div>
                 </li>
               </ul>
@@ -289,30 +288,12 @@ export default function Home() {
         <div className="relative z-20 container mx-auto px-4 md:px-6">
             <div className="text-center">
               <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  Cultura ExpertizDigital
+                  CULTURA EXPERTIZDIGITAL
               </h2>
               <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto" style={{ fontFamily: 'Roboto, sans-serif' }}>
-                Porque cuando el motor es la pasión, no hay curva que nos detenga
+                Cuando la pasión nos mueve, no hay curva que nos detenga
               </p>
               <div className="w-24 h-1 bg-primary mx-auto mt-4 mb-8"></div>
-              
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      <Lightbulb className="mr-2 h-5 w-5" /> Innovación
-                  </Button>
-                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      <Users className="mr-2 h-5 w-5" /> Colaboración
-                  </Button>
-                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      <Rocket className="mr-2 h-5 w-5" /> Resultados
-                  </Button>
-                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      <Sparkles className="mr-2 h-5 w-5" /> Creatividad
-                  </Button>
-                  <Button className="rounded-full bg-white/10 border border-white/20 text-white transition-all duration-300" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-                      <Handshake className="mr-2 h-5 w-5" /> Transparencia
-                  </Button>
-              </div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 mt-16">
@@ -326,7 +307,7 @@ export default function Home() {
                                 Visión
                             </h3>
                             <p className="text-white/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                                Ser el motor creativo que revoluciona el marketing automotriz. Transformamos concesionarias en marcas memorables, conectando con las personas de forma auténtica y llevando su presencia digital a lo más alto.
+                                Ser el aliado creativo que transforme el marketing automotriz en México, conectando concesionarias con sus clientes a través de experiencias memorables que generen ventas reales.
                             </p>
                         </div>
                     </div>
@@ -341,7 +322,7 @@ export default function Home() {
                                 Misión
                             </h3>
                             <p className="text-white/80 text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                                Impulsar el crecimiento de cada concesionaria con estrategias digitales inteligentes, creatividad sin frenos y decisiones basadas en datos. Consolidando así relaciones duraderas generando resultados medibles.
+                                Impulsar el crecimiento de cada concesionaria con estrategias digitales inteligentes, creatividad enfocada y decisiones basadas en datos, construyendo relaciones sólidas y duraderas.
                             </p>
                         </div>
                     </div>
@@ -534,6 +515,7 @@ export default function Home() {
     
 
     
+
 
 
 
