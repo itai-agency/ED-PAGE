@@ -85,6 +85,8 @@ const locations = [
     { name: "Sinaloa" },
 ];
 
+const cultureValues = ["Innovación", "Colaboración", "Resultados", "Creatividad", "Transparencia"];
+
 const useIntersectionObserver = (options: IntersectionObserverInit) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLElement | null>(null);
@@ -185,13 +187,13 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
                 <Link href="#services">
-                  <Button size="lg" className="rounded-full w-full sm:w-auto" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                  <Button size="lg" className="w-full sm:w-auto" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
                     Descubre lo que podemos hacer
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link href={heroWhatsappLink} target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" className="rounded-full w-full sm:w-auto" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
                     Agenda una asesoría
                   </Button>
                 </Link>
@@ -294,9 +296,16 @@ export default function Home() {
                 Cuando la pasión nos mueve, no hay curva que nos detenga
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto mt-6 mb-8"></div>
+              <div className="flex flex-wrap justify-center gap-4 mb-16">
+                {cultureValues.map((value) => (
+                    <Button key={value} variant="outline" className="bg-transparent border-white/20 text-white hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors duration-300">
+                        {value}
+                    </Button>
+                ))}
+              </div>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 mt-16">
+            <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-card/20 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-white/10 text-white">
                     <div className="flex items-start gap-4">
                         <div className="p-3 bg-white/10 rounded-full">
@@ -404,7 +413,7 @@ export default function Home() {
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" className="rounded-full">
+                <Button size="lg" className="">
                   Quiero mi asesoría
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -493,7 +502,7 @@ export default function Home() {
                   </div>
                 </Form>
                 <div className="flex justify-end gap-4 mt-4">
-                  <Button type="button" onClick={handleWhatsappSubmit} className="rounded-full">
+                  <Button type="button" onClick={handleWhatsappSubmit} className="">
                     Enviar mensaje
                   </Button>
                 </div>
@@ -515,6 +524,7 @@ export default function Home() {
     
 
     
+
 
 
 
