@@ -37,7 +37,7 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 <div className="md:col-span-1 lg:col-span-2">
                      <Link href="/" className="flex items-center space-x-2 mb-4">
-                        <img src="https://imgur.com/p8fziZ7.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
+                        <img src="https://imgur.com/egofLQq.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
                     </Link>
                     <p className="text-white/70 max-w-sm mt-4 text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                         Agencia de marketing digital especializada en el sector automotriz. Diseñamos estrategias que generan demanda y medimos lo que realmente importa: prospectos calificados, citas y ventas concretadas.
