@@ -65,25 +65,6 @@ const services = [
     },
 ]
 
-const locations = [
-    { name: "Baja California" },
-    { name: "Baja California Sur" },
-    { name: "Sonora" },
-    { name: "Chihuahua" },
-    { name: "Coahuila" },
-    { name: "Nuevo León" },
-    { name: "San Luis Potosí" },
-    { name: "Guanajuato" },
-    { name: "Querétaro" },
-    { name: "Ciudad de México" },
-    { name: "Tamaulipas" },
-    { name: "Veracruz" },
-    { name: "Jalisco" },
-    { name: "Quintana Roo" },
-    { name: "Zacatecas" },
-    { name: "Estado de México" },
-    { name: "Sinaloa" },
-];
 
 const cultureValues = ["Innovación", "Colaboración", "Resultados", "Creatividad", "Transparencia"];
 
@@ -200,15 +181,21 @@ export default function Home() {
               </div>
             </div>
             <div className="relative mt-12 md:mt-0">
-              <div className="relative flex justify-center">
-                <Image
-                  src="https://imgur.com/E2INdht.png"
-                  alt="Mujer profesional sonriendo"
-                  width={500}
-                  height={600}
-                  className="object-contain"
-                  data-ai-hint="woman smiling"
-                />
+              <div className="relative flex justify-center bg-white p-4 rounded-2xl shadow-lg max-w-[600px] w-full mx-auto">
+                <div className="relative">
+                  <Image
+                    src="https://imgur.com/M2CgPzb.png"
+                    alt="Mujer profesional sonriendo"
+                    width={600}
+                    height={600}
+                    className="rounded-xl shadow-lg object-cover"
+                    data-ai-hint="woman smiling"
+                  />
+                  <div className="absolute -bottom-4 -left-4 bg-primary rounded-xl p-1 text-primary-foreground text-center shadow-lg w-48">
+                    <p className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>+8</p>
+                    <p className="text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Años de Experiencia</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -245,10 +232,6 @@ export default function Home() {
                 className="rounded-xl shadow-2xl object-cover"
                 data-ai-hint="team collaboration"
               />
-              <div className="absolute -bottom-4 -right-4 bg-primary rounded-xl p-4 text-primary-foreground text-center shadow-lg w-48">
-                <p className="text-4xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>+8</p>
-                <p className="text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Años de Experiencia</p>
-              </div>
             </div>
             <div className="space-y-6">
               <div className="space-y-3">
