@@ -157,7 +157,7 @@ export default function Home() {
     <>
       <section id="inicio" className="pt-16 pb-12 md:pt-0">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 items-center min-h-[calc(100vh-4rem)] py-12 px-4 lg:px-8 container mx-auto">
+          <div className="grid lg:grid-cols-2 items-center min-h-[calc(100vh-4rem)] py-12 px-4 lg:px-7 container mx-auto">
             <div className="space-y-6 text-center lg:text-left max-w-3xl mx-auto lg:max-w-none w-full lg:pr-12">
               <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Acelera las ventas y la <span className="text-primary transition-all duration-300 hover:drop-shadow-[0_0_8px_hsl(var(--primary))]">presencia digital</span> de tu concesionaria.
@@ -190,9 +190,9 @@ export default function Home() {
                     className="rounded-xl shadow-lg object-cover"
                     data-ai-hint="woman smiling"
                   />
-                  <div className="absolute -bottom-4 -left-4 bg-primary rounded-xl p-1 text-primary-foreground text-center shadow-lg w-48">
-                    <p className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>+8</p>
-                    <p className="text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>Años de Experiencia</p>
+                  <div className="absolute -bottom-4 -left-4 bg-primary rounded-xl px-4 py-2 text-primary-foreground text-center shadow-lg whitespace-nowrap flex items-center">
+                    <span className="text-2xl font-bold mr-2" style={{ fontFamily: 'Poppins, sans-serif' }}>+8</span>
+                    <span className="text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500 }}>Años de experiencia</span>
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Nuestros clientes confían en nosotros
             </h2>
-            <p className="text-foreground/80 max-w-2xl mx-auto mb-8 px-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
+            <p className="text-foreground/80 max-w-3xl mx-auto mb-8 px-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
               Colaboramos con marcas líderes en la industria automotriz para impulsar su presencia digital
             </p>
             <div className="marquee">
@@ -276,7 +276,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="culture" ref={cultureRef} className={`relative pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden observed bg-black/80 ${isCultureVisible ? 'animate-fade-in' : ''}`}>
+      <section id="culture" ref={cultureRef} className={`relative pt-20 md:pt-30 pb-16 md:pb-24 overflow-hidden observed bg-black/80 ${isCultureVisible ? 'animate-fade-in' : ''}`}>
         <div className="relative z-20 container mx-auto px-4 md:px-6">
             <div className="text-center">
               <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
