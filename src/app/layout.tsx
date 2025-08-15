@@ -5,6 +5,7 @@ import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollToTopButton } from '@/components/scroll-to-top-button';
 import { WhatsappButton } from '@/components/whatsapp-button';
+import { ScrollIndicator } from '@/components/scroll-indicator';
 
 export const metadata: Metadata = {
   title: 'ExpertizDigital',
@@ -33,6 +34,7 @@ export default function RootLayout({
             <Footer />
         </div>
         <Toaster />
+        <ScrollIndicator />
         <ScrollToTopButton />
         <WhatsappButton />
       </body>

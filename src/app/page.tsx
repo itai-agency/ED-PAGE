@@ -153,14 +153,13 @@ export default function Home() {
 
   const heroWhatsappLink = `https://wa.me/525649871454?text=${encodeURIComponent("Hola ExpertizDigital, me gustaría obtener más información.")}`;
 
-
   return (
     <>
-      <section className="pt-16 pb-12 md:pt-0">
+      <section id="inicio" className="pt-16 pb-12 md:pt-0">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
-            <div className="space-y-6 text-center md:text-left max-w-xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <div className="grid lg:grid-cols-2 items-center min-h-[calc(100vh-4rem)] py-12 px-4 lg:px-8 container mx-auto">
+            <div className="space-y-6 text-center lg:text-left max-w-3xl mx-auto lg:max-w-none w-full lg:pr-12">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Acelera las ventas y la <span className="text-primary transition-all duration-300 hover:drop-shadow-[0_0_8px_hsl(var(--primary))]">presencia digital</span> de tu concesionaria.
               </h1>
               <div className="text-foreground md:text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
@@ -199,7 +198,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="py-8 md:py-12">
+          <div className="py-8 md:py-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              Nuestros clientes confían en nosotros
+            </h2>
+            <p className="text-foreground/80 max-w-2xl mx-auto mb-8 px-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
+              Colaboramos con marcas líderes en la industria automotriz para impulsar su presencia digital
+            </p>
             <div className="marquee">
                 <div className="marquee-content">
                     {[...logos, ...logos].map((logo, index) => (
@@ -216,22 +221,24 @@ export default function Home() {
                     ))}
                 </div>
             </div>
-        </div>
+          </div>
         </div>
       </section>
 
       <section id="about" ref={aboutRef} className={`py-16 md:py-24 observed ${isAboutVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative">
-              <Image
-                src="https://imgur.com/y1IlHIp.png"
-                alt="Equipo de ExpertizDigital colaborando"
-                width={600}
-                height={600}
-                className="rounded-xl shadow-2xl object-cover"
-                data-ai-hint="team collaboration"
-              />
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20">
+            <div className="lg:order-1">
+              <div className="max-w-[600px] mx-auto">
+                <Image
+                  src="https://imgur.com/y1IlHIp.png"
+                  alt="Equipo de ExpertizDigital colaborando"
+                  width={600}
+                  height={600}
+                  className="rounded-xl shadow-2xl w-full h-auto object-cover"
+                  data-ai-hint="team collaboration"
+                />
+              </div>
             </div>
             <div className="space-y-6">
               <div className="space-y-3">
@@ -327,7 +334,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>Soluciones especializadas en marketing automotriz</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Soluciones Integrales para tu Éxito Digital</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Soluciones integrales para tu éxito digital</h2>
                 <p className="text-foreground text-lg mt-4" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                     Estrategias, tecnología e inteligencia artificial para atraer, convertir y fidelizar a tus clientes ideales.
                 </p>
@@ -348,15 +355,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="locations" ref={locationsRef} className={`py-20 md:py-32 observed ${isLocationsVisible ? 'animate-fade-in-up' : ''}`}>
+      <section id="locations" ref={locationsRef} className={`py-16 md:py-24 bg-muted/30 ${isLocationsVisible ? 'animate-fade-in-up' : ''}`}>
         <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <div className="space-y-6">
                     <div>
                         <span className="text-primary uppercase tracking-wider" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>¿DÓNDE ESTAMOS?</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                            En las ciudades que mueven el volante del país
-                        </h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: 'Poppins, sans-serif' }}>En las ciudades que mueven el volante del país</h2>
                     </div>
                     <p className="text-foreground text-lg" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
                         Estamos en las principales ciudades de México, preparados para acelerar el crecimiento digital de tu concesionaria sin importar el código postal.
@@ -393,8 +398,22 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="contact" ref={contactRef} className={`py-20 md:py-32 observed ${isContactVisible ? 'animate-fade-in-up' : ''}`}>
-        <div className="container mx-auto px-4 md:px-6">
+      <section id="contact" ref={contactRef} className={`relative py-20 md:py-32 overflow-hidden observed ${isContactVisible ? 'animate-fade-in-up' : ''}`}>
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 -top-30">
+            <Image
+              src="https://imgur.com/H1h0BdM.png"
+              alt="Background"
+              fill
+              className="object-cover object-center"
+              quality={100}
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative">
           <div className="text-center max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Poppins, sans-serif' }}>
               ¿Listo para acelerar el crecimiento de tu concesionaria?
