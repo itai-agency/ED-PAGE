@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'ExpertizDigital',
   description: 'Best Marketing Company',
   icons: {
-    icon: 'https://i.imgur.com/4yti2TO.png',
+    icon: '/favicon.ico',
   },
 };
 
