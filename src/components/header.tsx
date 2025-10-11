@@ -30,6 +30,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className="relative group transition-colors hover:text-primary"
+              style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 500, fontSize: "1.1rem" }}
             >
               <span>{link.label}</span>
               <span className="absolute bottom-[-2px] left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
@@ -39,7 +40,7 @@ export function Header() {
         
         <div className="hidden md:flex items-center">
             <Link href="#contact">
-                <Button className="rounded-full">Escríbenos</Button>
+                <Button className="rounded-full" style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 600 }}>Escríbenos</Button>
             </Link>
         </div>
 

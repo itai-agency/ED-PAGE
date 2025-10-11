@@ -1,76 +1,137 @@
-
 import Link from "next/link";
-import { Instagram, Facebook } from "lucide-react";
+import Image from "next/image";
+import { Instagram, Facebook, Twitter, } from "lucide-react";
 
-const socialLinks = [
-  { icon: <Instagram className="h-6 w-6" />, href: "https://www.instagram.com/expertizdigital/" },
-  { icon: <Facebook className="h-6 w-6" />, href: "https://www.facebook.com/expertizdigital/?locale=es_LA" },
+const socials = [
+  { href: "https://www.facebook.com/expertizdigital/?locale=es_LA", Icon: Facebook, label: "Facebook" },
+  { href: "https://twitter.com", Icon: Twitter, label: "Twitter" },
+  { href: "https://www.instagram.com/expertizdigital/", Icon: Instagram, label: "Instagram" },
 ];
 
-const footerSections = [
-    {
-        title: "Servicios",
-        links: [
-            { label: "Estrategias digitales", href: "#services" },
-            { label: "Diseño web", href: "#services" },
-            { label: "Publicidad inteligente", href: "#services" },
-            { label: "Producción audiovisual", href: "#services" },
-            { label: "Diseño gráfico", href: "#services" },
-            { label: "Innovación con IA", href: "#services" },
-        ],
-    },
-    {
-        title: "Nosotros",
-        links: [
-            { label: "Nuestra Cultura", href: "#culture" },
-            { label: "Innovación", href: "#about" },
-            { label: "Resultados", href: "#about" },
-            { label: "Contacto", href: "#contact" },
-        ],
-    },
-]
+const aboutLinks = [
+  { label: "How it works", href: "#" },
+  { label: "Featured", href: "#" },
+  { label: "Partnership", href: "#" },
+  { label: "Business Relation", href: "#" },
+];
+
+const communityLinks = [
+  { label: "Events", href: "#" },
+  { label: "Blog", href: "#" },
+  { label: "Podcast", href: "#" },
+  { label: "Invite a friend", href: "#" },
+];
+
+const socialTextLinks = [
+  { label: "Discord", href: "https://discord.com" },
+  { label: "Instagram", href: "https://www.instagram.com/expertizdigital/" },
+  { label: "Twitter", href: "https://twitter.com" },
+  { label: "Facebook", href: "https://www.facebook.com/expertizdigital/?locale=es_LA" },
+];
 
 export function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-black/90 text-white">
-        <div className="container mx-auto px-4 md:px-6 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <div className="md:col-span-1 lg:col-span-2">
-                     <Link href="/" className="flex items-center space-x-2 mb-4">
-                        <img src="https://imgur.com/egofLQq.png" alt="ExpertizDigital Logo" className="h-8 w-auto" />
-                    </Link>
-                    <p className="text-white/70 max-w-sm mt-4 text-sm" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-                        Agencia de marketing digital especializada en el sector automotriz. Diseñamos estrategias que generan demanda y medimos lo que realmente importa: prospectos calificados, citas y ventas concretadas.
-                    </p>
-                    <div className="flex items-center space-x-4 mt-6">
-                        {socialLinks.map((social, index) => (
-                            <Link key={index} href={social.href} className="text-primary hover:text-primary/80 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
-                                {social.icon}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-                {footerSections.map((section) => (
-                    <div key={section.title}>
-                        <h3 className="font-bold text-lg mb-4 text-primary">{section.title}</h3>
-                        <ul className="space-y-3">
-                            {section.links.map((link) => (
-                                <li key={link.label}>
-                                    <Link href={link.href} className="text-white/70 hover:text-white transition-colors duration-300">
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        </div>
-      <div className="bg-black/50 py-4">
-        <div className="container mx-auto px-4 md:px-6 text-center text-sm text-white/50">
-            <p>
-                &copy; {new Date().getFullYear()} ExpertizDigital. Todos los derechos reservados.
+    <footer className="bg-[#2A313A] text-white">
+      <div className="container mx-auto px-6 py-14">
+        {/* Top grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          {/* Brand + vision + social bubbles */}
+          <div className="max-w-sm">
+            <Link href="/" className="inline-flex items-center gap-3">
+              <Image
+                src="https://imgur.com/egofLQq.png"
+                alt="ExpertizDigital"
+                width={180}
+                height={40}
+                className="h-8 w-auto"
+                priority
+              />
+            </Link>
+
+            <p
+              className="mt-6 text-sm text-white/70 leading-relaxed"
+              style={{ fontFamily: "Roboto, sans-serif" }}
+            >
+              Our vision is to provide convenience and help increase your sales business.
             </p>
+
+            <div className="mt-6 flex items-center gap-3">
+              {socials.map(({ href, Icon, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-orange-500 text-white
+                             hover:bg-orange-600 transition-colors"
+                >
+                  <Icon className="h-4 w-4" />
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* About */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">About</h3>
+            <ul className="space-y-3 text-white/80">
+              {aboutLinks.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="hover:text-white transition-colors">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Community */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Community</h3>
+            <ul className="space-y-3 text-white/80">
+              {communityLinks.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="hover:text-white transition-colors">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Socials (text list) */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Socials</h3>
+            <ul className="space-y-3 text-white/80">
+              {socialTextLinks.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="hover:text-white transition-colors" target="_blank">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="mt-10 h-px w-full bg-white/15" />
+
+        {/* Bottom row */}
+        <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-white/60">
+          <p>©{year} Company Name. All rights reserved</p>
+
+          <div className="flex items-center gap-8">
+            <Link href="#" className="hover:text-white transition-colors">
+              Privacy & Policy
+            </Link>
+            <Link href="#" className="hover:text-white transition-colors">
+              Terms & Condition
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
