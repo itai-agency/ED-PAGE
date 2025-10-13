@@ -4,28 +4,23 @@ import { Instagram, Facebook, Twitter, } from "lucide-react";
 
 const socials = [
   { href: "https://www.facebook.com/expertizdigital/?locale=es_LA", Icon: Facebook, label: "Facebook" },
-  { href: "https://twitter.com", Icon: Twitter, label: "Twitter" },
   { href: "https://www.instagram.com/expertizdigital/", Icon: Instagram, label: "Instagram" },
 ];
 
 const aboutLinks = [
-  { label: "How it works", href: "#" },
-  { label: "Featured", href: "#" },
-  { label: "Partnership", href: "#" },
-  { label: "Business Relation", href: "#" },
+  { label: "Cómo funciona", href: "#" },
+  { label: "Destacado", href: "#" },
+  { label: "Asociación", href: "#" },
+  { label: "Relacion comercial", href: "#" },
 ];
 
 const communityLinks = [
-  { label: "Events", href: "#" },
   { label: "Blog", href: "#" },
   { label: "Podcast", href: "#" },
-  { label: "Invite a friend", href: "#" },
 ];
 
 const socialTextLinks = [
-  { label: "Discord", href: "https://discord.com" },
   { label: "Instagram", href: "https://www.instagram.com/expertizdigital/" },
-  { label: "Twitter", href: "https://twitter.com" },
   { label: "Facebook", href: "https://www.facebook.com/expertizdigital/?locale=es_LA" },
 ];
 
@@ -54,8 +49,8 @@ export function Footer() {
               className="mt-6 text-sm text-white/70 leading-relaxed"
               style={{ fontFamily: "Roboto, sans-serif" }}
             >
-              Our vision is to provide convenience and help increase your sales business.
-            </p>
+              Nuestra visión es proporcionar comodidad y ayudar a aumentar tus ventas.
+            </p> 
 
             <div className="mt-6 flex items-center gap-3">
               {socials.map(({ href, Icon, label }) => (
@@ -76,7 +71,7 @@ export function Footer() {
 
           {/* About */}
           <div>
-            <h3 className="text-white font-semibold mb-4">About</h3>
+            <h3 className="text-white font-semibold mb-4">Nosotros</h3>
             <ul className="space-y-3 text-white/80">
               {aboutLinks.map((l) => (
                 <li key={l.label}>
@@ -90,7 +85,7 @@ export function Footer() {
 
           {/* Community */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Community</h3>
+            <h3 className="text-white font-semibold mb-4">Comunidad</h3>
             <ul className="space-y-3 text-white/80">
               {communityLinks.map((l) => (
                 <li key={l.label}>
@@ -104,7 +99,7 @@ export function Footer() {
 
           {/* Socials (text list) */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Socials</h3>
+            <h3 className="text-white font-semibold mb-4">Redes Sociales</h3>
             <ul className="space-y-3 text-white/80">
               {socialTextLinks.map((l) => (
                 <li key={l.label}>
@@ -122,14 +117,14 @@ export function Footer() {
 
         {/* Bottom row */}
         <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-white/60">
-          <p>©{year} Company Name. All rights reserved</p>
+          <p>©{year} ExpertizDigital. Todos los derechos reservados</p>
 
           <div className="flex items-center gap-8">
             <Link href="#" className="hover:text-white transition-colors">
-              Privacy & Policy
+              Privacidad y política
             </Link>
             <Link href="#" className="hover:text-white transition-colors">
-              Terms & Condition
+              Términos y condiciones
             </Link>
           </div>
         </div>
