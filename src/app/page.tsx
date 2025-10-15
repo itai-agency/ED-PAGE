@@ -12,7 +12,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
-import { useIsMobile } from "@/hooks/use-mobile";
 import banner from "@/assets/banner.png";
 import l2 from "@/assets/I2.jpg";
 import l3 from "@/assets/I3.jpg";
@@ -29,6 +28,99 @@ import EDLogo from "@/assets/EDLogo.png";
 import EDLogo2 from "@/assets/EDLogo2.png";
 import MAPA_PC from "@/assets/MAPA-PC.png";
 import MAPA_MB from "@/assets/MAPA-MB.png";
+import CHIREY_SEMINUEVOS from "@/assets/CHIREY-SEMINUEVOS.png";
+import Ensenada from "@/assets/Ensenada.png";
+import LOGO_BUICK from "@/assets/LOGO-BUICK.png";
+import LOGO_CADILLAC from "@/assets/LOGO-CADILLAC.png";
+import LOGO_CHEVROLET from "@/assets/LOGO-CHEVROLET.png";
+import LOGO_GMC from "@/assets/LOGO-GMC.png";
+import Mexicali from "@/assets/Mexicali.png";
+import nissan_logo from "@/assets/nissan-logo.png";
+import nissan_mexicali from "@/assets/nissan-mexicali.png";
+import nissan_tijuana from "@/assets/nissan-tijuana.png";
+import Tijuana from "@/assets/Tijuana.png";
+
+/* === Carrusel lógico sin CSS externo === */
+function LogoMarquee({
+  items,
+  speed = 0.35,            // píxeles por frame aprox. Ajusta velocidad
+}: {
+  items: { src: any; alt: string }[];
+  speed?: number;
+}) {
+  const trackRef = React.useRef<HTMLDivElement | null>(null);
+  const speedRef = React.useRef(speed);   // para pausar/reanudar
+  const xRef = React.useRef(0);
+  const rafRef = React.useRef<number | null>(null);
+  const halfWidthRef = React.useRef<number>(0);
+
+  React.useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+
+    // calcular mitad del ancho (porque duplicamos la lista)
+    const updateHalf = () => {
+      // scrollWidth total / 2 (porque renderizamos items * 2)
+      halfWidthRef.current = el.scrollWidth / 2;
+    };
+    updateHalf();
+
+    // re-calcular en resize
+    const ro = new ResizeObserver(updateHalf);
+    ro.observe(el);
+
+    const tick = () => {
+      const el = trackRef.current;
+      if (!el) return;
+
+      xRef.current -= speedRef.current;
+      // reset suave cuando pasamos la mitad
+      if (-xRef.current >= halfWidthRef.current) {
+        xRef.current = 0;
+      }
+      el.style.transform = `translateX(${xRef.current}px)`;
+      rafRef.current = requestAnimationFrame(tick);
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      ro.disconnect();
+    };
+  }, []);
+
+  return (
+    <div
+      className="relative overflow-hidden"
+      onMouseEnter={() => (speedRef.current = 0)}
+      onMouseLeave={() => (speedRef.current = speed)}
+    >
+      <div
+        ref={trackRef}
+        className="flex items-center gap-10 sm:gap-12 md:gap-16 will-change-transform"
+        style={{ transform: "translateX(0px)" }}
+      >
+        {/* pista A + pista B (duplicada) */}
+        {[...items, ...items].map((l, i) => (
+          <div
+            key={`logo-${i}`}
+            className="shrink-0 opacity-60 hover:opacity-90 transition-opacity"
+          >
+            <Image
+              src={l.src}
+              alt={l.alt || ""}
+              width={220}
+              height={90}
+              className="h-auto w-auto max-h-10 sm:max-h-12 md:max-h-16 object-contain"
+              priority={i < 2}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 
 const services = [
     {
@@ -77,7 +169,19 @@ const clientLogos = [
   { src: EDLogo2, alt: "YouTube", w: 180, h: 60 },
 ];
 
-const cultureValues = ["Innovación", "Colaboración", "Resultados", "Creatividad", "Transparencia"];
+const carouselLogos = [
+  { src: CHIREY_SEMINUEVOS, alt: "Chirey Seminuevos" },
+  { src: Ensenada, alt: "Ensenada" },
+  { src: LOGO_BUICK, alt: "Buick" },
+  { src: LOGO_CADILLAC, alt: "Cadillac" },
+  { src: LOGO_CHEVROLET, alt: "Chevrolet" },
+  { src: LOGO_GMC, alt: "GMC" },
+  { src: Mexicali, alt: "Mexicali" },
+  { src: nissan_logo, alt: "Nissan" },
+  { src: nissan_mexicali, alt: "Nissan Mexicali" },
+  { src: nissan_tijuana, alt: "Nissan Tijuana" },
+  { src: Tijuana, alt: "Tijuana" },
+];
 
 const useIntersectionObserver = (options: IntersectionObserverInit) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -570,9 +674,9 @@ export default function Home() {
       </div>
     </section>
 
-    <section id="clientes" className="relative py-12 md:py-20 bg-white">
+    {/* === CLIENTES: Carrusel de logos (auto-scroll, sin CSS externo) === */}
+    <section id="clientes" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        {/* Título y subtítulo */}
         <div className="text-center max-w-3xl mx-auto">
           <h2
             className="
@@ -599,20 +703,8 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Logos */}
-        <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-x-10 sm:gap-x-12 gap-y-6 sm:gap-y-8">
-          {clientLogos.map((l, i) => (
-            <div key={i} className="opacity-40 grayscale hover:opacity-70 transition-opacity">
-              <Image
-                src={l.src}
-                alt={l.alt}
-                width={l.w}
-                height={l.h}
-                className="h-auto w-auto max-h-10 sm:max-h-12 md:max-h-16 object-contain"
-                priority={i < 2}
-              />
-            </div>
-          ))}
+        <div className="mt-8 sm:mt-10">
+          <LogoMarquee items={carouselLogos} speed={0.35} />
         </div>
       </div>
     </section>
@@ -904,29 +996,3 @@ export default function Home() {
     </>
   );
 }
-
-    
-
-    
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
