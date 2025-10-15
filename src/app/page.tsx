@@ -273,73 +273,83 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
 
           {/* Panel blanco con texto — primero en móvil, segundo en desktop */}
-          <div className="bg-white order-1 lg:order-2">
-            <div className="h-full flex items-center">
-              <div
-                className="
-                  w-full max-w-[720px]
-                  px-5 sm:px-8 lg:px-16
-                  py-10 lg:py-0 mx-auto
-                  text-center lg:text-left
-                "
-              >
-                <h1
-                  className="
-                    font-extrabold text-zinc-900 tracking-tight
-                    text-[28px] sm:text-[36px] lg:text-[56px]
-                    leading-[1.28] sm:leading-[1.24] lg:leading-[1.18]
-                  "
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
-                >
-                  Acelera tus ventas con{" "}
-                  <span className="text-primary">estrategias digitales</span>{" "}
-                  para tu concesionaria
-                </h1>
+          {/* Panel blanco con texto — primero en móvil, segundo en desktop */}
+<div className="bg-white order-1 lg:order-2">
+  <div className="h-full flex items-center">
+    <div
+      className="
+        w-full
+        px-5 sm:px-8 lg:px-10 xl:px-16
+        py-10 lg:py-0 mx-auto
+        text-center lg:text-left
+        max-w-[720px] lg:max-w-[600px] xl:max-w-[720px]
+      "
+    >
+      <h1
+        className="
+          font-extrabold text-zinc-900 tracking-tight
+          /* tamaños pensados para 13'' */
+          text-[26px] sm:text-[32px] md:text-[36px]
+          lg:text-[42px] xl:text-[52px] 2xl:text-[60px]
+          leading-[1.24] md:leading-[1.22] lg:leading-[1.18]
+          /* limitar ancho para evitar 'escalera' */
+          max-w-[22ch] lg:max-w-[20ch] xl:max-w-[22ch]
+          mx-auto lg:mx-0
+        "
+        style={{ fontFamily: "Montserrat, sans-serif" }}
+      >
+        Acelera tus ventas con{" "}
+        <span className="text-primary">estrategias digitales</span>{" "}
+        para tu concesionaria
+      </h1>
 
-                <p
-                  className="
-                    mt-4 text-zinc-600
-                    text-[15px] sm:text-base lg:text-xl
-                    leading-[1.85]
-                    max-w-[36ch] lg:max-w-[58ch]
-                    mx-auto lg:mx-0
-                  "
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
-                >
-                  Impulsamos tu concesionaria con estrategias digitales, contenido
-                  relevante y decisiones basadas en datos para aumentar tus ventas.
-                </p>
+      <p
+        className="
+          mt-4 text-zinc-600
+          /* tipografía más contenida en lg */
+          text-[14.5px] sm:text-[15.5px] lg:text-[16.5px] xl:text-[18px]
+          leading-[1.9] lg:leading-[1.85]
+          /* ancho de línea controlado */
+          max-w-[34ch] sm:max-w-[40ch] lg:max-w-[44ch] xl:max-w-[52ch]
+          mx-auto lg:mx-0
+        "
+        style={{ fontFamily: "Montserrat, sans-serif" }}
+      >
+        Impulsamos tu concesionaria con estrategias digitales, contenido
+        relevante y decisiones basadas en datos para aumentar tus ventas.
+      </p>
 
-                <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                  <Link href="#services">
-                    <Button
-                      size="lg"
-                      className="rounded-full px-6 lg:px-7 py-6 text-base lg:text-lg"
-                      style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700 }}
-                    >
-                      Descubre lo que podemos hacer
-                    </Button>
-                  </Link>
-                  <Link
-                    href={`https://wa.me/525649871454?text=${encodeURIComponent(
-                      "Hola ExpertizDigital, me gustaría obtener más información."
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="rounded-full px-6 lg:px-7 py-6 text-base lg:text-lg"
-                      style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700 }}
-                    >
-                      Agenda una asesoría
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+        <Link href="#services">
+          <Button
+            size="lg"
+            className="rounded-full px-6 lg:px-7 py-6 text-base lg:text-lg"
+            style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700 }}
+          >
+            Descubre lo que podemos hacer
+          </Button>
+        </Link>
+        <Link
+          href={`https://wa.me/525649871454?text=${encodeURIComponent(
+            "Hola ExpertizDigital, me gustaría obtener más información."
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            size="lg"
+            variant="outline"
+            className="rounded-full px-6 lg:px-7 py-6 text-base lg:text-lg"
+            style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700 }}
+          >
+            Agenda una asesoría
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 
           {/* Imagen — segunda en móvil, primera en desktop */}
           <div className="relative order-2 lg:order-1 w-full h-[40vh] sm:h-[50vh] lg:h-[78vh]">
